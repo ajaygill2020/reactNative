@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 41</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft03{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft06{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft09{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page41-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals041.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:831px;white-space:nowrap" class="ft00">37</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 11: ListView</b></p>
+<p style="position:absolute;top:99px;left:43px;white-space:nowrap" class="ft02"><b>Section 11.1: Simple Example</b></p>
+<p style="position:absolute;top:150px;left:43px;white-space:nowrap" class="ft09">ListView - A core component designed for eﬃcient display of vertically scrolling lists of changing data. The minimal<br/>API is to create a ListView.DataSource, populate it with a simple array of data blobs, and instantiate a ListView<br/>component with that data source and a renderRow callback which takes a blob from the data array and returns a<br/>renderable component.</p>
+<p style="position:absolute;top:257px;left:43px;white-space:nowrap" class="ft03">Minimal example:</p>
+<p style="position:absolute;top:301px;left:48px;white-space:nowrap" class="ft04">getInitialState</p>
+<p style="position:absolute;top:301px;left:170px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:301px;left:178px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:301px;left:186px;white-space:nowrap" class="ft06"><b>function</b></p>
+<p style="position:absolute;top:301px;left:251px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:301px;left:267px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:301px;left:275px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:320px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:320px;left:64px;white-space:nowrap" class="ft06"><b>var</b></p>
+<p style="position:absolute;top:320px;left:89px;white-space:nowrap" class="ft04">&#160;ds&#160;</p>
+<p style="position:absolute;top:320px;left:121px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:320px;left:129px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:320px;left:137px;white-space:nowrap" class="ft06"><b>new</b></p>
+<p style="position:absolute;top:320px;left:162px;white-space:nowrap" class="ft04">&#160;ListView.</p>
+<p style="position:absolute;top:320px;left:243px;white-space:nowrap" class="ft07">DataSource</p>
+<p style="position:absolute;top:320px;left:324px;white-space:nowrap" class="ft05">({</p>
+<p style="position:absolute;top:320px;left:340px;white-space:nowrap" class="ft04">rowHasChanged</p>
+<p style="position:absolute;top:320px;left:445px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:320px;left:453px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:320px;left:461px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:320px;left:469px;white-space:nowrap" class="ft04">r1</p>
+<p style="position:absolute;top:320px;left:486px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:320px;left:494px;white-space:nowrap" class="ft04">&#160;r2</p>
+<p style="position:absolute;top:320px;left:518px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:320px;left:526px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:320px;left:534px;white-space:nowrap" class="ft05">=&gt;</p>
+<p style="position:absolute;top:320px;left:550px;white-space:nowrap" class="ft04">&#160;r1&#160;</p>
+<p style="position:absolute;top:320px;left:583px;white-space:nowrap" class="ft05">!==</p>
+<p style="position:absolute;top:320px;left:607px;white-space:nowrap" class="ft04">&#160;r2</p>
+<p style="position:absolute;top:320px;left:631px;white-space:nowrap" class="ft05">});</p>
+<p style="position:absolute;top:338px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:338px;left:64px;white-space:nowrap" class="ft06"><b>return</b></p>
+<p style="position:absolute;top:338px;left:113px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:338px;left:121px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:357px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; dataSource</p>
+<p style="position:absolute;top:357px;left:162px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:357px;left:170px;white-space:nowrap" class="ft04">&#160;ds.</p>
+<p style="position:absolute;top:357px;left:202px;white-space:nowrap" class="ft07">cloneWithRows</p>
+<p style="position:absolute;top:357px;left:307px;white-space:nowrap" class="ft05">([</p>
+<p style="position:absolute;top:357px;left:324px;white-space:nowrap" class="ft08">'row 1'</p>
+<p style="position:absolute;top:357px;left:380px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:357px;left:388px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:357px;left:396px;white-space:nowrap" class="ft08">'row 2'</p>
+<p style="position:absolute;top:357px;left:453px;white-space:nowrap" class="ft05">]),</p>
+<p style="position:absolute;top:375px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:375px;left:64px;white-space:nowrap" class="ft05">};</p>
+<p style="position:absolute;top:394px;left:48px;white-space:nowrap" class="ft05">},</p>
+<p style="position:absolute;top:431px;left:48px;white-space:nowrap" class="ft04">render</p>
+<p style="position:absolute;top:431px;left:97px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:431px;left:105px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:431px;left:113px;white-space:nowrap" class="ft06"><b>function</b></p>
+<p style="position:absolute;top:431px;left:178px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:431px;left:194px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:431px;left:202px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:449px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:449px;left:64px;white-space:nowrap" class="ft06"><b>return</b></p>
+<p style="position:absolute;top:449px;left:113px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:449px;left:121px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:468px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:468px;left:81px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:468px;left:89px;white-space:nowrap" class="ft04">ListView</p>
+<p style="position:absolute;top:486px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; dataSource</p>
+<p style="position:absolute;top:486px;left:178px;white-space:nowrap" class="ft05">={</p>
+<p style="position:absolute;top:486px;left:194px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:486px;left:226px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:486px;left:234px;white-space:nowrap" class="ft07">state</p>
+<p style="position:absolute;top:486px;left:275px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:486px;left:283px;white-space:nowrap" class="ft07">dataSource</p>
+<p style="position:absolute;top:486px;left:364px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:505px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; renderRow</p>
+<p style="position:absolute;top:505px;left:170px;white-space:nowrap" class="ft05">={(</p>
+<p style="position:absolute;top:505px;left:194px;white-space:nowrap" class="ft04">rowData</p>
+<p style="position:absolute;top:505px;left:251px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:505px;left:259px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:505px;left:267px;white-space:nowrap" class="ft05">=&gt;</p>
+<p style="position:absolute;top:505px;left:283px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:505px;left:291px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:505px;left:299px;white-space:nowrap" class="ft04">Text</p>
+<p style="position:absolute;top:505px;left:332px;white-space:nowrap" class="ft05">&gt;{</p>
+<p style="position:absolute;top:505px;left:348px;white-space:nowrap" class="ft04">rowData</p>
+<p style="position:absolute;top:505px;left:405px;white-space:nowrap" class="ft05">}&lt;/</p>
+<p style="position:absolute;top:505px;left:429px;white-space:nowrap" class="ft04">Text</p>
+<p style="position:absolute;top:505px;left:461px;white-space:nowrap" class="ft05">&gt;}</p>
+<p style="position:absolute;top:523px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:523px;left:81px;white-space:nowrap" class="ft05">/&gt;</p>
+<p style="position:absolute;top:542px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:542px;left:64px;white-space:nowrap" class="ft05">);</p>
+<p style="position:absolute;top:560px;left:48px;white-space:nowrap" class="ft05">},</p>
+<p style="position:absolute;top:601px;left:43px;white-space:nowrap" class="ft09">ListView also supports more advanced features, including sections with sticky section headers, header and footer<br/>support, callbacks on reaching the end of the available data (onEndReached) and on the set of rows that are visible<br/>in the device viewport change (onChangeVisibleRows), and several performance optimizations.</p>
+<p style="position:absolute;top:686px;left:43px;white-space:nowrap" class="ft09">There are a few performance operations designed to make ListView scroll smoothly while dynamically loading<br/>potentially very large (or conceptually inﬁnite) data sets:</p>
+<p style="position:absolute;top:748px;left:88px;white-space:nowrap" class="ft09">Only re-render changed rows - the rowHasChanged function provided to the data source tells the ListView if<br/>it needs to re-render a row because the source data has changed - see ListViewDataSource for more details.<br/>Rate-limited row rendering - By default, only one row is rendered per event-loop (customizable with the<br/>pageSize prop). This breaks up the work into smaller chunks to reduce the chance of dropping frames while<br/>rendering rows.</p>
+</div>
+</body>
+</html>

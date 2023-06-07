@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 74</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft02{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft03{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft04{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft05{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#cc0000;}
+	.ft09{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+	.ft010{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page74-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals074.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">70</p>
+<p style="position:absolute;top:44px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:44px;left:81px;white-space:nowrap" class="ft02">&lt;/</p>
+<p style="position:absolute;top:44px;left:97px;white-space:nowrap" class="ft01">View</p>
+<p style="position:absolute;top:44px;left:129px;white-space:nowrap" class="ft02">&gt;</p>
+<p style="position:absolute;top:62px;left:48px;white-space:nowrap" class="ft01">&#160;&#160;</p>
+<p style="position:absolute;top:62px;left:64px;white-space:nowrap" class="ft02">);</p>
+<p style="position:absolute;top:81px;left:48px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:122px;left:43px;white-space:nowrap" class="ft03"><b>Conﬁguring the Navigator</b></p>
+<p style="position:absolute;top:162px;left:43px;white-space:nowrap" class="ft04">You can conﬁgure the&#160;</p>
+<p style="position:absolute;top:165px;left:199px;white-space:nowrap" class="ft01">Navigator</p>
+<p style="position:absolute;top:162px;left:272px;white-space:nowrap" class="ft04">'s transitions with the&#160;</p>
+<p style="position:absolute;top:165px;left:425px;white-space:nowrap" class="ft01">configureScene</p>
+<p style="position:absolute;top:162px;left:538px;white-space:nowrap" class="ft04">&#160;prop. This is a function that's passed the</p>
+<p style="position:absolute;top:187px;left:43px;white-space:nowrap" class="ft01">route</p>
+<p style="position:absolute;top:184px;left:83px;white-space:nowrap" class="ft04">&#160;object, and needs to return a conﬁguration object. These are the available conﬁguration objects:</p>
+<p style="position:absolute;top:224px;left:88px;white-space:nowrap" class="ft010">Navigator.SceneConﬁgs.PushFromRight (default)<br/>Navigator.SceneConﬁgs.FloatFromRight<br/>Navigator.SceneConﬁgs.FloatFromLeft<br/>Navigator.SceneConﬁgs.FloatFromBottom<br/>Navigator.SceneConﬁgs.FloatFromBottomAndroid<br/>Navigator.SceneConﬁgs.FadeAndroid<br/>Navigator.SceneConﬁgs.HorizontalSwipeJump<br/>Navigator.SceneConﬁgs.HorizontalSwipeJumpFromRight<br/>Navigator.SceneConﬁgs.VerticalUpSwipeJump<br/>Navigator.SceneConﬁgs.VerticalDownSwipeJump</p>
+<p style="position:absolute;top:466px;left:43px;white-space:nowrap" class="ft010">You can return one of these objects without modiﬁcation, or you can modify the conﬁguration object to customize<br/>the navigation transitions. For example, to modify the edge hit width to more closely emulate the iOS</p>
+<p style="position:absolute;top:514px;left:43px;white-space:nowrap" class="ft01">UINavigationController</p>
+<p style="position:absolute;top:511px;left:221px;white-space:nowrap" class="ft04">'s&#160;</p>
+<p style="position:absolute;top:514px;left:235px;white-space:nowrap" class="ft01">interactivePopGestureRecognizer</p>
+<p style="position:absolute;top:511px;left:486px;white-space:nowrap" class="ft04">:</p>
+<p style="position:absolute;top:556px;left:48px;white-space:nowrap" class="ft01">configureScene</p>
+<p style="position:absolute;top:556px;left:162px;white-space:nowrap" class="ft02">={(</p>
+<p style="position:absolute;top:556px;left:186px;white-space:nowrap" class="ft01">route</p>
+<p style="position:absolute;top:556px;left:226px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:556px;left:234px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:556px;left:243px;white-space:nowrap" class="ft02">=&gt;</p>
+<p style="position:absolute;top:556px;left:259px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:556px;left:267px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:574px;left:48px;white-space:nowrap" class="ft01">&#160;&#160;</p>
+<p style="position:absolute;top:574px;left:64px;white-space:nowrap" class="ft05"><b>return</b></p>
+<p style="position:absolute;top:574px;left:113px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:574px;left:121px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:593px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; ...</p>
+<p style="position:absolute;top:593px;left:105px;white-space:nowrap" class="ft06">Navigator</p>
+<p style="position:absolute;top:593px;left:178px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:593px;left:186px;white-space:nowrap" class="ft06">SceneConfigs</p>
+<p style="position:absolute;top:593px;left:283px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:593px;left:291px;white-space:nowrap" class="ft06">FloatFromRight</p>
+<p style="position:absolute;top:593px;left:405px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:611px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; gestures</p>
+<p style="position:absolute;top:611px;left:145px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:611px;left:153px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:611px;left:162px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:630px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; pop</p>
+<p style="position:absolute;top:630px;left:121px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:630px;left:129px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:630px;left:137px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:648px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; ...</p>
+<p style="position:absolute;top:648px;left:137px;white-space:nowrap" class="ft06">Navigator</p>
+<p style="position:absolute;top:648px;left:210px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:648px;left:218px;white-space:nowrap" class="ft06">SceneConfigs</p>
+<p style="position:absolute;top:648px;left:315px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:648px;left:324px;white-space:nowrap" class="ft06">FloatFromRight</p>
+<p style="position:absolute;top:648px;left:437px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:648px;left:445px;white-space:nowrap" class="ft06">gestures</p>
+<p style="position:absolute;top:648px;left:510px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:648px;left:518px;white-space:nowrap" class="ft06">pop</p>
+<p style="position:absolute;top:648px;left:542px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:667px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; edgeHitWidth</p>
+<p style="position:absolute;top:667px;left:210px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:667px;left:218px;white-space:nowrap" class="ft01">&#160;Dimensions.</p>
+<p style="position:absolute;top:667px;left:315px;white-space:nowrap" class="ft05"><b>get</b></p>
+<p style="position:absolute;top:667px;left:340px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:667px;left:348px;white-space:nowrap" class="ft07">'window'</p>
+<p style="position:absolute;top:667px;left:413px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:667px;left:421px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:667px;left:429px;white-space:nowrap" class="ft06">width</p>
+<p style="position:absolute;top:667px;left:469px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:667px;left:477px;white-space:nowrap" class="ft02">/</p>
+<p style="position:absolute;top:667px;left:486px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:667px;left:494px;white-space:nowrap" class="ft08">2</p>
+<p style="position:absolute;top:667px;left:502px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:685px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:685px;left:97px;white-space:nowrap" class="ft02">},</p>
+<p style="position:absolute;top:704px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:704px;left:81px;white-space:nowrap" class="ft02">},</p>
+<p style="position:absolute;top:722px;left:48px;white-space:nowrap" class="ft01">&#160;&#160;</p>
+<p style="position:absolute;top:722px;left:64px;white-space:nowrap" class="ft02">};</p>
+<p style="position:absolute;top:741px;left:48px;white-space:nowrap" class="ft02">}}</p>
+<p style="position:absolute;top:782px;left:43px;white-space:nowrap" class="ft03"><b>Managing the NavigationBar</b></p>
+<p style="position:absolute;top:822px;left:43px;white-space:nowrap" class="ft04">The&#160;</p>
+<p style="position:absolute;top:825px;left:72px;white-space:nowrap" class="ft01">Navigator</p>
+<p style="position:absolute;top:822px;left:145px;white-space:nowrap" class="ft04">&#160;component comes with a&#160;</p>
+<p style="position:absolute;top:825px;left:329px;white-space:nowrap" class="ft01">navigationBar</p>
+<p style="position:absolute;top:822px;left:435px;white-space:nowrap" class="ft04">&#160;prop, which can theoretically take any properly conﬁgured</p>
+<p style="position:absolute;top:844px;left:43px;white-space:nowrap" class="ft04">React component. But the most common implementation uses the default&#160;</p>
+<p style="position:absolute;top:847px;left:565px;white-space:nowrap" class="ft01">Navigator.</p>
+<p style="position:absolute;top:847px;left:646px;white-space:nowrap" class="ft06">NavigationBar</p>
+<p style="position:absolute;top:844px;left:752px;white-space:nowrap" class="ft04">. This takes a</p>
+<p style="position:absolute;top:870px;left:43px;white-space:nowrap" class="ft01">routeMapper</p>
+<p style="position:absolute;top:867px;left:132px;white-space:nowrap" class="ft04">&#160;prop that you can use to conﬁgure the appearance of the navigation bar based on the route.</p>
+<p style="position:absolute;top:906px;left:43px;white-space:nowrap" class="ft04">A&#160;</p>
+<p style="position:absolute;top:909px;left:56px;white-space:nowrap" class="ft01">routeMapper</p>
+<p style="position:absolute;top:906px;left:145px;white-space:nowrap" class="ft04">&#160;is a regular javascript object with three functions:&#160;</p>
+<p style="position:absolute;top:909px;left:496px;white-space:nowrap" class="ft01">Title</p>
+<p style="position:absolute;top:906px;left:536px;white-space:nowrap" class="ft04">,&#160;</p>
+<p style="position:absolute;top:909px;left:544px;white-space:nowrap" class="ft01">RightButton</p>
+<p style="position:absolute;top:906px;left:633px;white-space:nowrap" class="ft04">, and&#160;</p>
+<p style="position:absolute;top:909px;left:671px;white-space:nowrap" class="ft01">LeftButton</p>
+<p style="position:absolute;top:906px;left:752px;white-space:nowrap" class="ft04">. For</p>
+<p style="position:absolute;top:929px;left:43px;white-space:nowrap" class="ft04">example:</p>
+<p style="position:absolute;top:974px;left:48px;white-space:nowrap" class="ft05"><b>const</b></p>
+<p style="position:absolute;top:974px;left:89px;white-space:nowrap" class="ft01">&#160;routeMapper&#160;</p>
+<p style="position:absolute;top:974px;left:194px;white-space:nowrap" class="ft02">=</p>
+<p style="position:absolute;top:974px;left:202px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:974px;left:210px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:1011px;left:48px;white-space:nowrap" class="ft01">&#160; LeftButton</p>
+<p style="position:absolute;top:1011px;left:145px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:1011px;left:153px;white-space:nowrap" class="ft01">route</p>
+<p style="position:absolute;top:1011px;left:194px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:1011px;left:202px;white-space:nowrap" class="ft01">&#160;navigator</p>
+<p style="position:absolute;top:1011px;left:283px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:1011px;left:291px;white-space:nowrap" class="ft01">&#160;index</p>
+<p style="position:absolute;top:1011px;left:340px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:1011px;left:348px;white-space:nowrap" class="ft01">&#160;navState</p>
+<p style="position:absolute;top:1011px;left:421px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:1011px;left:429px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:1011px;left:437px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:1029px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1029px;left:81px;white-space:nowrap" class="ft05"><b>if</b></p>
+<p style="position:absolute;top:1029px;left:97px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:1029px;left:105px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:1029px;left:113px;white-space:nowrap" class="ft01">index&#160;</p>
+<p style="position:absolute;top:1029px;left:162px;white-space:nowrap" class="ft02">===</p>
+<p style="position:absolute;top:1029px;left:186px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:1029px;left:194px;white-space:nowrap" class="ft08">0</p>
+<p style="position:absolute;top:1029px;left:202px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:1029px;left:210px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:1029px;left:218px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:1047px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1047px;left:97px;white-space:nowrap" class="ft05"><b>return</b></p>
+<p style="position:absolute;top:1047px;left:145px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:1047px;left:153px;white-space:nowrap" class="ft09"><b>null</b></p>
+<p style="position:absolute;top:1047px;left:186px;white-space:nowrap" class="ft02">;</p>
+<p style="position:absolute;top:1066px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1066px;left:81px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:1103px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1103px;left:81px;white-space:nowrap" class="ft05"><b>return</b></p>
+<p style="position:absolute;top:1103px;left:129px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:1103px;left:137px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:1121px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1121px;left:97px;white-space:nowrap" class="ft02">&lt;</p>
+<p style="position:absolute;top:1121px;left:105px;white-space:nowrap" class="ft01">TouchableOpacity</p>
+<p style="position:absolute;top:1140px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; onPress</p>
+<p style="position:absolute;top:1140px;left:170px;white-space:nowrap" class="ft02">={()</p>
+<p style="position:absolute;top:1140px;left:202px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:1140px;left:210px;white-space:nowrap" class="ft02">=&gt;</p>
+<p style="position:absolute;top:1140px;left:226px;white-space:nowrap" class="ft01">&#160;navigator.</p>
+<p style="position:absolute;top:1140px;left:315px;white-space:nowrap" class="ft06">pop</p>
+<p style="position:absolute;top:1140px;left:340px;white-space:nowrap" class="ft02">()}</p>
+<p style="position:absolute;top:1158px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; style</p>
+<p style="position:absolute;top:1158px;left:153px;white-space:nowrap" class="ft02">={</p>
+<p style="position:absolute;top:1158px;left:170px;white-space:nowrap" class="ft01">styles.</p>
+<p style="position:absolute;top:1158px;left:226px;white-space:nowrap" class="ft06">navBarLeftButton</p>
+<p style="position:absolute;top:1158px;left:356px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:1177px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1177px;left:97px;white-space:nowrap" class="ft02">&gt;</p>
+</div>
+</body>
+</html>

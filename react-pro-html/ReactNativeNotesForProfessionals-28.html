@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 28</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft06{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft07{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000000;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000066;}
+	.ft09{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+	.ft010{font-size:13px;font-family:AQBTGV+RobotoMono;color:#ff0000;}
+	.ft011{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft012{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft013{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft014{font-size:13px;font-family:AQBTGV+RobotoMono;color:#cc0000;}
+	.ft015{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page28-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals028.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">24</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 8: Styling</b></p>
+<p style="position:absolute;top:105px;left:43px;white-space:nowrap" class="ft015">Styles are deﬁned within a JSON object with similar styling attribute names like in CSS. Such an object can either be<br/>put inline in the style prop of a component or it can be passed to the function&#160;</p>
+<p style="position:absolute;top:131px;left:587px;white-space:nowrap" class="ft03">StyleSheet.</p>
+<p style="position:absolute;top:131px;left:676px;white-space:nowrap" class="ft04">create</p>
+<p style="position:absolute;top:131px;left:724px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:131px;left:733px;white-space:nowrap" class="ft03">StyleObject</p>
+<p style="position:absolute;top:131px;left:822px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:150px;left:43px;white-space:nowrap" class="ft02">and be stored in a variable for shorter inline access by using a selector name for it similar to a class in CSS.</p>
+<p style="position:absolute;top:187px;left:43px;white-space:nowrap" class="ft06"><b>Section 8.1: Conditional Styling</b></p>
+<p style="position:absolute;top:243px;left:48px;white-space:nowrap" class="ft07"><b>&lt;View</b></p>
+<p style="position:absolute;top:243px;left:89px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:243px;left:97px;white-space:nowrap" class="ft08">style</p>
+<p style="position:absolute;top:243px;left:137px;white-space:nowrap" class="ft05">={[(this.props.isTrue)&#160;? styles.bgcolorBlack : styles.bgColorWhite]}</p>
+<p style="position:absolute;top:243px;left:688px;white-space:nowrap" class="ft07"><b>&gt;</b></p>
+<p style="position:absolute;top:284px;left:43px;white-space:nowrap" class="ft02">If the value of&#160;</p>
+<p style="position:absolute;top:287px;left:142px;white-space:nowrap" class="ft03">isTrue</p>
+<p style="position:absolute;top:284px;left:190px;white-space:nowrap" class="ft02">&#160;is&#160;</p>
+<p style="position:absolute;top:287px;left:209px;white-space:nowrap" class="ft09"><b>true</b></p>
+<p style="position:absolute;top:284px;left:241px;white-space:nowrap" class="ft02">&#160;then it will have black background color otherwise white.</p>
+<p style="position:absolute;top:321px;left:43px;white-space:nowrap" class="ft06"><b>Section 8.2: Styling using inline styles</b></p>
+<p style="position:absolute;top:371px;left:43px;white-space:nowrap" class="ft02">Each React Native component can take a&#160;</p>
+<p style="position:absolute;top:374px;left:329px;white-space:nowrap" class="ft03">style</p>
+<p style="position:absolute;top:371px;left:370px;white-space:nowrap" class="ft02">&#160;prop. You can pass it a JavaScript object with CSS-style style</p>
+<p style="position:absolute;top:394px;left:43px;white-space:nowrap" class="ft02">properties:</p>
+<p style="position:absolute;top:439px;left:48px;white-space:nowrap" class="ft07"><b>&lt;Text</b></p>
+<p style="position:absolute;top:439px;left:89px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:439px;left:97px;white-space:nowrap" class="ft08">style</p>
+<p style="position:absolute;top:439px;left:137px;white-space:nowrap" class="ft05">={{color:</p>
+<p style="position:absolute;top:439px;left:210px;white-space:nowrap" class="ft010">'red'</p>
+<p style="position:absolute;top:439px;left:251px;white-space:nowrap" class="ft05">}}</p>
+<p style="position:absolute;top:439px;left:267px;white-space:nowrap" class="ft07"><b>&gt;</b></p>
+<p style="position:absolute;top:439px;left:275px;white-space:nowrap" class="ft03">Red text</p>
+<p style="position:absolute;top:439px;left:340px;white-space:nowrap" class="ft07"><b>&lt;/Text&gt;</b></p>
+<p style="position:absolute;top:480px;left:43px;white-space:nowrap" class="ft015">This can be ineﬃcient as it has to recreate the object each time the component is rendered. Using a stylesheet is<br/>preferred.</p>
+<p style="position:absolute;top:539px;left:43px;white-space:nowrap" class="ft06"><b>Section 8.3: Styling using a stylesheet</b></p>
+<p style="position:absolute;top:595px;left:48px;white-space:nowrap" class="ft011">import</p>
+<p style="position:absolute;top:595px;left:97px;white-space:nowrap" class="ft03">&#160;React</p>
+<p style="position:absolute;top:595px;left:145px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:595px;left:153px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:595px;left:162px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:595px;left:170px;white-space:nowrap" class="ft03">&#160;Component&#160;</p>
+<p style="position:absolute;top:595px;left:259px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:595px;left:267px;white-space:nowrap" class="ft03">&#160;from&#160;</p>
+<p style="position:absolute;top:595px;left:315px;white-space:nowrap" class="ft012">'react'</p>
+<p style="position:absolute;top:595px;left:372px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:614px;left:48px;white-space:nowrap" class="ft011">import</p>
+<p style="position:absolute;top:614px;left:97px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:614px;left:105px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:614px;left:113px;white-space:nowrap" class="ft03">&#160;View</p>
+<p style="position:absolute;top:614px;left:153px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:614px;left:162px;white-space:nowrap" class="ft03">&#160;Text</p>
+<p style="position:absolute;top:614px;left:202px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:614px;left:210px;white-space:nowrap" class="ft03">&#160;StyleSheet&#160;</p>
+<p style="position:absolute;top:614px;left:307px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:614px;left:315px;white-space:nowrap" class="ft03">&#160;from&#160;</p>
+<p style="position:absolute;top:614px;left:364px;white-space:nowrap" class="ft012">'react-native'</p>
+<p style="position:absolute;top:614px;left:477px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:651px;left:48px;white-space:nowrap" class="ft013"><b>const</b></p>
+<p style="position:absolute;top:651px;left:89px;white-space:nowrap" class="ft03">&#160;styles&#160;</p>
+<p style="position:absolute;top:651px;left:153px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:651px;left:162px;white-space:nowrap" class="ft03">&#160;StyleSheet.</p>
+<p style="position:absolute;top:651px;left:259px;white-space:nowrap" class="ft04">create</p>
+<p style="position:absolute;top:651px;left:307px;white-space:nowrap" class="ft05">({</p>
+<p style="position:absolute;top:669px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; red</p>
+<p style="position:absolute;top:669px;left:105px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:669px;left:113px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:669px;left:121px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:688px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160; color</p>
+<p style="position:absolute;top:688px;left:153px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:688px;left:162px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:688px;left:170px;white-space:nowrap" class="ft012">'red'</p>
+<p style="position:absolute;top:706px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:706px;left:81px;white-space:nowrap" class="ft05">},</p>
+<p style="position:absolute;top:724px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; big</p>
+<p style="position:absolute;top:724px;left:105px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:724px;left:113px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:724px;left:121px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:743px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160; fontSize</p>
+<p style="position:absolute;top:743px;left:178px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:743px;left:186px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:743px;left:194px;white-space:nowrap" class="ft014">30</p>
+<p style="position:absolute;top:761px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:761px;left:81px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:780px;left:48px;white-space:nowrap" class="ft05">});</p>
+<p style="position:absolute;top:817px;left:48px;white-space:nowrap" class="ft011">class</p>
+<p style="position:absolute;top:817px;left:89px;white-space:nowrap" class="ft03">&#160;Example&#160;</p>
+<p style="position:absolute;top:817px;left:162px;white-space:nowrap" class="ft011">extends</p>
+<p style="position:absolute;top:817px;left:218px;white-space:nowrap" class="ft03">&#160;Component&#160;</p>
+<p style="position:absolute;top:817px;left:307px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:835px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; render</p>
+<p style="position:absolute;top:835px;left:129px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:835px;left:145px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:835px;left:153px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:854px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:854px;left:113px;white-space:nowrap" class="ft013"><b>return</b></p>
+<p style="position:absolute;top:854px;left:162px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:854px;left:170px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:872px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:872px;left:145px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:872px;left:153px;white-space:nowrap" class="ft03">View</p>
+<p style="position:absolute;top:872px;left:186px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:891px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:891px;left:178px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:891px;left:186px;white-space:nowrap" class="ft03">Text style</p>
+<p style="position:absolute;top:891px;left:267px;white-space:nowrap" class="ft05">={</p>
+<p style="position:absolute;top:891px;left:283px;white-space:nowrap" class="ft03">styles.</p>
+<p style="position:absolute;top:891px;left:340px;white-space:nowrap" class="ft04">red</p>
+<p style="position:absolute;top:891px;left:364px;white-space:nowrap" class="ft05">}&gt;</p>
+<p style="position:absolute;top:891px;left:380px;white-space:nowrap" class="ft03">Red</p>
+<p style="position:absolute;top:891px;left:405px;white-space:nowrap" class="ft05">&lt;/</p>
+<p style="position:absolute;top:891px;left:421px;white-space:nowrap" class="ft03">Text</p>
+<p style="position:absolute;top:891px;left:453px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:909px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:909px;left:178px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:909px;left:186px;white-space:nowrap" class="ft03">Text style</p>
+<p style="position:absolute;top:909px;left:267px;white-space:nowrap" class="ft05">={</p>
+<p style="position:absolute;top:909px;left:283px;white-space:nowrap" class="ft03">styles.</p>
+<p style="position:absolute;top:909px;left:340px;white-space:nowrap" class="ft04">big</p>
+<p style="position:absolute;top:909px;left:364px;white-space:nowrap" class="ft05">}&gt;</p>
+<p style="position:absolute;top:909px;left:380px;white-space:nowrap" class="ft03">Big</p>
+<p style="position:absolute;top:909px;left:405px;white-space:nowrap" class="ft05">&lt;/</p>
+<p style="position:absolute;top:909px;left:421px;white-space:nowrap" class="ft03">Text</p>
+<p style="position:absolute;top:909px;left:453px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:928px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:928px;left:145px;white-space:nowrap" class="ft05">&lt;/</p>
+<p style="position:absolute;top:928px;left:162px;white-space:nowrap" class="ft03">View</p>
+<p style="position:absolute;top:928px;left:194px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:946px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:946px;left:113px;white-space:nowrap" class="ft05">);</p>
+<p style="position:absolute;top:965px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:965px;left:81px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:983px;left:48px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:1027px;left:43px;white-space:nowrap" class="ft03">StyleSheet.</p>
+<p style="position:absolute;top:1027px;left:132px;white-space:nowrap" class="ft04">create</p>
+<p style="position:absolute;top:1027px;left:180px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:1024px;left:196px;white-space:nowrap" class="ft02">&#160;returns an object where the values are numbers. React Native knows to convert these</p>
+<p style="position:absolute;top:1047px;left:43px;white-space:nowrap" class="ft02">numeric IDs into the correct style object.</p>
+<p style="position:absolute;top:1083px;left:43px;white-space:nowrap" class="ft06"><b>Section 8.4: Adding multiple styles</b></p>
+<p style="position:absolute;top:1134px;left:43px;white-space:nowrap" class="ft02">You can pass an array to the&#160;</p>
+<p style="position:absolute;top:1137px;left:244px;white-space:nowrap" class="ft03">style</p>
+<p style="position:absolute;top:1134px;left:285px;white-space:nowrap" class="ft02">&#160;prop to apply multiple styles. When there is a conﬂict, the last one in the list</p>
+<p style="position:absolute;top:1157px;left:43px;white-space:nowrap" class="ft02">takes precedence.</p>
+</div>
+</body>
+</html>

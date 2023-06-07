@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 81</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft04{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#cc0000;}
+	.ft09{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft010{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+	.ft011{font-size:13px;font-family:AOOFJR+RobotoMono;color:#790774;}
+	.ft012{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000000;}
+	.ft013{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page81-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals081.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:831px;white-space:nowrap" class="ft00">77</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 28: Create a shareable APK for</b></p>
+<p style="position:absolute;top:71px;left:43px;white-space:nowrap" class="ft01"><b>android</b></p>
+<p style="position:absolute;top:140px;left:43px;white-space:nowrap" class="ft02">Steps to create an APK (signed and unsigned) which you can install on a device using CLI and share as well:</p>
+<p style="position:absolute;top:180px;left:43px;white-space:nowrap" class="ft03"><b>Problem statement:</b></p>
+<p style="position:absolute;top:180px;left:192px;white-space:nowrap" class="ft02">&#160;I've built my app, I can run it on my local emulator (and also on my android device by</p>
+<p style="position:absolute;top:203px;left:43px;white-space:nowrap" class="ft013">changing debug server). But, I want to build an apk that I can send to someone without access to development<br/>server and I want them to be able to test application.</p>
+<p style="position:absolute;top:262px;left:43px;white-space:nowrap" class="ft04"><b>Section 28.1: Create a key to sign the APK</b></p>
+<p style="position:absolute;top:318px;left:48px;white-space:nowrap" class="ft05">keytool&#160;</p>
+<p style="position:absolute;top:318px;left:113px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:121px;white-space:nowrap" class="ft05">genkey&#160;</p>
+<p style="position:absolute;top:318px;left:178px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:186px;white-space:nowrap" class="ft05">v&#160;</p>
+<p style="position:absolute;top:318px;left:202px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:210px;white-space:nowrap" class="ft05">keystore my</p>
+<p style="position:absolute;top:318px;left:299px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:307px;white-space:nowrap" class="ft05">app</p>
+<p style="position:absolute;top:318px;left:332px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:340px;white-space:nowrap" class="ft05">key.</p>
+<p style="position:absolute;top:318px;left:372px;white-space:nowrap" class="ft07">keystore</p>
+<p style="position:absolute;top:318px;left:437px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:318px;left:445px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:453px;white-space:nowrap" class="ft05">alias my</p>
+<p style="position:absolute;top:318px;left:518px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:526px;white-space:nowrap" class="ft05">app</p>
+<p style="position:absolute;top:318px;left:550px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:559px;white-space:nowrap" class="ft05">alias&#160;</p>
+<p style="position:absolute;top:318px;left:607px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:615px;white-space:nowrap" class="ft05">keyalg RSA&#160;</p>
+<p style="position:absolute;top:318px;left:704px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:318px;left:712px;white-space:nowrap" class="ft05">keysize&#160;</p>
+<p style="position:absolute;top:318px;left:777px;white-space:nowrap" class="ft08">2048</p>
+<p style="position:absolute;top:318px;left:810px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:318px;left:818px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:337px;left:48px;white-space:nowrap" class="ft05">validity&#160;</p>
+<p style="position:absolute;top:337px;left:121px;white-space:nowrap" class="ft08">10000</p>
+<p style="position:absolute;top:378px;left:43px;white-space:nowrap" class="ft02">Use a password when prompted</p>
+<p style="position:absolute;top:414px;left:43px;white-space:nowrap" class="ft04"><b>Section 28.2: Once the key is generated, use it to generate</b></p>
+<p style="position:absolute;top:439px;left:43px;white-space:nowrap" class="ft04"><b>the installable build:</b></p>
+<p style="position:absolute;top:495px;left:48px;white-space:nowrap" class="ft05">react</p>
+<p style="position:absolute;top:495px;left:89px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:495px;left:97px;white-space:nowrap" class="ft09">native</p>
+<p style="position:absolute;top:495px;left:145px;white-space:nowrap" class="ft05">&#160;bundle&#160;</p>
+<p style="position:absolute;top:495px;left:210px;white-space:nowrap" class="ft06">--</p>
+<p style="position:absolute;top:495px;left:226px;white-space:nowrap" class="ft05">platform android&#160;</p>
+<p style="position:absolute;top:495px;left:364px;white-space:nowrap" class="ft06">--</p>
+<p style="position:absolute;top:495px;left:380px;white-space:nowrap" class="ft05">dev&#160;</p>
+<p style="position:absolute;top:495px;left:413px;white-space:nowrap" class="ft010"><b>false</b></p>
+<p style="position:absolute;top:495px;left:453px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:495px;left:461px;white-space:nowrap" class="ft06">--</p>
+<p style="position:absolute;top:495px;left:478px;white-space:nowrap" class="ft05">entry</p>
+<p style="position:absolute;top:495px;left:518px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:495px;left:526px;white-space:nowrap" class="ft05">file index.</p>
+<p style="position:absolute;top:495px;left:615px;white-space:nowrap" class="ft07">android</p>
+<p style="position:absolute;top:495px;left:672px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:495px;left:680px;white-space:nowrap" class="ft07">js</p>
+<p style="position:absolute;top:495px;left:696px;white-space:nowrap" class="ft05">&#160;\</p>
+<p style="position:absolute;top:513px;left:48px;white-space:nowrap" class="ft06">--</p>
+<p style="position:absolute;top:513px;left:64px;white-space:nowrap" class="ft05">bundle</p>
+<p style="position:absolute;top:513px;left:113px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:513px;left:121px;white-space:nowrap" class="ft05">output android</p>
+<p style="position:absolute;top:513px;left:234px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:513px;left:243px;white-space:nowrap" class="ft05">app</p>
+<p style="position:absolute;top:513px;left:267px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:513px;left:275px;white-space:nowrap" class="ft05">src</p>
+<p style="position:absolute;top:513px;left:299px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:513px;left:307px;white-space:nowrap" class="ft05">main</p>
+<p style="position:absolute;top:513px;left:340px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:513px;left:348px;white-space:nowrap" class="ft05">assets</p>
+<p style="position:absolute;top:513px;left:396px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:513px;left:405px;white-space:nowrap" class="ft05">index.</p>
+<p style="position:absolute;top:513px;left:453px;white-space:nowrap" class="ft07">android</p>
+<p style="position:absolute;top:513px;left:510px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:513px;left:518px;white-space:nowrap" class="ft07">bundle</p>
+<p style="position:absolute;top:513px;left:567px;white-space:nowrap" class="ft05">&#160;\</p>
+<p style="position:absolute;top:532px;left:48px;white-space:nowrap" class="ft06">--</p>
+<p style="position:absolute;top:532px;left:64px;white-space:nowrap" class="ft05">assets</p>
+<p style="position:absolute;top:532px;left:113px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:532px;left:121px;white-space:nowrap" class="ft05">dest android</p>
+<p style="position:absolute;top:532px;left:218px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:532px;left:226px;white-space:nowrap" class="ft05">app</p>
+<p style="position:absolute;top:532px;left:251px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:532px;left:259px;white-space:nowrap" class="ft05">src</p>
+<p style="position:absolute;top:532px;left:283px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:532px;left:291px;white-space:nowrap" class="ft05">main</p>
+<p style="position:absolute;top:532px;left:324px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:532px;left:332px;white-space:nowrap" class="ft05">res</p>
+<p style="position:absolute;top:532px;left:356px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:570px;left:43px;white-space:nowrap" class="ft04"><b>Section 28.3: Generate the build using gradle</b></p>
+<p style="position:absolute;top:626px;left:48px;white-space:nowrap" class="ft011"><b>cd</b></p>
+<p style="position:absolute;top:626px;left:64px;white-space:nowrap" class="ft05">&#160;android&#160;</p>
+<p style="position:absolute;top:626px;left:137px;white-space:nowrap" class="ft012"><b>&amp;&amp;</b></p>
+<p style="position:absolute;top:626px;left:153px;white-space:nowrap" class="ft05">&#160;.</p>
+<p style="position:absolute;top:626px;left:170px;white-space:nowrap" class="ft012"><b>/</b></p>
+<p style="position:absolute;top:626px;left:178px;white-space:nowrap" class="ft05">gradlew assembleRelease</p>
+<p style="position:absolute;top:665px;left:43px;white-space:nowrap" class="ft04"><b>Section 28.4: Upload or share the generated APK</b></p>
+<p style="position:absolute;top:715px;left:43px;white-space:nowrap" class="ft02">Upload the APK to your phone. The -r ﬂag will replace the existing app (if it exists)</p>
+<p style="position:absolute;top:760px;left:48px;white-space:nowrap" class="ft05">adb install&#160;</p>
+<p style="position:absolute;top:760px;left:145px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:760px;left:153px;white-space:nowrap" class="ft05">r .</p>
+<p style="position:absolute;top:760px;left:178px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:760px;left:186px;white-space:nowrap" class="ft05">app</p>
+<p style="position:absolute;top:760px;left:210px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:760px;left:218px;white-space:nowrap" class="ft05">build</p>
+<p style="position:absolute;top:760px;left:259px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:760px;left:267px;white-space:nowrap" class="ft05">outputs</p>
+<p style="position:absolute;top:760px;left:324px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:760px;left:332px;white-space:nowrap" class="ft05">apk</p>
+<p style="position:absolute;top:760px;left:356px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:760px;left:364px;white-space:nowrap" class="ft05">app</p>
+<p style="position:absolute;top:760px;left:388px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:760px;left:396px;white-space:nowrap" class="ft05">release</p>
+<p style="position:absolute;top:760px;left:453px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:760px;left:461px;white-space:nowrap" class="ft05">unsigned.</p>
+<p style="position:absolute;top:760px;left:534px;white-space:nowrap" class="ft07">apk</p>
+<p style="position:absolute;top:801px;left:43px;white-space:nowrap" class="ft02">The shareable signed APK is located at:</p>
+<p style="position:absolute;top:846px;left:48px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:846px;left:56px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:846px;left:64px;white-space:nowrap" class="ft05">app</p>
+<p style="position:absolute;top:846px;left:89px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:846px;left:97px;white-space:nowrap" class="ft05">build</p>
+<p style="position:absolute;top:846px;left:137px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:846px;left:145px;white-space:nowrap" class="ft05">outputs</p>
+<p style="position:absolute;top:846px;left:202px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:846px;left:210px;white-space:nowrap" class="ft05">apk</p>
+<p style="position:absolute;top:846px;left:234px;white-space:nowrap" class="ft06">/</p>
+<p style="position:absolute;top:846px;left:243px;white-space:nowrap" class="ft05">app</p>
+<p style="position:absolute;top:846px;left:267px;white-space:nowrap" class="ft06">-</p>
+<p style="position:absolute;top:846px;left:275px;white-space:nowrap" class="ft05">release.</p>
+<p style="position:absolute;top:846px;left:340px;white-space:nowrap" class="ft07">apk</p>
+</div>
+</body>
+</html>

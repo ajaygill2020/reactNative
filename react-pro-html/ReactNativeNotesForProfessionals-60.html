@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 60</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft03{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft06{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#cc0000;}
+	.ft09{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft010{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page60-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals060.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:831px;white-space:nowrap" class="ft00">56</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 19: Animation API</b></p>
+<p style="position:absolute;top:99px;left:43px;white-space:nowrap" class="ft02"><b>Section 19.1: Animate an Image</b></p>
+<p style="position:absolute;top:155px;left:48px;white-space:nowrap" class="ft03">class</p>
+<p style="position:absolute;top:155px;left:89px;white-space:nowrap" class="ft04">&#160;AnimatedImage&#160;</p>
+<p style="position:absolute;top:155px;left:210px;white-space:nowrap" class="ft03">extends</p>
+<p style="position:absolute;top:155px;left:267px;white-space:nowrap" class="ft04">&#160;Component&#160;</p>
+<p style="position:absolute;top:155px;left:356px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:174px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; constructor</p>
+<p style="position:absolute;top:174px;left:170px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:174px;left:178px;white-space:nowrap" class="ft04">props</p>
+<p style="position:absolute;top:174px;left:218px;white-space:nowrap" class="ft05">){</p>
+<p style="position:absolute;top:192px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:192px;left:113px;white-space:nowrap" class="ft03">super</p>
+<p style="position:absolute;top:192px;left:153px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:192px;left:162px;white-space:nowrap" class="ft04">props</p>
+<p style="position:absolute;top:192px;left:202px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:210px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:210px;left:113px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:210px;left:145px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:210px;left:153px;white-space:nowrap" class="ft07">state</p>
+<p style="position:absolute;top:210px;left:194px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:210px;left:202px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:210px;left:210px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:210px;left:218px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:229px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; &#160; &#160; logoMarginTop</p>
+<p style="position:absolute;top:229px;left:251px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:229px;left:259px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:229px;left:267px;white-space:nowrap" class="ft06"><b>new</b></p>
+<p style="position:absolute;top:229px;left:291px;white-space:nowrap" class="ft04">&#160;Animated.</p>
+<p style="position:absolute;top:229px;left:372px;white-space:nowrap" class="ft07">Value</p>
+<p style="position:absolute;top:229px;left:413px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:229px;left:421px;white-space:nowrap" class="ft08">200</p>
+<p style="position:absolute;top:229px;left:445px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:247px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:247px;left:113px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:266px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:266px;left:81px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:284px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; componentDidMount</p>
+<p style="position:absolute;top:284px;left:218px;white-space:nowrap" class="ft05">(){</p>
+<p style="position:absolute;top:303px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; Animated.</p>
+<p style="position:absolute;top:303px;left:186px;white-space:nowrap" class="ft07">timing</p>
+<p style="position:absolute;top:303px;left:234px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:321px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:321px;left:145px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:321px;left:178px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:321px;left:186px;white-space:nowrap" class="ft07">state</p>
+<p style="position:absolute;top:321px;left:226px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:321px;left:234px;white-space:nowrap" class="ft07">logoMarginTop</p>
+<p style="position:absolute;top:321px;left:340px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:340px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:340px;left:145px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:340px;left:153px;white-space:nowrap" class="ft04">&#160;toValue</p>
+<p style="position:absolute;top:340px;left:218px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:340px;left:226px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:340px;left:234px;white-space:nowrap" class="ft08">100</p>
+<p style="position:absolute;top:340px;left:259px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:340px;left:267px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:358px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:358px;left:113px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:358px;left:121px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:358px;left:129px;white-space:nowrap" class="ft07">start</p>
+<p style="position:absolute;top:358px;left:170px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:377px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:377px;left:81px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:395px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; render&#160;</p>
+<p style="position:absolute;top:395px;left:137px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:395px;left:153px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:395px;left:162px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:414px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:414px;left:97px;white-space:nowrap" class="ft06"><b>return</b></p>
+<p style="position:absolute;top:414px;left:145px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:414px;left:153px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:432px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:432px;left:113px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:432px;left:121px;white-space:nowrap" class="ft04">View</p>
+<p style="position:absolute;top:432px;left:153px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:451px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; &#160; &#160;</p>
+<p style="position:absolute;top:451px;left:137px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:451px;left:145px;white-space:nowrap" class="ft04">Animated.</p>
+<p style="position:absolute;top:451px;left:218px;white-space:nowrap" class="ft07">Image</p>
+<p style="position:absolute;top:451px;left:259px;white-space:nowrap" class="ft04">&#160;source</p>
+<p style="position:absolute;top:451px;left:315px;white-space:nowrap" class="ft05">={</p>
+<p style="position:absolute;top:451px;left:332px;white-space:nowrap" class="ft04">require</p>
+<p style="position:absolute;top:451px;left:388px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:451px;left:396px;white-space:nowrap" class="ft09">'../images/Logo.png'</p>
+<p style="position:absolute;top:451px;left:558px;white-space:nowrap" class="ft05">)}</p>
+<p style="position:absolute;top:451px;left:575px;white-space:nowrap" class="ft04">&#160;style</p>
+<p style="position:absolute;top:451px;left:623px;white-space:nowrap" class="ft05">={[</p>
+<p style="position:absolute;top:451px;left:648px;white-space:nowrap" class="ft04">baseStyles.</p>
+<p style="position:absolute;top:451px;left:737px;white-space:nowrap" class="ft07">logo</p>
+<p style="position:absolute;top:451px;left:769px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:451px;left:777px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:451px;left:785px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:469px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; &#160; &#160; &#160; marginTop</p>
+<p style="position:absolute;top:469px;left:234px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:469px;left:243px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:469px;left:251px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:469px;left:283px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:469px;left:291px;white-space:nowrap" class="ft07">state</p>
+<p style="position:absolute;top:469px;left:332px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:469px;left:340px;white-space:nowrap" class="ft07">logoMarginTop</p>
+<p style="position:absolute;top:487px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; &#160; &#160;</p>
+<p style="position:absolute;top:487px;left:137px;white-space:nowrap" class="ft05">}]}</p>
+<p style="position:absolute;top:487px;left:162px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:487px;left:170px;white-space:nowrap" class="ft05">/&gt;</p>
+<p style="position:absolute;top:506px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:506px;left:113px;white-space:nowrap" class="ft05">&lt;/</p>
+<p style="position:absolute;top:506px;left:129px;white-space:nowrap" class="ft04">View</p>
+<p style="position:absolute;top:506px;left:162px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:524px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:524px;left:97px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:543px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:543px;left:81px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:561px;left:48px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:602px;left:43px;white-space:nowrap" class="ft010">This example is animating the image position by changing the margin.</p>
+</div>
+</body>
+</html>

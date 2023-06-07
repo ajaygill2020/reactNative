@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 53</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft03{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft09{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft010{font-size:13px;font-family:AQBTGV+RobotoMono;color:#cc0000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page53-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals053.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">49</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 16: Platform Module</b></p>
+<p style="position:absolute;top:99px;left:43px;white-space:nowrap" class="ft02"><b>Section 16.1: Find the OS Type/Version</b></p>
+<p style="position:absolute;top:150px;left:43px;white-space:nowrap" class="ft03">The ﬁrst step is to import Platform from the 'react-native' package like so:</p>
+<p style="position:absolute;top:194px;left:48px;white-space:nowrap" class="ft04">import</p>
+<p style="position:absolute;top:194px;left:97px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:194px;left:105px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:194px;left:113px;white-space:nowrap" class="ft05">&#160;Platform&#160;</p>
+<p style="position:absolute;top:194px;left:194px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:194px;left:202px;white-space:nowrap" class="ft05">&#160;from&#160;</p>
+<p style="position:absolute;top:194px;left:251px;white-space:nowrap" class="ft07">'react-native'</p>
+<p style="position:absolute;top:236px;left:43px;white-space:nowrap" class="ft03">After you've done that, you can go ahead and access the OS type through&#160;</p>
+<p style="position:absolute;top:238px;left:557px;white-space:nowrap" class="ft05">Platform.</p>
+<p style="position:absolute;top:238px;left:630px;white-space:nowrap" class="ft08">OS</p>
+<p style="position:absolute;top:236px;left:646px;white-space:nowrap" class="ft03">&#160;allowing you to use it in</p>
+<p style="position:absolute;top:258px;left:43px;white-space:nowrap" class="ft03">conditional statements like</p>
+<p style="position:absolute;top:303px;left:48px;white-space:nowrap" class="ft09"><b>const</b></p>
+<p style="position:absolute;top:303px;left:89px;white-space:nowrap" class="ft05">&#160;styles&#160;</p>
+<p style="position:absolute;top:303px;left:153px;white-space:nowrap" class="ft06">=</p>
+<p style="position:absolute;top:303px;left:162px;white-space:nowrap" class="ft05">&#160;StyleSheet.</p>
+<p style="position:absolute;top:303px;left:259px;white-space:nowrap" class="ft08">create</p>
+<p style="position:absolute;top:303px;left:307px;white-space:nowrap" class="ft06">({</p>
+<p style="position:absolute;top:321px;left:48px;white-space:nowrap" class="ft05">&#160; height</p>
+<p style="position:absolute;top:321px;left:113px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:321px;left:121px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:321px;left:129px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:321px;left:137px;white-space:nowrap" class="ft05">Platform.</p>
+<p style="position:absolute;top:321px;left:210px;white-space:nowrap" class="ft08">OS</p>
+<p style="position:absolute;top:321px;left:226px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:321px;left:234px;white-space:nowrap" class="ft06">===</p>
+<p style="position:absolute;top:321px;left:259px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:321px;left:267px;white-space:nowrap" class="ft07">'ios'</p>
+<p style="position:absolute;top:321px;left:307px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:321px;left:315px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:321px;left:324px;white-space:nowrap" class="ft06">?</p>
+<p style="position:absolute;top:321px;left:332px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:321px;left:340px;white-space:nowrap" class="ft010">200</p>
+<p style="position:absolute;top:321px;left:364px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:321px;left:372px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:321px;left:380px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:321px;left:388px;white-space:nowrap" class="ft010">100</p>
+<p style="position:absolute;top:321px;left:413px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:340px;left:48px;white-space:nowrap" class="ft06">})</p>
+<p style="position:absolute;top:381px;left:43px;white-space:nowrap" class="ft03">If you want to detect the Android version, you can use&#160;</p>
+<p style="position:absolute;top:384px;left:422px;white-space:nowrap" class="ft05">Platform.</p>
+<p style="position:absolute;top:384px;left:495px;white-space:nowrap" class="ft08">Version</p>
+<p style="position:absolute;top:381px;left:552px;white-space:nowrap" class="ft03">&#160;like so:</p>
+<p style="position:absolute;top:426px;left:48px;white-space:nowrap" class="ft09"><b>if</b></p>
+<p style="position:absolute;top:426px;left:64px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:426px;left:72px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:426px;left:81px;white-space:nowrap" class="ft05">Platform.</p>
+<p style="position:absolute;top:426px;left:153px;white-space:nowrap" class="ft08">Version</p>
+<p style="position:absolute;top:426px;left:210px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:426px;left:218px;white-space:nowrap" class="ft06">===</p>
+<p style="position:absolute;top:426px;left:243px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:426px;left:251px;white-space:nowrap" class="ft010">21</p>
+<p style="position:absolute;top:426px;left:267px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:426px;left:275px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:426px;left:283px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:444px;left:48px;white-space:nowrap" class="ft05">&#160; console.</p>
+<p style="position:absolute;top:444px;left:129px;white-space:nowrap" class="ft08">log</p>
+<p style="position:absolute;top:444px;left:153px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:444px;left:162px;white-space:nowrap" class="ft07">'Running on Lollipop!'</p>
+<p style="position:absolute;top:444px;left:340px;white-space:nowrap" class="ft06">);</p>
+<p style="position:absolute;top:463px;left:48px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:504px;left:43px;white-space:nowrap" class="ft03">For iOS, Platform.Version is returning a String, for complex condition don't forget to parse it.</p>
+<p style="position:absolute;top:548px;left:48px;white-space:nowrap" class="ft09"><b>if</b></p>
+<p style="position:absolute;top:548px;left:64px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:548px;left:72px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:548px;left:81px;white-space:nowrap" class="ft05">parseInt</p>
+<p style="position:absolute;top:548px;left:145px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:548px;left:153px;white-space:nowrap" class="ft05">Platform.</p>
+<p style="position:absolute;top:548px;left:226px;white-space:nowrap" class="ft08">Version</p>
+<p style="position:absolute;top:548px;left:283px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:548px;left:291px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:548px;left:299px;white-space:nowrap" class="ft010">10</p>
+<p style="position:absolute;top:548px;left:315px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:548px;left:324px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:548px;left:332px;white-space:nowrap" class="ft06">&gt;=</p>
+<p style="position:absolute;top:548px;left:348px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:548px;left:356px;white-space:nowrap" class="ft010">9</p>
+<p style="position:absolute;top:548px;left:364px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:548px;left:372px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:548px;left:380px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:567px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; console.</p>
+<p style="position:absolute;top:567px;left:145px;white-space:nowrap" class="ft08">log</p>
+<p style="position:absolute;top:567px;left:170px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:567px;left:178px;white-space:nowrap" class="ft07">'Running version higher than 8'</p>
+<p style="position:absolute;top:567px;left:429px;white-space:nowrap" class="ft06">);</p>
+<p style="position:absolute;top:585px;left:48px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:627px;left:43px;white-space:nowrap" class="ft03">If the platform speciﬁc logic is complex, one can render two diﬀerent ﬁles based on platform. Ex:</p>
+<p style="position:absolute;top:669px;left:88px;white-space:nowrap" class="ft05">MyTask.</p>
+<p style="position:absolute;top:669px;left:144px;white-space:nowrap" class="ft08">android</p>
+<p style="position:absolute;top:669px;left:201px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:669px;left:209px;white-space:nowrap" class="ft08">js</p>
+<p style="position:absolute;top:691px;left:88px;white-space:nowrap" class="ft05">MyTask.</p>
+<p style="position:absolute;top:691px;left:144px;white-space:nowrap" class="ft08">ios</p>
+<p style="position:absolute;top:691px;left:169px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:691px;left:177px;white-space:nowrap" class="ft08">js</p>
+<p style="position:absolute;top:728px;left:43px;white-space:nowrap" class="ft03">and require it using</p>
+<p style="position:absolute;top:773px;left:48px;white-space:nowrap" class="ft09"><b>const</b></p>
+<p style="position:absolute;top:773px;left:89px;white-space:nowrap" class="ft05">&#160;MyTask&#160;</p>
+<p style="position:absolute;top:773px;left:153px;white-space:nowrap" class="ft06">=</p>
+<p style="position:absolute;top:773px;left:162px;white-space:nowrap" class="ft05">&#160;require</p>
+<p style="position:absolute;top:773px;left:226px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:773px;left:234px;white-space:nowrap" class="ft07">'./MyTask'</p>
+<p style="position:absolute;top:773px;left:315px;white-space:nowrap" class="ft06">)</p>
+</div>
+</body>
+</html>

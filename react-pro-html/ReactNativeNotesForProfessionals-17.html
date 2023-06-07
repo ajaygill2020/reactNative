@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 17</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft08{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft09{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft010{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+	.ft011{font-size:13px;font-family:AOAEKO+RobotoMono;color:#006600;}
+	.ft012{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft013{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page17-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals017.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:834px;white-space:nowrap" class="ft00">13</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 3: Props</b></p>
+<p style="position:absolute;top:105px;left:43px;white-space:nowrap" class="ft013">Props, or properties, are data that is passed to child components in a React application. React components render<br/>UI elements based on their props and their internal state. The props that a component takes (and uses) deﬁnes<br/>how it can be controlled from the outside.</p>
+<p style="position:absolute;top:187px;left:43px;white-space:nowrap" class="ft03"><b>Section 3.1: PropTypes</b></p>
+<p style="position:absolute;top:238px;left:43px;white-space:nowrap" class="ft02">The&#160;</p>
+<p style="position:absolute;top:240px;left:72px;white-space:nowrap" class="ft04">prop</p>
+<p style="position:absolute;top:240px;left:105px;white-space:nowrap" class="ft05">-</p>
+<p style="position:absolute;top:240px;left:113px;white-space:nowrap" class="ft04">types</p>
+<p style="position:absolute;top:238px;left:153px;white-space:nowrap" class="ft02">&#160;package allows you to add runtime type checking to your component that ensures the types of the</p>
+<p style="position:absolute;top:260px;left:43px;white-space:nowrap" class="ft02">props passed to the component are correct. For instance, if you don't pass a&#160;</p>
+<p style="position:absolute;top:263px;left:577px;white-space:nowrap" class="ft04">name</p>
+<p style="position:absolute;top:260px;left:610px;white-space:nowrap" class="ft02">&#160;or&#160;</p>
+<p style="position:absolute;top:263px;left:633px;white-space:nowrap" class="ft04">isYummy</p>
+<p style="position:absolute;top:260px;left:689px;white-space:nowrap" class="ft02">&#160;prop to the</p>
+<p style="position:absolute;top:283px;left:43px;white-space:nowrap" class="ft013">component below it will throw an error in development mode. In production mode the prop type checks are not<br/>done. Deﬁning&#160;</p>
+<p style="position:absolute;top:308px;left:149px;white-space:nowrap" class="ft04">propTypes</p>
+<p style="position:absolute;top:305px;left:222px;white-space:nowrap" class="ft02">&#160;can make your component more readable and maintainable.</p>
+<p style="position:absolute;top:350px;left:48px;white-space:nowrap" class="ft06">import</p>
+<p style="position:absolute;top:350px;left:97px;white-space:nowrap" class="ft04">&#160;React</p>
+<p style="position:absolute;top:350px;left:145px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:350px;left:153px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:350px;left:162px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:350px;left:170px;white-space:nowrap" class="ft04">&#160;Component&#160;</p>
+<p style="position:absolute;top:350px;left:259px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:350px;left:267px;white-space:nowrap" class="ft04">&#160;from&#160;</p>
+<p style="position:absolute;top:350px;left:315px;white-space:nowrap" class="ft07">'react'</p>
+<p style="position:absolute;top:350px;left:372px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:368px;left:48px;white-space:nowrap" class="ft06">import</p>
+<p style="position:absolute;top:368px;left:97px;white-space:nowrap" class="ft04">&#160;PropTypes from&#160;</p>
+<p style="position:absolute;top:368px;left:226px;white-space:nowrap" class="ft07">'prop-types'</p>
+<p style="position:absolute;top:368px;left:324px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:387px;left:48px;white-space:nowrap" class="ft06">import</p>
+<p style="position:absolute;top:387px;left:97px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:387px;left:105px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:387px;left:113px;white-space:nowrap" class="ft04">&#160;AppRegistry</p>
+<p style="position:absolute;top:387px;left:210px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:387px;left:218px;white-space:nowrap" class="ft04">&#160;Text</p>
+<p style="position:absolute;top:387px;left:259px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:387px;left:267px;white-space:nowrap" class="ft04">&#160;View&#160;</p>
+<p style="position:absolute;top:387px;left:315px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:387px;left:324px;white-space:nowrap" class="ft04">&#160;from&#160;</p>
+<p style="position:absolute;top:387px;left:372px;white-space:nowrap" class="ft07">'react-native'</p>
+<p style="position:absolute;top:387px;left:486px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:424px;left:48px;white-space:nowrap" class="ft06">import</p>
+<p style="position:absolute;top:424px;left:97px;white-space:nowrap" class="ft04">&#160;styles from&#160;</p>
+<p style="position:absolute;top:424px;left:202px;white-space:nowrap" class="ft07">'./styles.js'</p>
+<p style="position:absolute;top:424px;left:307px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:461px;left:48px;white-space:nowrap" class="ft06">class</p>
+<p style="position:absolute;top:461px;left:89px;white-space:nowrap" class="ft04">&#160;Recipe&#160;</p>
+<p style="position:absolute;top:461px;left:153px;white-space:nowrap" class="ft06">extends</p>
+<p style="position:absolute;top:461px;left:210px;white-space:nowrap" class="ft04">&#160;Component&#160;</p>
+<p style="position:absolute;top:461px;left:299px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:479px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:479px;left:64px;white-space:nowrap" class="ft08"><b>static</b></p>
+<p style="position:absolute;top:479px;left:113px;white-space:nowrap" class="ft04">&#160;propTypes&#160;</p>
+<p style="position:absolute;top:479px;left:202px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:479px;left:210px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:479px;left:218px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:498px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; name</p>
+<p style="position:absolute;top:498px;left:113px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:498px;left:121px;white-space:nowrap" class="ft04">&#160;PropTypes.</p>
+<p style="position:absolute;top:498px;left:210px;white-space:nowrap" class="ft09">string</p>
+<p style="position:absolute;top:498px;left:259px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:498px;left:267px;white-space:nowrap" class="ft09">isRequired</p>
+<p style="position:absolute;top:498px;left:348px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:516px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; isYummy</p>
+<p style="position:absolute;top:516px;left:137px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:516px;left:145px;white-space:nowrap" class="ft04">&#160;PropTypes.</p>
+<p style="position:absolute;top:516px;left:234px;white-space:nowrap" class="ft09">bool</p>
+<p style="position:absolute;top:516px;left:267px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:516px;left:275px;white-space:nowrap" class="ft09">isRequired</p>
+<p style="position:absolute;top:535px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:535px;left:64px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:553px;left:48px;white-space:nowrap" class="ft04">&#160; render</p>
+<p style="position:absolute;top:553px;left:113px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:553px;left:129px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:553px;left:137px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:572px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:572px;left:81px;white-space:nowrap" class="ft08"><b>return</b></p>
+<p style="position:absolute;top:572px;left:129px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:572px;left:137px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:590px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:590px;left:97px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:590px;left:105px;white-space:nowrap" class="ft04">View style</p>
+<p style="position:absolute;top:590px;left:186px;white-space:nowrap" class="ft05">={</p>
+<p style="position:absolute;top:590px;left:202px;white-space:nowrap" class="ft04">styles.</p>
+<p style="position:absolute;top:590px;left:259px;white-space:nowrap" class="ft09">container</p>
+<p style="position:absolute;top:590px;left:332px;white-space:nowrap" class="ft05">}&gt;</p>
+<p style="position:absolute;top:609px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:609px;left:113px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:609px;left:121px;white-space:nowrap" class="ft04">Text</p>
+<p style="position:absolute;top:609px;left:153px;white-space:nowrap" class="ft05">&gt;{</p>
+<p style="position:absolute;top:609px;left:170px;white-space:nowrap" class="ft08"><b>this</b></p>
+<p style="position:absolute;top:609px;left:202px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:609px;left:210px;white-space:nowrap" class="ft09">props</p>
+<p style="position:absolute;top:609px;left:251px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:609px;left:259px;white-space:nowrap" class="ft09">name</p>
+<p style="position:absolute;top:609px;left:291px;white-space:nowrap" class="ft05">}&lt;/</p>
+<p style="position:absolute;top:609px;left:315px;white-space:nowrap" class="ft04">Text</p>
+<p style="position:absolute;top:609px;left:348px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:627px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:627px;left:113px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:627px;left:121px;white-space:nowrap" class="ft08"><b>this</b></p>
+<p style="position:absolute;top:627px;left:153px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:627px;left:162px;white-space:nowrap" class="ft09">props</p>
+<p style="position:absolute;top:627px;left:202px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:627px;left:210px;white-space:nowrap" class="ft09">isYummy</p>
+<p style="position:absolute;top:627px;left:267px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:627px;left:275px;white-space:nowrap" class="ft05">?</p>
+<p style="position:absolute;top:627px;left:283px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:627px;left:291px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:627px;left:299px;white-space:nowrap" class="ft04">Text</p>
+<p style="position:absolute;top:627px;left:332px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:627px;left:340px;white-space:nowrap" class="ft04">THIS RECIPE IS YUMMY</p>
+<p style="position:absolute;top:627px;left:502px;white-space:nowrap" class="ft05">&lt;/</p>
+<p style="position:absolute;top:627px;left:518px;white-space:nowrap" class="ft04">Text</p>
+<p style="position:absolute;top:627px;left:550px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:627px;left:558px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:627px;left:567px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:627px;left:575px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:627px;left:583px;white-space:nowrap" class="ft010"><b>null</b></p>
+<p style="position:absolute;top:627px;left:615px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:645px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:645px;left:97px;white-space:nowrap" class="ft05">&lt;/</p>
+<p style="position:absolute;top:645px;left:113px;white-space:nowrap" class="ft04">View</p>
+<p style="position:absolute;top:645px;left:145px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:664px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:664px;left:81px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:682px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:682px;left:64px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:701px;left:48px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:738px;left:48px;white-space:nowrap" class="ft04">AppRegistry.</p>
+<p style="position:absolute;top:738px;left:145px;white-space:nowrap" class="ft09">registerComponent</p>
+<p style="position:absolute;top:738px;left:283px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:738px;left:291px;white-space:nowrap" class="ft07">'Recipe'</p>
+<p style="position:absolute;top:738px;left:356px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:738px;left:364px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:738px;left:372px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:738px;left:388px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:738px;left:396px;white-space:nowrap" class="ft05">=&gt;</p>
+<p style="position:absolute;top:738px;left:413px;white-space:nowrap" class="ft04">&#160;Recipe</p>
+<p style="position:absolute;top:738px;left:469px;white-space:nowrap" class="ft05">);</p>
+<p style="position:absolute;top:793px;left:48px;white-space:nowrap" class="ft011"><i>// Using the component</i></p>
+<p style="position:absolute;top:812px;left:48px;white-space:nowrap" class="ft05">&lt;</p>
+<p style="position:absolute;top:812px;left:56px;white-space:nowrap" class="ft04">Recipe name</p>
+<p style="position:absolute;top:812px;left:145px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:812px;left:153px;white-space:nowrap" class="ft07">&#34;Pancakes&#34;</p>
+<p style="position:absolute;top:812px;left:234px;white-space:nowrap" class="ft04">&#160;isYummy</p>
+<p style="position:absolute;top:812px;left:299px;white-space:nowrap" class="ft05">={</p>
+<p style="position:absolute;top:812px;left:315px;white-space:nowrap" class="ft010"><b>true</b></p>
+<p style="position:absolute;top:812px;left:348px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:812px;left:356px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:812px;left:364px;white-space:nowrap" class="ft05">/&gt;</p>
+<p style="position:absolute;top:853px;left:43px;white-space:nowrap" class="ft012"><b>Multiple PropTypes</b></p>
+<p style="position:absolute;top:893px;left:43px;white-space:nowrap" class="ft02">You can also have multiple&#160;</p>
+<p style="position:absolute;top:896px;left:233px;white-space:nowrap" class="ft04">propTypes</p>
+<p style="position:absolute;top:893px;left:306px;white-space:nowrap" class="ft02">&#160;for one props. For example, the name props I'm taking can also be an object,</p>
+<p style="position:absolute;top:915px;left:43px;white-space:nowrap" class="ft02">I can write it as.</p>
+<p style="position:absolute;top:960px;left:48px;white-space:nowrap" class="ft08"><b>static</b></p>
+<p style="position:absolute;top:960px;left:97px;white-space:nowrap" class="ft04">&#160;propTypes&#160;</p>
+<p style="position:absolute;top:960px;left:186px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:960px;left:194px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:960px;left:202px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:979px;left:48px;white-space:nowrap" class="ft04">&#160; name</p>
+<p style="position:absolute;top:979px;left:97px;white-space:nowrap" class="ft05">:</p>
+<p style="position:absolute;top:979px;left:105px;white-space:nowrap" class="ft04">&#160;PropTypes.</p>
+<p style="position:absolute;top:979px;left:194px;white-space:nowrap" class="ft09">oneOfType</p>
+<p style="position:absolute;top:979px;left:267px;white-space:nowrap" class="ft05">([</p>
+<p style="position:absolute;top:997px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; PropTypes.</p>
+<p style="position:absolute;top:997px;left:178px;white-space:nowrap" class="ft09">string</p>
+<p style="position:absolute;top:997px;left:226px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:1016px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; PropTypes.</p>
+<p style="position:absolute;top:1016px;left:178px;white-space:nowrap" class="ft09">object</p>
+<p style="position:absolute;top:1034px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:1034px;left:64px;white-space:nowrap" class="ft05">])</p>
+<p style="position:absolute;top:1053px;left:48px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:1094px;left:43px;white-space:nowrap" class="ft012"><b>Children Props</b></p>
+<p style="position:absolute;top:1134px;left:43px;white-space:nowrap" class="ft02">There is also a special props called&#160;</p>
+<p style="position:absolute;top:1137px;left:287px;white-space:nowrap" class="ft04">children</p>
+<p style="position:absolute;top:1134px;left:352px;white-space:nowrap" class="ft02">, which is&#160;</p>
+<p style="position:absolute;top:1134px;left:419px;white-space:nowrap" class="ft012"><b>not</b></p>
+<p style="position:absolute;top:1134px;left:445px;white-space:nowrap" class="ft02">&#160;passed in like</p>
+</div>
+</body>
+</html>

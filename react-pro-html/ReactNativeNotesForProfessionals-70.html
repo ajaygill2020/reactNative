@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 70</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:13px;font-family:AOAEKO+RobotoMono;color:#006600;}
+	.ft03{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft08{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft09{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft010{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft011{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft012{font-size:13px;line-height:18px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft013{font-size:13px;line-height:18px;font-family:AQBTGV+RobotoMono;color:#666666;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page70-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals070.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:831px;white-space:nowrap" class="ft00">66</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 25: Integration with Firebase for</b></p>
+<p style="position:absolute;top:71px;left:43px;white-space:nowrap" class="ft01"><b>Authentication</b></p>
+<p style="position:absolute;top:158px;left:48px;white-space:nowrap" class="ft02"><i>//Replace firebase values with your app API values</i></p>
+<p style="position:absolute;top:177px;left:48px;white-space:nowrap" class="ft03">import</p>
+<p style="position:absolute;top:177px;left:97px;white-space:nowrap" class="ft04">&#160;firebase from&#160;</p>
+<p style="position:absolute;top:177px;left:218px;white-space:nowrap" class="ft05">'firebase'</p>
+<p style="position:absolute;top:177px;left:299px;white-space:nowrap" class="ft06">;</p>
+<p style="position:absolute;top:214px;left:48px;white-space:nowrap" class="ft04">componentWillMount</p>
+<p style="position:absolute;top:214px;left:194px;white-space:nowrap" class="ft06">()</p>
+<p style="position:absolute;top:214px;left:210px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:214px;left:218px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:251px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; firebase.</p>
+<p style="position:absolute;top:251px;left:153px;white-space:nowrap" class="ft07">initializeApp</p>
+<p style="position:absolute;top:251px;left:259px;white-space:nowrap" class="ft06">({</p>
+<p style="position:absolute;top:269px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; apiKey</p>
+<p style="position:absolute;top:269px;left:162px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:269px;left:170px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:269px;left:178px;white-space:nowrap" class="ft05">&#34;yourAPIKey&#34;</p>
+<p style="position:absolute;top:269px;left:275px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:288px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; authDomain</p>
+<p style="position:absolute;top:288px;left:194px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:288px;left:202px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:288px;left:210px;white-space:nowrap" class="ft05">&#34;authDomainNAme&#34;</p>
+<p style="position:absolute;top:288px;left:340px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:306px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; databaseURL</p>
+<p style="position:absolute;top:306px;left:202px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:306px;left:210px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:306px;left:218px;white-space:nowrap" class="ft05">&#34;yourDomainBaseURL&#34;</p>
+<p style="position:absolute;top:306px;left:372px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:325px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; projectId</p>
+<p style="position:absolute;top:325px;left:186px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:325px;left:194px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:325px;left:202px;white-space:nowrap" class="ft05">&#34;yourProjectID&#34;</p>
+<p style="position:absolute;top:325px;left:324px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:343px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; storageBucket</p>
+<p style="position:absolute;top:343px;left:218px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:343px;left:226px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:343px;left:234px;white-space:nowrap" class="ft05">&#34;storageBUcketValue&#34;</p>
+<p style="position:absolute;top:343px;left:396px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:362px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; messagingSenderId</p>
+<p style="position:absolute;top:362px;left:251px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:362px;left:259px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:362px;left:267px;white-space:nowrap" class="ft05">&#34;senderIdValue&#34;</p>
+<p style="position:absolute;top:380px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:380px;left:81px;white-space:nowrap" class="ft06">});</p>
+<p style="position:absolute;top:399px;left:48px;white-space:nowrap" class="ft012">&#160; &#160; &#160; &#160;<br/>&#160; &#160; firebase.</p>
+<p style="position:absolute;top:417px;left:153px;white-space:nowrap" class="ft07">auth</p>
+<p style="position:absolute;top:417px;left:186px;white-space:nowrap" class="ft06">()</p>
+<p style="position:absolute;top:417px;left:202px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:417px;left:210px;white-space:nowrap" class="ft07">signInWithEmailAndPassword</p>
+<p style="position:absolute;top:417px;left:421px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:417px;left:429px;white-space:nowrap" class="ft04">email</p>
+<p style="position:absolute;top:417px;left:469px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:417px;left:477px;white-space:nowrap" class="ft04">&#160;password</p>
+<p style="position:absolute;top:417px;left:550px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:435px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; .</p>
+<p style="position:absolute;top:435px;left:89px;white-space:nowrap" class="ft07">then</p>
+<p style="position:absolute;top:435px;left:121px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:435px;left:129px;white-space:nowrap" class="ft08"><b>this</b></p>
+<p style="position:absolute;top:435px;left:162px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:435px;left:170px;white-space:nowrap" class="ft07">onLoginSuccess</p>
+<p style="position:absolute;top:435px;left:283px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:454px;left:48px;white-space:nowrap" class="ft013">})<br/>}</p>
+<p style="position:absolute;top:511px;left:43px;white-space:nowrap" class="ft09"><b>Section 25.1: Authentication In React Native Using Firebase</b></p>
+<p style="position:absolute;top:562px;left:43px;white-space:nowrap" class="ft010">Replace ﬁrebase values with your app api values:</p>
+<p style="position:absolute;top:606px;left:48px;white-space:nowrap" class="ft03">import</p>
+<p style="position:absolute;top:606px;left:97px;white-space:nowrap" class="ft04">&#160;firebase from&#160;</p>
+<p style="position:absolute;top:606px;left:218px;white-space:nowrap" class="ft05">'firebase'</p>
+<p style="position:absolute;top:606px;left:299px;white-space:nowrap" class="ft06">;</p>
+<p style="position:absolute;top:625px;left:48px;white-space:nowrap" class="ft04">componentWillMount</p>
+<p style="position:absolute;top:625px;left:194px;white-space:nowrap" class="ft06">()</p>
+<p style="position:absolute;top:625px;left:210px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:625px;left:218px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:643px;left:48px;white-space:nowrap" class="ft04">firebase.</p>
+<p style="position:absolute;top:643px;left:121px;white-space:nowrap" class="ft07">initializeApp</p>
+<p style="position:absolute;top:643px;left:226px;white-space:nowrap" class="ft06">({</p>
+<p style="position:absolute;top:662px;left:48px;white-space:nowrap" class="ft04">&#160; apiKey</p>
+<p style="position:absolute;top:662px;left:113px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:662px;left:121px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:662px;left:129px;white-space:nowrap" class="ft05">&#34;yourAPIKey&#34;</p>
+<p style="position:absolute;top:662px;left:226px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:680px;left:48px;white-space:nowrap" class="ft04">&#160; authDomain</p>
+<p style="position:absolute;top:680px;left:145px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:680px;left:153px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:680px;left:162px;white-space:nowrap" class="ft05">&#34;authDomainNAme&#34;</p>
+<p style="position:absolute;top:680px;left:291px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:699px;left:48px;white-space:nowrap" class="ft04">&#160; databaseURL</p>
+<p style="position:absolute;top:699px;left:153px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:699px;left:162px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:699px;left:170px;white-space:nowrap" class="ft05">&#34;yourDomainBaseURL&#34;</p>
+<p style="position:absolute;top:699px;left:324px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:717px;left:48px;white-space:nowrap" class="ft04">&#160; projectId</p>
+<p style="position:absolute;top:717px;left:137px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:717px;left:145px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:717px;left:153px;white-space:nowrap" class="ft05">&#34;yourProjectID&#34;</p>
+<p style="position:absolute;top:717px;left:275px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:736px;left:48px;white-space:nowrap" class="ft04">&#160; storageBucket</p>
+<p style="position:absolute;top:736px;left:170px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:736px;left:178px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:736px;left:186px;white-space:nowrap" class="ft05">&#34;storageBUcketValue&#34;</p>
+<p style="position:absolute;top:736px;left:348px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:754px;left:48px;white-space:nowrap" class="ft04">&#160; messagingSenderId</p>
+<p style="position:absolute;top:754px;left:202px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:754px;left:210px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:754px;left:218px;white-space:nowrap" class="ft05">&#34;senderIdValue&#34;</p>
+<p style="position:absolute;top:772px;left:48px;white-space:nowrap" class="ft06">});</p>
+<p style="position:absolute;top:791px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; firebase.</p>
+<p style="position:absolute;top:791px;left:153px;white-space:nowrap" class="ft07">auth</p>
+<p style="position:absolute;top:791px;left:186px;white-space:nowrap" class="ft06">()</p>
+<p style="position:absolute;top:791px;left:202px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:791px;left:210px;white-space:nowrap" class="ft07">signInWithEmailAndPassword</p>
+<p style="position:absolute;top:791px;left:421px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:791px;left:429px;white-space:nowrap" class="ft04">email</p>
+<p style="position:absolute;top:791px;left:469px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:791px;left:477px;white-space:nowrap" class="ft04">&#160;password</p>
+<p style="position:absolute;top:791px;left:550px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:809px;left:48px;white-space:nowrap" class="ft04">&#160; .</p>
+<p style="position:absolute;top:809px;left:72px;white-space:nowrap" class="ft07">then</p>
+<p style="position:absolute;top:809px;left:105px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:809px;left:113px;white-space:nowrap" class="ft08"><b>this</b></p>
+<p style="position:absolute;top:809px;left:145px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:809px;left:153px;white-space:nowrap" class="ft07">onLoginSuccess</p>
+<p style="position:absolute;top:809px;left:267px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:828px;left:48px;white-space:nowrap" class="ft04">&#160; .</p>
+<p style="position:absolute;top:828px;left:72px;white-space:nowrap" class="ft08"><b>catch</b></p>
+<p style="position:absolute;top:828px;left:113px;white-space:nowrap" class="ft06">(()</p>
+<p style="position:absolute;top:828px;left:137px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:828px;left:145px;white-space:nowrap" class="ft06">=&gt;</p>
+<p style="position:absolute;top:828px;left:162px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:828px;left:170px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:846px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; firebase.</p>
+<p style="position:absolute;top:846px;left:153px;white-space:nowrap" class="ft07">auth</p>
+<p style="position:absolute;top:846px;left:186px;white-space:nowrap" class="ft06">()</p>
+<p style="position:absolute;top:846px;left:202px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:846px;left:210px;white-space:nowrap" class="ft07">createUserWithEmailAndPassword</p>
+<p style="position:absolute;top:846px;left:453px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:846px;left:461px;white-space:nowrap" class="ft04">email</p>
+<p style="position:absolute;top:846px;left:502px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:846px;left:510px;white-space:nowrap" class="ft04">&#160;password</p>
+<p style="position:absolute;top:846px;left:583px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:865px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; .</p>
+<p style="position:absolute;top:865px;left:105px;white-space:nowrap" class="ft07">then</p>
+<p style="position:absolute;top:865px;left:137px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:865px;left:145px;white-space:nowrap" class="ft08"><b>this</b></p>
+<p style="position:absolute;top:865px;left:178px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:865px;left:186px;white-space:nowrap" class="ft07">onLoginSuccess</p>
+<p style="position:absolute;top:865px;left:299px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:883px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; .</p>
+<p style="position:absolute;top:883px;left:105px;white-space:nowrap" class="ft08"><b>catch</b></p>
+<p style="position:absolute;top:883px;left:145px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:883px;left:153px;white-space:nowrap" class="ft08"><b>this</b></p>
+<p style="position:absolute;top:883px;left:186px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:883px;left:194px;white-space:nowrap" class="ft07">onLoginFail</p>
+<p style="position:absolute;top:883px;left:283px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:902px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:902px;left:64px;white-space:nowrap" class="ft06">})</p>
+<p style="position:absolute;top:920px;left:48px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:959px;left:43px;white-space:nowrap" class="ft09"><b>Section 25.2: React Native - ListView with Firebase</b></p>
+<p style="position:absolute;top:1009px;left:43px;white-space:nowrap" class="ft010">This is what I do when I'm working with Firebase and I want to use ListView.</p>
+<p style="position:absolute;top:1049px;left:43px;white-space:nowrap" class="ft010">Use a parent component to retrieve the data from Firebase (Posts.js):</p>
+<p style="position:absolute;top:1088px;left:43px;white-space:nowrap" class="ft011"><b>Posts.js</b></p>
+<p style="position:absolute;top:1134px;left:48px;white-space:nowrap" class="ft03">import</p>
+<p style="position:absolute;top:1134px;left:97px;white-space:nowrap" class="ft04">&#160;PostsList from&#160;</p>
+<p style="position:absolute;top:1134px;left:226px;white-space:nowrap" class="ft05">'./PostsList'</p>
+<p style="position:absolute;top:1134px;left:332px;white-space:nowrap" class="ft06">;</p>
+<p style="position:absolute;top:1170px;left:48px;white-space:nowrap" class="ft03">class</p>
+<p style="position:absolute;top:1170px;left:89px;white-space:nowrap" class="ft04">&#160;Posts&#160;</p>
+<p style="position:absolute;top:1170px;left:145px;white-space:nowrap" class="ft03">extends</p>
+<p style="position:absolute;top:1170px;left:202px;white-space:nowrap" class="ft04">&#160;Component</p>
+<p style="position:absolute;top:1170px;left:283px;white-space:nowrap" class="ft06">{</p>
+</div>
+</body>
+</html>

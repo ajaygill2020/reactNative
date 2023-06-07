@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 24</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft03{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft05{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft06{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft09{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft010{font-size:13px;font-family:AQBTGV+RobotoMono;color:#cc0000;}
+	.ft011{font-size:13px;font-family:AOAEKO+RobotoMono;color:#006600;}
+	.ft012{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft013{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft014{font-size:13px;line-height:18px;font-family:AQBTGV+RobotoMono;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page24-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals024.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">20</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 6: State</b></p>
+<p style="position:absolute;top:99px;left:43px;white-space:nowrap" class="ft02"><b>Section 6.1: setState</b></p>
+<p style="position:absolute;top:150px;left:43px;white-space:nowrap" class="ft03">To change view in your application you can use&#160;</p>
+<p style="position:absolute;top:153px;left:374px;white-space:nowrap" class="ft04">setState</p>
+<p style="position:absolute;top:150px;left:439px;white-space:nowrap" class="ft03">&#160;- this will re-render your component and any of its child</p>
+<p style="position:absolute;top:172px;left:43px;white-space:nowrap" class="ft013">components. setState performs a shallow merge between the new and previous state, and triggers a re-render of<br/>the component.</p>
+<p style="position:absolute;top:237px;left:43px;white-space:nowrap" class="ft04">setState</p>
+<p style="position:absolute;top:234px;left:107px;white-space:nowrap" class="ft03">&#160;takes either a key-value object or a function that returns a key-value object</p>
+<p style="position:absolute;top:274px;left:43px;white-space:nowrap" class="ft05"><b>Key-Value Object</b></p>
+<p style="position:absolute;top:319px;left:48px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:319px;left:81px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:319px;left:89px;white-space:nowrap" class="ft07">setState</p>
+<p style="position:absolute;top:319px;left:153px;white-space:nowrap" class="ft08">({</p>
+<p style="position:absolute;top:319px;left:170px;white-space:nowrap" class="ft04">myKey</p>
+<p style="position:absolute;top:319px;left:210px;white-space:nowrap" class="ft08">:</p>
+<p style="position:absolute;top:319px;left:218px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:319px;left:226px;white-space:nowrap" class="ft09">'myValue'</p>
+<p style="position:absolute;top:319px;left:299px;white-space:nowrap" class="ft08">});</p>
+<p style="position:absolute;top:360px;left:43px;white-space:nowrap" class="ft05"><b>Function</b></p>
+<p style="position:absolute;top:400px;left:43px;white-space:nowrap" class="ft03">Using a function is useful for updating a value based oﬀ the existing state or props.</p>
+<p style="position:absolute;top:445px;left:48px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:445px;left:81px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:445px;left:89px;white-space:nowrap" class="ft07">setState</p>
+<p style="position:absolute;top:445px;left:153px;white-space:nowrap" class="ft08">((</p>
+<p style="position:absolute;top:445px;left:170px;white-space:nowrap" class="ft04">previousState</p>
+<p style="position:absolute;top:445px;left:275px;white-space:nowrap" class="ft08">,</p>
+<p style="position:absolute;top:445px;left:283px;white-space:nowrap" class="ft04">&#160;currentProps</p>
+<p style="position:absolute;top:445px;left:388px;white-space:nowrap" class="ft08">)</p>
+<p style="position:absolute;top:445px;left:396px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:445px;left:405px;white-space:nowrap" class="ft08">=&gt;</p>
+<p style="position:absolute;top:445px;left:421px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:445px;left:429px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:463px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:463px;left:81px;white-space:nowrap" class="ft06"><b>return</b></p>
+<p style="position:absolute;top:463px;left:129px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:463px;left:137px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:482px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; myInteger</p>
+<p style="position:absolute;top:482px;left:186px;white-space:nowrap" class="ft08">:</p>
+<p style="position:absolute;top:482px;left:194px;white-space:nowrap" class="ft04">&#160;previousState.</p>
+<p style="position:absolute;top:482px;left:315px;white-space:nowrap" class="ft07">myInteger</p>
+<p style="position:absolute;top:482px;left:388px;white-space:nowrap" class="ft08">+</p>
+<p style="position:absolute;top:482px;left:396px;white-space:nowrap" class="ft010">1</p>
+<p style="position:absolute;top:500px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:500px;left:81px;white-space:nowrap" class="ft08">}</p>
+<p style="position:absolute;top:519px;left:48px;white-space:nowrap" class="ft08">})</p>
+<p style="position:absolute;top:560px;left:43px;white-space:nowrap" class="ft03">You can also pass an optional callback to&#160;</p>
+<p style="position:absolute;top:563px;left:331px;white-space:nowrap" class="ft04">setState</p>
+<p style="position:absolute;top:560px;left:395px;white-space:nowrap" class="ft03">&#160;that will be ﬁred when the component has re-rendered with the</p>
+<p style="position:absolute;top:583px;left:43px;white-space:nowrap" class="ft03">new state.</p>
+<p style="position:absolute;top:627px;left:48px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:627px;left:81px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:627px;left:89px;white-space:nowrap" class="ft07">setState</p>
+<p style="position:absolute;top:627px;left:153px;white-space:nowrap" class="ft08">({</p>
+<p style="position:absolute;top:627px;left:170px;white-space:nowrap" class="ft04">myKey</p>
+<p style="position:absolute;top:627px;left:210px;white-space:nowrap" class="ft08">:</p>
+<p style="position:absolute;top:627px;left:218px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:627px;left:226px;white-space:nowrap" class="ft09">'myValue'</p>
+<p style="position:absolute;top:627px;left:299px;white-space:nowrap" class="ft08">},</p>
+<p style="position:absolute;top:627px;left:315px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:627px;left:324px;white-space:nowrap" class="ft08">()</p>
+<p style="position:absolute;top:627px;left:340px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:627px;left:348px;white-space:nowrap" class="ft08">=&gt;</p>
+<p style="position:absolute;top:627px;left:364px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:627px;left:372px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:646px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:646px;left:81px;white-space:nowrap" class="ft011"><i>// Component has re-rendered... do something amazing!</i></p>
+<p style="position:absolute;top:664px;left:48px;white-space:nowrap" class="ft08">));</p>
+<p style="position:absolute;top:689px;left:43px;white-space:nowrap" class="ft05"><b>Full Example</b></p>
+<p style="position:absolute;top:717px;left:48px;white-space:nowrap" class="ft012">import</p>
+<p style="position:absolute;top:717px;left:97px;white-space:nowrap" class="ft04">&#160;React</p>
+<p style="position:absolute;top:717px;left:145px;white-space:nowrap" class="ft08">,</p>
+<p style="position:absolute;top:717px;left:153px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:717px;left:162px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:717px;left:170px;white-space:nowrap" class="ft04">&#160;Component&#160;</p>
+<p style="position:absolute;top:717px;left:259px;white-space:nowrap" class="ft08">}</p>
+<p style="position:absolute;top:717px;left:267px;white-space:nowrap" class="ft04">&#160;from&#160;</p>
+<p style="position:absolute;top:717px;left:315px;white-space:nowrap" class="ft09">'react'</p>
+<p style="position:absolute;top:717px;left:372px;white-space:nowrap" class="ft08">;</p>
+<p style="position:absolute;top:736px;left:48px;white-space:nowrap" class="ft012">import</p>
+<p style="position:absolute;top:736px;left:97px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:736px;left:105px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:736px;left:113px;white-space:nowrap" class="ft04">&#160;AppRegistry</p>
+<p style="position:absolute;top:736px;left:210px;white-space:nowrap" class="ft08">,</p>
+<p style="position:absolute;top:736px;left:218px;white-space:nowrap" class="ft04">&#160;StyleSheet</p>
+<p style="position:absolute;top:736px;left:307px;white-space:nowrap" class="ft08">,</p>
+<p style="position:absolute;top:736px;left:315px;white-space:nowrap" class="ft04">&#160;Text</p>
+<p style="position:absolute;top:736px;left:356px;white-space:nowrap" class="ft08">,</p>
+<p style="position:absolute;top:736px;left:364px;white-space:nowrap" class="ft04">&#160;View</p>
+<p style="position:absolute;top:736px;left:405px;white-space:nowrap" class="ft08">,</p>
+<p style="position:absolute;top:736px;left:413px;white-space:nowrap" class="ft04">&#160;TouchableOpacity&#160;</p>
+<p style="position:absolute;top:736px;left:558px;white-space:nowrap" class="ft08">}</p>
+<p style="position:absolute;top:736px;left:567px;white-space:nowrap" class="ft04">&#160;from&#160;</p>
+<p style="position:absolute;top:736px;left:615px;white-space:nowrap" class="ft09">'react-native'</p>
+<p style="position:absolute;top:736px;left:729px;white-space:nowrap" class="ft08">;</p>
+<p style="position:absolute;top:773px;left:48px;white-space:nowrap" class="ft012">export</p>
+<p style="position:absolute;top:773px;left:97px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:773px;left:105px;white-space:nowrap" class="ft06"><b>default</b></p>
+<p style="position:absolute;top:773px;left:162px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:773px;left:170px;white-space:nowrap" class="ft012">class</p>
+<p style="position:absolute;top:773px;left:210px;white-space:nowrap" class="ft04">&#160;MyParentComponent&#160;</p>
+<p style="position:absolute;top:773px;left:364px;white-space:nowrap" class="ft012">extends</p>
+<p style="position:absolute;top:773px;left:421px;white-space:nowrap" class="ft04">&#160;Component&#160;</p>
+<p style="position:absolute;top:773px;left:510px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:791px;left:48px;white-space:nowrap" class="ft04">&#160; constructor</p>
+<p style="position:absolute;top:791px;left:153px;white-space:nowrap" class="ft08">(</p>
+<p style="position:absolute;top:791px;left:162px;white-space:nowrap" class="ft04">props</p>
+<p style="position:absolute;top:791px;left:202px;white-space:nowrap" class="ft08">)</p>
+<p style="position:absolute;top:791px;left:210px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:791px;left:218px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:810px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:810px;left:81px;white-space:nowrap" class="ft012">super</p>
+<p style="position:absolute;top:810px;left:121px;white-space:nowrap" class="ft08">(</p>
+<p style="position:absolute;top:810px;left:129px;white-space:nowrap" class="ft04">props</p>
+<p style="position:absolute;top:810px;left:170px;white-space:nowrap" class="ft08">);</p>
+<p style="position:absolute;top:846px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:846px;left:81px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:846px;left:113px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:846px;left:121px;white-space:nowrap" class="ft07">state</p>
+<p style="position:absolute;top:846px;left:162px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:846px;left:170px;white-space:nowrap" class="ft08">=</p>
+<p style="position:absolute;top:846px;left:178px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:846px;left:186px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:865px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; myInteger</p>
+<p style="position:absolute;top:865px;left:170px;white-space:nowrap" class="ft08">:</p>
+<p style="position:absolute;top:865px;left:178px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:865px;left:186px;white-space:nowrap" class="ft010">0</p>
+<p style="position:absolute;top:883px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:883px;left:81px;white-space:nowrap" class="ft08">}</p>
+<p style="position:absolute;top:920px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:920px;left:64px;white-space:nowrap" class="ft08">}</p>
+<p style="position:absolute;top:939px;left:48px;white-space:nowrap" class="ft04">&#160; getRandomInteger</p>
+<p style="position:absolute;top:939px;left:194px;white-space:nowrap" class="ft08">()</p>
+<p style="position:absolute;top:939px;left:210px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:939px;left:218px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:957px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:957px;left:81px;white-space:nowrap" class="ft06"><b>const</b></p>
+<p style="position:absolute;top:957px;left:121px;white-space:nowrap" class="ft04">&#160;randomInt&#160;</p>
+<p style="position:absolute;top:957px;left:210px;white-space:nowrap" class="ft08">=</p>
+<p style="position:absolute;top:957px;left:218px;white-space:nowrap" class="ft04">&#160;Math.</p>
+<p style="position:absolute;top:957px;left:267px;white-space:nowrap" class="ft07">floor</p>
+<p style="position:absolute;top:957px;left:307px;white-space:nowrap" class="ft08">(</p>
+<p style="position:absolute;top:957px;left:315px;white-space:nowrap" class="ft04">Math.</p>
+<p style="position:absolute;top:957px;left:356px;white-space:nowrap" class="ft07">random</p>
+<p style="position:absolute;top:957px;left:405px;white-space:nowrap" class="ft08">()*</p>
+<p style="position:absolute;top:957px;left:429px;white-space:nowrap" class="ft010">100</p>
+<p style="position:absolute;top:957px;left:453px;white-space:nowrap" class="ft08">);</p>
+<p style="position:absolute;top:994px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:994px;left:81px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:994px;left:113px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:994px;left:121px;white-space:nowrap" class="ft07">setState</p>
+<p style="position:absolute;top:994px;left:186px;white-space:nowrap" class="ft08">({</p>
+<p style="position:absolute;top:1013px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; myInteger</p>
+<p style="position:absolute;top:1013px;left:170px;white-space:nowrap" class="ft08">:</p>
+<p style="position:absolute;top:1013px;left:178px;white-space:nowrap" class="ft04">&#160;randomInt</p>
+<p style="position:absolute;top:1031px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1031px;left:81px;white-space:nowrap" class="ft08">});</p>
+<p style="position:absolute;top:1068px;left:48px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:1068px;left:64px;white-space:nowrap" class="ft08">}</p>
+<p style="position:absolute;top:1087px;left:48px;white-space:nowrap" class="ft04">&#160; incrementInteger</p>
+<p style="position:absolute;top:1087px;left:194px;white-space:nowrap" class="ft08">()</p>
+<p style="position:absolute;top:1087px;left:210px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:1087px;left:218px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:1105px;left:48px;white-space:nowrap" class="ft014">&#160; &#160;<br/>&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1123px;left:81px;white-space:nowrap" class="ft06"><b>this</b></p>
+<p style="position:absolute;top:1123px;left:113px;white-space:nowrap" class="ft04">.</p>
+<p style="position:absolute;top:1123px;left:121px;white-space:nowrap" class="ft07">setState</p>
+<p style="position:absolute;top:1123px;left:186px;white-space:nowrap" class="ft08">((</p>
+<p style="position:absolute;top:1123px;left:202px;white-space:nowrap" class="ft04">previousState</p>
+<p style="position:absolute;top:1123px;left:307px;white-space:nowrap" class="ft08">,</p>
+<p style="position:absolute;top:1123px;left:315px;white-space:nowrap" class="ft04">&#160;currentProps</p>
+<p style="position:absolute;top:1123px;left:421px;white-space:nowrap" class="ft08">)</p>
+<p style="position:absolute;top:1123px;left:429px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:1123px;left:437px;white-space:nowrap" class="ft08">=&gt;</p>
+<p style="position:absolute;top:1123px;left:453px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:1123px;left:461px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:1142px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1142px;left:97px;white-space:nowrap" class="ft06"><b>return</b></p>
+<p style="position:absolute;top:1142px;left:145px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:1142px;left:153px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:1160px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160; &#160; myInteger</p>
+<p style="position:absolute;top:1160px;left:186px;white-space:nowrap" class="ft08">:</p>
+<p style="position:absolute;top:1160px;left:194px;white-space:nowrap" class="ft04">&#160;previousState.</p>
+<p style="position:absolute;top:1160px;left:315px;white-space:nowrap" class="ft07">myInteger</p>
+<p style="position:absolute;top:1160px;left:388px;white-space:nowrap" class="ft08">+</p>
+<p style="position:absolute;top:1160px;left:396px;white-space:nowrap" class="ft010">1</p>
+<p style="position:absolute;top:1179px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1179px;left:97px;white-space:nowrap" class="ft08">}</p>
+</div>
+</body>
+</html>

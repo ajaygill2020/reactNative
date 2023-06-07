@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 65</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft03{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft04{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft05{font-size:15px;font-family:AQIEPH+OpenSans;color:#05a4d1;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft07{font-size:15px;font-family:BDVIQH+OpenSans;color:#000000;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft09{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft010{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft011{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft012{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page65-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals065.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:834px;white-space:nowrap" class="ft00">61</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 22: Native Modules</b></p>
+<p style="position:absolute;top:99px;left:43px;white-space:nowrap" class="ft02"><b>Section 22.1: Create your Native Module (IOS)</b></p>
+<p style="position:absolute;top:150px;left:43px;white-space:nowrap" class="ft03"><b>Introduction</b></p>
+<p style="position:absolute;top:190px;left:43px;white-space:nowrap" class="ft04">from&#160;</p>
+<p style="position:absolute;top:190px;left:81px;white-space:nowrap" class="ft05"><a href="http://facebook.github.io/react-native/docs/native-modules-ios.html">http://facebook.github.io/react-native/docs/native-modules-ios.html</a></p>
+<p style="position:absolute;top:246px;left:79px;white-space:nowrap" class="ft012">Sometimes an app needs access to platform API, and React Native doesn't have a corresponding module<br/>yet. Maybe you want to reuse some existing Objective-C, Swift or C++ code without having to<br/>reimplement it in JavaScript, or write some high performance, multi-threaded code such as for image<br/>processing, a database, or any number of advanced extensions.</p>
+<p style="position:absolute;top:370px;left:43px;white-space:nowrap" class="ft04">A Native Module is simply an Objective-C Class that implements the&#160;</p>
+<p style="position:absolute;top:373px;left:516px;white-space:nowrap" class="ft06">RCTBridgeModule</p>
+<p style="position:absolute;top:370px;left:638px;white-space:nowrap" class="ft04">&#160;protocol.</p>
+<p style="position:absolute;top:432px;left:43px;white-space:nowrap" class="ft03"><b>Example</b></p>
+<p style="position:absolute;top:472px;left:43px;white-space:nowrap" class="ft04">In your Xcode project create a new ﬁle and select&#160;</p>
+<p style="position:absolute;top:472px;left:388px;white-space:nowrap" class="ft03"><b>Cocoa Touch Class</b></p>
+<p style="position:absolute;top:472px;left:524px;white-space:nowrap" class="ft04">, in the creation wizard choose a name for</p>
+<p style="position:absolute;top:495px;left:43px;white-space:nowrap" class="ft04">your Class (</p>
+<p style="position:absolute;top:495px;left:123px;white-space:nowrap" class="ft07"><i>e.g. NativeModule</i></p>
+<p style="position:absolute;top:495px;left:241px;white-space:nowrap" class="ft04">), make it a&#160;</p>
+<p style="position:absolute;top:495px;left:320px;white-space:nowrap" class="ft03"><b>Subclass of</b></p>
+<p style="position:absolute;top:495px;left:403px;white-space:nowrap" class="ft04">:&#160;</p>
+<p style="position:absolute;top:498px;left:411px;white-space:nowrap" class="ft06">NSObject</p>
+<p style="position:absolute;top:495px;left:476px;white-space:nowrap" class="ft04">&#160;and choose&#160;</p>
+<p style="position:absolute;top:498px;left:564px;white-space:nowrap" class="ft06">Objective</p>
+<p style="position:absolute;top:498px;left:637px;white-space:nowrap" class="ft08">-</p>
+<p style="position:absolute;top:498px;left:645px;white-space:nowrap" class="ft06">C</p>
+<p style="position:absolute;top:495px;left:653px;white-space:nowrap" class="ft04">&#160;for the language.</p>
+<p style="position:absolute;top:535px;left:43px;white-space:nowrap" class="ft04">This will create two ﬁles&#160;</p>
+<p style="position:absolute;top:538px;left:212px;white-space:nowrap" class="ft06">NativeModuleEx.</p>
+<p style="position:absolute;top:538px;left:333px;white-space:nowrap" class="ft09">h</p>
+<p style="position:absolute;top:535px;left:341px;white-space:nowrap" class="ft04">&#160;and&#160;</p>
+<p style="position:absolute;top:538px;left:376px;white-space:nowrap" class="ft06">NativeModuleEx.</p>
+<p style="position:absolute;top:538px;left:497px;white-space:nowrap" class="ft09">m</p>
+<p style="position:absolute;top:574px;left:43px;white-space:nowrap" class="ft04">You will need to import&#160;</p>
+<p style="position:absolute;top:577px;left:209px;white-space:nowrap" class="ft06">RCTBridgeModule.</p>
+<p style="position:absolute;top:577px;left:338px;white-space:nowrap" class="ft09">h</p>
+<p style="position:absolute;top:574px;left:346px;white-space:nowrap" class="ft04">&#160;to your&#160;</p>
+<p style="position:absolute;top:577px;left:404px;white-space:nowrap" class="ft06">NativeModuleEx.</p>
+<p style="position:absolute;top:577px;left:526px;white-space:nowrap" class="ft09">h</p>
+<p style="position:absolute;top:574px;left:534px;white-space:nowrap" class="ft04">&#160;ﬁle as it follows:</p>
+<p style="position:absolute;top:619px;left:48px;white-space:nowrap" class="ft06">#import&#160;</p>
+<p style="position:absolute;top:619px;left:113px;white-space:nowrap" class="ft08">&lt;</p>
+<p style="position:absolute;top:619px;left:121px;white-space:nowrap" class="ft06">Foundation</p>
+<p style="position:absolute;top:619px;left:202px;white-space:nowrap" class="ft08">/</p>
+<p style="position:absolute;top:619px;left:210px;white-space:nowrap" class="ft06">Foundation.</p>
+<p style="position:absolute;top:619px;left:299px;white-space:nowrap" class="ft09">h</p>
+<p style="position:absolute;top:619px;left:307px;white-space:nowrap" class="ft08">&gt;</p>
+<p style="position:absolute;top:638px;left:48px;white-space:nowrap" class="ft06">#import&#160;</p>
+<p style="position:absolute;top:638px;left:113px;white-space:nowrap" class="ft010">&#34;RCTBridgeModule.h&#34;</p>
+<p style="position:absolute;top:675px;left:48px;white-space:nowrap" class="ft08">@</p>
+<p style="position:absolute;top:675px;left:56px;white-space:nowrap" class="ft011">interface</p>
+<p style="position:absolute;top:675px;left:129px;white-space:nowrap" class="ft06">&#160;NativeModuleEx&#160;</p>
+<p style="position:absolute;top:675px;left:259px;white-space:nowrap" class="ft08">:</p>
+<p style="position:absolute;top:675px;left:267px;white-space:nowrap" class="ft06">&#160;NSObject&#160;</p>
+<p style="position:absolute;top:675px;left:348px;white-space:nowrap" class="ft08">&lt;</p>
+<p style="position:absolute;top:675px;left:356px;white-space:nowrap" class="ft06">RCTBridgeModule</p>
+<p style="position:absolute;top:675px;left:477px;white-space:nowrap" class="ft08">&gt;</p>
+<p style="position:absolute;top:712px;left:48px;white-space:nowrap" class="ft08">@</p>
+<p style="position:absolute;top:712px;left:56px;white-space:nowrap" class="ft06">end</p>
+<p style="position:absolute;top:753px;left:43px;white-space:nowrap" class="ft04">In your&#160;</p>
+<p style="position:absolute;top:756px;left:96px;white-space:nowrap" class="ft06">NativeModuleEx.</p>
+<p style="position:absolute;top:756px;left:217px;white-space:nowrap" class="ft09">m</p>
+<p style="position:absolute;top:753px;left:225px;white-space:nowrap" class="ft04">&#160;add the following code:</p>
+<p style="position:absolute;top:797px;left:48px;white-space:nowrap" class="ft06">#import&#160;</p>
+<p style="position:absolute;top:797px;left:113px;white-space:nowrap" class="ft010">&#34;NativeModuleEx.h&#34;</p>
+<p style="position:absolute;top:834px;left:48px;white-space:nowrap" class="ft08">@</p>
+<p style="position:absolute;top:834px;left:56px;white-space:nowrap" class="ft06">implementation NativeModuleEx</p>
+<p style="position:absolute;top:871px;left:48px;white-space:nowrap" class="ft06">RCT_EXPORT_MODULE</p>
+<p style="position:absolute;top:871px;left:186px;white-space:nowrap" class="ft08">();</p>
+<p style="position:absolute;top:908px;left:48px;white-space:nowrap" class="ft06">RCT_EXPORT_METHOD</p>
+<p style="position:absolute;top:908px;left:186px;white-space:nowrap" class="ft08">(</p>
+<p style="position:absolute;top:908px;left:194px;white-space:nowrap" class="ft06">testModule</p>
+<p style="position:absolute;top:908px;left:275px;white-space:nowrap" class="ft08">:(</p>
+<p style="position:absolute;top:908px;left:291px;white-space:nowrap" class="ft06">NSString&#160;</p>
+<p style="position:absolute;top:908px;left:364px;white-space:nowrap" class="ft08">*)</p>
+<p style="position:absolute;top:908px;left:380px;white-space:nowrap" class="ft06">string&#160;</p>
+<p style="position:absolute;top:908px;left:437px;white-space:nowrap" class="ft08">)</p>
+<p style="position:absolute;top:927px;left:48px;white-space:nowrap" class="ft08">{</p>
+<p style="position:absolute;top:945px;left:48px;white-space:nowrap" class="ft06">&#160; NSLog</p>
+<p style="position:absolute;top:945px;left:105px;white-space:nowrap" class="ft08">(@</p>
+<p style="position:absolute;top:945px;left:121px;white-space:nowrap" class="ft010">&#34;The string '%@' comes from JavaScript! &#34;</p>
+<p style="position:absolute;top:945px;left:453px;white-space:nowrap" class="ft08">,</p>
+<p style="position:absolute;top:945px;left:461px;white-space:nowrap" class="ft06">&#160;string</p>
+<p style="position:absolute;top:945px;left:518px;white-space:nowrap" class="ft08">);</p>
+<p style="position:absolute;top:964px;left:48px;white-space:nowrap" class="ft08">}</p>
+<p style="position:absolute;top:1001px;left:48px;white-space:nowrap" class="ft08">@</p>
+<p style="position:absolute;top:1001px;left:56px;white-space:nowrap" class="ft06">end</p>
+<p style="position:absolute;top:1045px;left:43px;white-space:nowrap" class="ft06">RCT_EXPORT_MODULE</p>
+<p style="position:absolute;top:1045px;left:180px;white-space:nowrap" class="ft08">()</p>
+<p style="position:absolute;top:1042px;left:196px;white-space:nowrap" class="ft04">&#160;will make your module accessible in JavaScript, you can pass it an optional argument to</p>
+<p style="position:absolute;top:1064px;left:43px;white-space:nowrap" class="ft04">specify its name. If no name is provided it will match the Objective-C class name.</p>
+<p style="position:absolute;top:1107px;left:43px;white-space:nowrap" class="ft06">RCT_EXPORT_METHOD</p>
+<p style="position:absolute;top:1107px;left:180px;white-space:nowrap" class="ft08">()</p>
+<p style="position:absolute;top:1104px;left:196px;white-space:nowrap" class="ft04">&#160;will expose your method to JavaScript, only the methods you export using this macro will be</p>
+<p style="position:absolute;top:1126px;left:43px;white-space:nowrap" class="ft04">accessible in JavaScript.</p>
+<p style="position:absolute;top:1166px;left:43px;white-space:nowrap" class="ft04">Finally, in your JavaScript you can call your method as it follows:</p>
+</div>
+</body>
+</html>

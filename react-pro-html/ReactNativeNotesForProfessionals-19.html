@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 19</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#05a4d1;}
+	.ft03{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft07{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft09{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft010{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page19-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals019.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:834px;white-space:nowrap" class="ft00">15</p>
+<p style="position:absolute;top:44px;left:43px;white-space:nowrap" class="ft010">Using props one can make his component generic. For example, you have a Button component. You can pass<br/>diﬀerent props to that component, so that one can place that button anywhere in his view.</p>
+<p style="position:absolute;top:106px;left:43px;white-space:nowrap" class="ft01">source:&#160;</p>
+<p style="position:absolute;top:106px;left:98px;white-space:nowrap" class="ft02"><a href="http://facebook.github.io/react-native/docs/props.html">Props-React Native</a></p>
+<p style="position:absolute;top:143px;left:43px;white-space:nowrap" class="ft03"><b>Section 3.4: Default Props</b></p>
+<p style="position:absolute;top:193px;left:43px;white-space:nowrap" class="ft010">defaultProps allows you to set default prop values for your component. In the below example if you do not pass the<br/>name props, it will display John otherwise it will display the passed value</p>
+<p style="position:absolute;top:260px;left:48px;white-space:nowrap" class="ft04">class</p>
+<p style="position:absolute;top:260px;left:89px;white-space:nowrap" class="ft05">&#160;Example&#160;</p>
+<p style="position:absolute;top:260px;left:162px;white-space:nowrap" class="ft04">extends</p>
+<p style="position:absolute;top:260px;left:218px;white-space:nowrap" class="ft05">&#160;Component&#160;</p>
+<p style="position:absolute;top:260px;left:307px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:279px;left:48px;white-space:nowrap" class="ft05">&#160; render</p>
+<p style="position:absolute;top:279px;left:113px;white-space:nowrap" class="ft06">()</p>
+<p style="position:absolute;top:279px;left:129px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:279px;left:137px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:297px;left:48px;white-space:nowrap" class="ft05">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:297px;left:81px;white-space:nowrap" class="ft07"><b>return</b></p>
+<p style="position:absolute;top:297px;left:129px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:297px;left:137px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:316px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:316px;left:97px;white-space:nowrap" class="ft06">&lt;</p>
+<p style="position:absolute;top:316px;left:105px;white-space:nowrap" class="ft05">View</p>
+<p style="position:absolute;top:316px;left:137px;white-space:nowrap" class="ft06">&gt;</p>
+<p style="position:absolute;top:334px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:334px;left:113px;white-space:nowrap" class="ft06">&lt;</p>
+<p style="position:absolute;top:334px;left:121px;white-space:nowrap" class="ft05">Text</p>
+<p style="position:absolute;top:334px;left:153px;white-space:nowrap" class="ft06">&gt;{</p>
+<p style="position:absolute;top:334px;left:170px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:334px;left:202px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:334px;left:210px;white-space:nowrap" class="ft08">props</p>
+<p style="position:absolute;top:334px;left:251px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:334px;left:259px;white-space:nowrap" class="ft08">name</p>
+<p style="position:absolute;top:334px;left:291px;white-space:nowrap" class="ft06">}&lt;/</p>
+<p style="position:absolute;top:334px;left:315px;white-space:nowrap" class="ft05">Text</p>
+<p style="position:absolute;top:334px;left:348px;white-space:nowrap" class="ft06">&gt;</p>
+<p style="position:absolute;top:353px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:353px;left:97px;white-space:nowrap" class="ft06">&lt;/</p>
+<p style="position:absolute;top:353px;left:113px;white-space:nowrap" class="ft05">View</p>
+<p style="position:absolute;top:353px;left:145px;white-space:nowrap" class="ft06">&gt;</p>
+<p style="position:absolute;top:371px;left:48px;white-space:nowrap" class="ft05">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:371px;left:81px;white-space:nowrap" class="ft06">)</p>
+<p style="position:absolute;top:390px;left:48px;white-space:nowrap" class="ft05">&#160;&#160;</p>
+<p style="position:absolute;top:390px;left:64px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:408px;left:48px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:464px;left:48px;white-space:nowrap" class="ft05">Example.</p>
+<p style="position:absolute;top:464px;left:113px;white-space:nowrap" class="ft08">defaultProps</p>
+<p style="position:absolute;top:464px;left:210px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:464px;left:218px;white-space:nowrap" class="ft06">=</p>
+<p style="position:absolute;top:464px;left:226px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:464px;left:234px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:482px;left:48px;white-space:nowrap" class="ft05">&#160; name</p>
+<p style="position:absolute;top:482px;left:97px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:482px;left:105px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:482px;left:113px;white-space:nowrap" class="ft09">'John'</p>
+<p style="position:absolute;top:501px;left:48px;white-space:nowrap" class="ft06">}</p>
+</div>
+</body>
+</html>

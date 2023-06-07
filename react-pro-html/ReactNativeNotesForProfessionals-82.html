@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 82</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:15px;font-family:AKYLOI+OpenSans;color:#05a4d1;}
+	.ft04{font-size:15px;font-family:AQIEPH+OpenSans;color:#05a4d1;}
+	.ft05{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft06{font-size:15px;font-family:BDVIQH+OpenSans;color:#000000;}
+	.ft07{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft09{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft010{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft011{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft012{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft013{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft014{font-size:13px;font-family:AOAEKO+RobotoMono;color:#006600;}
+	.ft015{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+	.ft016{font-size:13px;line-height:18px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft017{font-size:13px;line-height:18px;font-family:AOAEKO+RobotoMono;color:#006600;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page82-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals082.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:831px;white-space:nowrap" class="ft00">78</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 29: PushNotiﬁcation</b></p>
+<p style="position:absolute;top:105px;left:43px;white-space:nowrap" class="ft02">We can add Push Notiﬁcation to react native app by using the npm module&#160;</p>
+<p style="position:absolute;top:105px;left:569px;white-space:nowrap" class="ft03"><a href="https://github.com/zo0r/react-native-push-notification"><b>react-native-push-notiﬁcation</b></a></p>
+<p style="position:absolute;top:105px;left:794px;white-space:nowrap" class="ft04"><a href="https://github.com/zo0r/react-native-push-notification">&#160;by</a></p>
+<p style="position:absolute;top:129px;left:43px;white-space:nowrap" class="ft03"><a href="https://github.com/zo0r/react-native-push-notification"><b>zo0r</b></a></p>
+<p style="position:absolute;top:129px;left:74px;white-space:nowrap" class="ft02">. This enables for a cross platform development.</p>
+<p style="position:absolute;top:169px;left:43px;white-space:nowrap" class="ft05"><b>Installation</b></p>
+<p style="position:absolute;top:209px;left:43px;white-space:nowrap" class="ft06"><i>npm install --save react-native-push-notiﬁcation</i></p>
+<p style="position:absolute;top:248px;left:43px;white-space:nowrap" class="ft06"><i>react-native link</i></p>
+<p style="position:absolute;top:285px;left:43px;white-space:nowrap" class="ft07"><b>Section 29.1: Push Notiﬁcation Simple Setup</b></p>
+<p style="position:absolute;top:335px;left:43px;white-space:nowrap" class="ft02">Create new project PushNotiﬁcation</p>
+<p style="position:absolute;top:380px;left:48px;white-space:nowrap" class="ft08">react</p>
+<p style="position:absolute;top:380px;left:89px;white-space:nowrap" class="ft09">-</p>
+<p style="position:absolute;top:380px;left:97px;white-space:nowrap" class="ft010">native</p>
+<p style="position:absolute;top:380px;left:145px;white-space:nowrap" class="ft08">&#160;init PushNotification</p>
+<p style="position:absolute;top:421px;left:43px;white-space:nowrap" class="ft02">Put following in index.android.js</p>
+<p style="position:absolute;top:466px;left:48px;white-space:nowrap" class="ft010">import</p>
+<p style="position:absolute;top:466px;left:97px;white-space:nowrap" class="ft08">&#160;React</p>
+<p style="position:absolute;top:466px;left:145px;white-space:nowrap" class="ft09">,</p>
+<p style="position:absolute;top:466px;left:153px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:466px;left:162px;white-space:nowrap" class="ft09">{</p>
+<p style="position:absolute;top:466px;left:170px;white-space:nowrap" class="ft08">&#160;Component&#160;</p>
+<p style="position:absolute;top:466px;left:259px;white-space:nowrap" class="ft09">}</p>
+<p style="position:absolute;top:466px;left:267px;white-space:nowrap" class="ft08">&#160;from&#160;</p>
+<p style="position:absolute;top:466px;left:315px;white-space:nowrap" class="ft011">'react'</p>
+<p style="position:absolute;top:466px;left:372px;white-space:nowrap" class="ft09">;</p>
+<p style="position:absolute;top:503px;left:48px;white-space:nowrap" class="ft010">import</p>
+<p style="position:absolute;top:503px;left:97px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:503px;left:105px;white-space:nowrap" class="ft09">{</p>
+<p style="position:absolute;top:521px;left:48px;white-space:nowrap" class="ft08">&#160; AppRegistry</p>
+<p style="position:absolute;top:521px;left:153px;white-space:nowrap" class="ft09">,</p>
+<p style="position:absolute;top:540px;left:48px;white-space:nowrap" class="ft08">&#160; StyleSheet</p>
+<p style="position:absolute;top:540px;left:145px;white-space:nowrap" class="ft09">,</p>
+<p style="position:absolute;top:558px;left:48px;white-space:nowrap" class="ft08">&#160; Text</p>
+<p style="position:absolute;top:558px;left:97px;white-space:nowrap" class="ft09">,</p>
+<p style="position:absolute;top:577px;left:48px;white-space:nowrap" class="ft08">&#160; View</p>
+<p style="position:absolute;top:577px;left:97px;white-space:nowrap" class="ft09">,</p>
+<p style="position:absolute;top:595px;left:48px;white-space:nowrap" class="ft08">&#160; Button</p>
+<p style="position:absolute;top:614px;left:48px;white-space:nowrap" class="ft09">}</p>
+<p style="position:absolute;top:614px;left:56px;white-space:nowrap" class="ft08">&#160;from&#160;</p>
+<p style="position:absolute;top:614px;left:105px;white-space:nowrap" class="ft011">'react-native'</p>
+<p style="position:absolute;top:614px;left:218px;white-space:nowrap" class="ft09">;</p>
+<p style="position:absolute;top:650px;left:48px;white-space:nowrap" class="ft010">import</p>
+<p style="position:absolute;top:650px;left:97px;white-space:nowrap" class="ft08">&#160;PushNotification from&#160;</p>
+<p style="position:absolute;top:650px;left:283px;white-space:nowrap" class="ft011">'react-native-push-notification'</p>
+<p style="position:absolute;top:650px;left:542px;white-space:nowrap" class="ft09">;</p>
+<p style="position:absolute;top:687px;left:48px;white-space:nowrap" class="ft010">export</p>
+<p style="position:absolute;top:687px;left:97px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:687px;left:105px;white-space:nowrap" class="ft012"><b>default</b></p>
+<p style="position:absolute;top:687px;left:162px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:687px;left:170px;white-space:nowrap" class="ft010">class</p>
+<p style="position:absolute;top:687px;left:210px;white-space:nowrap" class="ft08">&#160;App&#160;</p>
+<p style="position:absolute;top:687px;left:251px;white-space:nowrap" class="ft010">extends</p>
+<p style="position:absolute;top:687px;left:307px;white-space:nowrap" class="ft08">&#160;Component&#160;</p>
+<p style="position:absolute;top:687px;left:396px;white-space:nowrap" class="ft09">{</p>
+<p style="position:absolute;top:724px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; constructor</p>
+<p style="position:absolute;top:724px;left:170px;white-space:nowrap" class="ft09">(</p>
+<p style="position:absolute;top:724px;left:178px;white-space:nowrap" class="ft08">props</p>
+<p style="position:absolute;top:724px;left:218px;white-space:nowrap" class="ft09">){</p>
+<p style="position:absolute;top:743px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:743px;left:113px;white-space:nowrap" class="ft010">super</p>
+<p style="position:absolute;top:743px;left:153px;white-space:nowrap" class="ft09">(</p>
+<p style="position:absolute;top:743px;left:162px;white-space:nowrap" class="ft08">props</p>
+<p style="position:absolute;top:743px;left:202px;white-space:nowrap" class="ft09">);</p>
+<p style="position:absolute;top:761px;left:48px;white-space:nowrap" class="ft016">&#160; &#160; &#160; &#160;<br/>&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:780px;left:113px;white-space:nowrap" class="ft012"><b>this</b></p>
+<p style="position:absolute;top:780px;left:145px;white-space:nowrap" class="ft08">.</p>
+<p style="position:absolute;top:780px;left:153px;white-space:nowrap" class="ft013">NewNotification</p>
+<p style="position:absolute;top:780px;left:275px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:780px;left:283px;white-space:nowrap" class="ft09">=</p>
+<p style="position:absolute;top:780px;left:291px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:780px;left:299px;white-space:nowrap" class="ft012"><b>this</b></p>
+<p style="position:absolute;top:780px;left:332px;white-space:nowrap" class="ft08">.</p>
+<p style="position:absolute;top:780px;left:340px;white-space:nowrap" class="ft013">NewNotification</p>
+<p style="position:absolute;top:780px;left:461px;white-space:nowrap" class="ft08">.</p>
+<p style="position:absolute;top:780px;left:469px;white-space:nowrap" class="ft013">bind</p>
+<p style="position:absolute;top:780px;left:502px;white-space:nowrap" class="ft09">(</p>
+<p style="position:absolute;top:780px;left:510px;white-space:nowrap" class="ft012"><b>this</b></p>
+<p style="position:absolute;top:780px;left:542px;white-space:nowrap" class="ft09">);</p>
+<p style="position:absolute;top:798px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:798px;left:97px;white-space:nowrap" class="ft09">}</p>
+<p style="position:absolute;top:835px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; componentDidMount</p>
+<p style="position:absolute;top:835px;left:218px;white-space:nowrap" class="ft09">(){</p>
+<p style="position:absolute;top:872px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; PushNotification.</p>
+<p style="position:absolute;top:872px;left:251px;white-space:nowrap" class="ft013">configure</p>
+<p style="position:absolute;top:872px;left:324px;white-space:nowrap" class="ft09">({</p>
+<p style="position:absolute;top:909px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:909px;left:145px;white-space:nowrap" class="ft014"><i>// (required) Called when a remote or local notification is opened or received</i></p>
+<p style="position:absolute;top:928px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; &#160; &#160; onNotification</p>
+<p style="position:absolute;top:928px;left:259px;white-space:nowrap" class="ft09">:</p>
+<p style="position:absolute;top:928px;left:267px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:928px;left:275px;white-space:nowrap" class="ft012"><b>function</b></p>
+<p style="position:absolute;top:928px;left:340px;white-space:nowrap" class="ft09">(</p>
+<p style="position:absolute;top:928px;left:348px;white-space:nowrap" class="ft08">notification</p>
+<p style="position:absolute;top:928px;left:445px;white-space:nowrap" class="ft09">)</p>
+<p style="position:absolute;top:928px;left:453px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:928px;left:461px;white-space:nowrap" class="ft09">{</p>
+<p style="position:absolute;top:946px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; console.</p>
+<p style="position:absolute;top:946px;left:243px;white-space:nowrap" class="ft013">log</p>
+<p style="position:absolute;top:946px;left:267px;white-space:nowrap" class="ft09">(</p>
+<p style="position:absolute;top:946px;left:275px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:946px;left:283px;white-space:nowrap" class="ft011">'NOTIFICATION:'</p>
+<p style="position:absolute;top:946px;left:405px;white-space:nowrap" class="ft09">,</p>
+<p style="position:absolute;top:946px;left:413px;white-space:nowrap" class="ft08">&#160;notification&#160;</p>
+<p style="position:absolute;top:946px;left:526px;white-space:nowrap" class="ft09">);</p>
+<p style="position:absolute;top:964px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:964px;left:145px;white-space:nowrap" class="ft09">},</p>
+<p style="position:absolute;top:1001px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1001px;left:145px;white-space:nowrap" class="ft014"><i>// Should the initial notification be popped automatically</i></p>
+<p style="position:absolute;top:1020px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1020px;left:145px;white-space:nowrap" class="ft014"><i>// default: true</i></p>
+<p style="position:absolute;top:1038px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; &#160; &#160; popInitialNotification</p>
+<p style="position:absolute;top:1038px;left:324px;white-space:nowrap" class="ft09">:</p>
+<p style="position:absolute;top:1038px;left:332px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:1038px;left:340px;white-space:nowrap" class="ft015"><b>true</b></p>
+<p style="position:absolute;top:1038px;left:372px;white-space:nowrap" class="ft09">,</p>
+<p style="position:absolute;top:1075px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1075px;left:145px;white-space:nowrap" class="ft014"><i>/**</i></p>
+<p style="position:absolute;top:1094px;left:48px;white-space:nowrap" class="ft017"><i>&#160; &#160; &#160; &#160; &#160; &#160; &#160; * (optional) default: true<br/>&#160; &#160; &#160; &#160; &#160; &#160; &#160; * - Specified if permissions (ios) and token (android and ios) will requested or not,<br/>&#160; &#160; &#160; &#160; &#160; &#160; &#160; * - if not, you must call PushNotificationsHandler.requestPermissions() later<br/>&#160; &#160; &#160; &#160; &#160; &#160; &#160; */</i></p>
+<p style="position:absolute;top:1168px;left:48px;white-space:nowrap" class="ft08">&#160; &#160; &#160; &#160; &#160; &#160; requestPermissions</p>
+<p style="position:absolute;top:1168px;left:291px;white-space:nowrap" class="ft09">:</p>
+<p style="position:absolute;top:1168px;left:299px;white-space:nowrap" class="ft08">&#160;</p>
+<p style="position:absolute;top:1168px;left:307px;white-space:nowrap" class="ft015"><b>true</b></p>
+<p style="position:absolute;top:1168px;left:340px;white-space:nowrap" class="ft09">,</p>
+</div>
+</body>
+</html>

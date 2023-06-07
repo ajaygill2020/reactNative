@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 45</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft08{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft09{font-size:13px;font-family:AQBTGV+RobotoMono;color:#cc0000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page45-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals045.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:834px;white-space:nowrap" class="ft00">41</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 13: WebView</b></p>
+<p style="position:absolute;top:105px;left:43px;white-space:nowrap" class="ft02">Webview can be used to load external webpages or html content. This component is there by default.</p>
+<p style="position:absolute;top:142px;left:43px;white-space:nowrap" class="ft03"><b>Section 13.1: Simple component using webview</b></p>
+<p style="position:absolute;top:198px;left:48px;white-space:nowrap" class="ft04">import</p>
+<p style="position:absolute;top:198px;left:97px;white-space:nowrap" class="ft05">&#160;React</p>
+<p style="position:absolute;top:198px;left:145px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:198px;left:153px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:198px;left:162px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:198px;left:170px;white-space:nowrap" class="ft05">&#160;Component&#160;</p>
+<p style="position:absolute;top:198px;left:259px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:198px;left:267px;white-space:nowrap" class="ft05">&#160;from&#160;</p>
+<p style="position:absolute;top:198px;left:315px;white-space:nowrap" class="ft07">'react'</p>
+<p style="position:absolute;top:198px;left:372px;white-space:nowrap" class="ft06">;</p>
+<p style="position:absolute;top:216px;left:48px;white-space:nowrap" class="ft04">import</p>
+<p style="position:absolute;top:216px;left:97px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:216px;left:105px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:216px;left:113px;white-space:nowrap" class="ft05">&#160;WebView&#160;</p>
+<p style="position:absolute;top:216px;left:186px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:216px;left:194px;white-space:nowrap" class="ft05">&#160;from&#160;</p>
+<p style="position:absolute;top:216px;left:243px;white-space:nowrap" class="ft07">'react-native'</p>
+<p style="position:absolute;top:216px;left:356px;white-space:nowrap" class="ft06">;</p>
+<p style="position:absolute;top:253px;left:48px;white-space:nowrap" class="ft04">class</p>
+<p style="position:absolute;top:253px;left:89px;white-space:nowrap" class="ft05">&#160;MyWeb&#160;</p>
+<p style="position:absolute;top:253px;left:145px;white-space:nowrap" class="ft04">extends</p>
+<p style="position:absolute;top:253px;left:202px;white-space:nowrap" class="ft05">&#160;Component&#160;</p>
+<p style="position:absolute;top:253px;left:291px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:272px;left:48px;white-space:nowrap" class="ft05">&#160; render</p>
+<p style="position:absolute;top:272px;left:113px;white-space:nowrap" class="ft06">()</p>
+<p style="position:absolute;top:272px;left:129px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:272px;left:137px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:290px;left:48px;white-space:nowrap" class="ft05">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:290px;left:81px;white-space:nowrap" class="ft08"><b>return</b></p>
+<p style="position:absolute;top:290px;left:129px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:290px;left:137px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:309px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:309px;left:97px;white-space:nowrap" class="ft06">&lt;</p>
+<p style="position:absolute;top:309px;left:105px;white-space:nowrap" class="ft05">WebView</p>
+<p style="position:absolute;top:327px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; source</p>
+<p style="position:absolute;top:327px;left:162px;white-space:nowrap" class="ft06">={{</p>
+<p style="position:absolute;top:327px;left:186px;white-space:nowrap" class="ft05">uri</p>
+<p style="position:absolute;top:327px;left:210px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:327px;left:218px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:327px;left:226px;white-space:nowrap" class="ft07">'https://github.com/facebook/react-native'</p>
+<p style="position:absolute;top:327px;left:567px;white-space:nowrap" class="ft06">}}</p>
+<p style="position:absolute;top:346px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; style</p>
+<p style="position:absolute;top:346px;left:153px;white-space:nowrap" class="ft06">={{</p>
+<p style="position:absolute;top:346px;left:178px;white-space:nowrap" class="ft05">marginTop</p>
+<p style="position:absolute;top:346px;left:251px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:346px;left:259px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:346px;left:267px;white-space:nowrap" class="ft09">20</p>
+<p style="position:absolute;top:346px;left:283px;white-space:nowrap" class="ft06">}}</p>
+<p style="position:absolute;top:364px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;</p>
+<p style="position:absolute;top:364px;left:105px;white-space:nowrap" class="ft06">/&gt;</p>
+<p style="position:absolute;top:383px;left:48px;white-space:nowrap" class="ft05">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:383px;left:81px;white-space:nowrap" class="ft06">);</p>
+<p style="position:absolute;top:401px;left:48px;white-space:nowrap" class="ft05">&#160;&#160;</p>
+<p style="position:absolute;top:401px;left:64px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:419px;left:48px;white-space:nowrap" class="ft06">}</p>
+</div>
+</body>
+</html>

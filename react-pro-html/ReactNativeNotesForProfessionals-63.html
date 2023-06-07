@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 63</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft09{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft010{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page63-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals063.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">59</p>
+<p style="position:absolute;top:44px;left:43px;white-space:nowrap" class="ft01"><b>Important:</b></p>
+<p style="position:absolute;top:44px;left:124px;white-space:nowrap" class="ft02">&#160;Don't forget to bind method in constructor and to remove listener in componentWillUnmount.</p>
+<p style="position:absolute;top:84px;left:43px;white-space:nowrap" class="ft02">Case 2: Exit App</p>
+<p style="position:absolute;top:123px;left:43px;white-space:nowrap" class="ft02">In this case, no need to handle anything on that screen where you want to exit app.</p>
+<p style="position:absolute;top:163px;left:43px;white-space:nowrap" class="ft01"><b>Important:</b></p>
+<p style="position:absolute;top:163px;left:124px;white-space:nowrap" class="ft02">&#160;This should be only screen on stack.</p>
+<p style="position:absolute;top:200px;left:43px;white-space:nowrap" class="ft03"><b>Section 20.4: Example of Hardware back button detection</b></p>
+<p style="position:absolute;top:224px;left:43px;white-space:nowrap" class="ft03"><b>using BackHandler</b></p>
+<p style="position:absolute;top:275px;left:43px;white-space:nowrap" class="ft02">Since BackAndroid is deprecated. Use BackHandler instead of BackAndroid.</p>
+<p style="position:absolute;top:320px;left:48px;white-space:nowrap" class="ft04">import</p>
+<p style="position:absolute;top:320px;left:97px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:320px;left:105px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:320px;left:113px;white-space:nowrap" class="ft05">&#160;BackHandler&#160;</p>
+<p style="position:absolute;top:320px;left:218px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:320px;left:226px;white-space:nowrap" class="ft05">&#160;from&#160;</p>
+<p style="position:absolute;top:320px;left:275px;white-space:nowrap" class="ft07">'react-native'</p>
+<p style="position:absolute;top:320px;left:388px;white-space:nowrap" class="ft06">;</p>
+<p style="position:absolute;top:357px;left:48px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:357px;left:56px;white-space:nowrap" class="ft05">...</p>
+<p style="position:absolute;top:357px;left:81px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:375px;left:48px;white-space:nowrap" class="ft05">&#160; ComponentWillMount</p>
+<p style="position:absolute;top:375px;left:210px;white-space:nowrap" class="ft06">(){</p>
+<p style="position:absolute;top:394px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; BackHandler.</p>
+<p style="position:absolute;top:394px;left:178px;white-space:nowrap" class="ft08">addEventListener</p>
+<p style="position:absolute;top:394px;left:307px;white-space:nowrap" class="ft06">(</p>
+<p style="position:absolute;top:394px;left:315px;white-space:nowrap" class="ft07">'hardwareBackPress'</p>
+<p style="position:absolute;top:394px;left:469px;white-space:nowrap" class="ft06">,()=&gt;{</p>
+<p style="position:absolute;top:394px;left:518px;white-space:nowrap" class="ft05">&#160;&#160;</p>
+<p style="position:absolute;top:412px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:412px;left:97px;white-space:nowrap" class="ft09"><b>if</b></p>
+<p style="position:absolute;top:412px;left:113px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:412px;left:121px;white-space:nowrap" class="ft06">(!</p>
+<p style="position:absolute;top:412px;left:137px;white-space:nowrap" class="ft09"><b>this</b></p>
+<p style="position:absolute;top:412px;left:170px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:412px;left:178px;white-space:nowrap" class="ft08">onMainScreen</p>
+<p style="position:absolute;top:412px;left:275px;white-space:nowrap" class="ft06">())</p>
+<p style="position:absolute;top:412px;left:299px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:412px;left:307px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:431px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:431px;left:113px;white-space:nowrap" class="ft09"><b>this</b></p>
+<p style="position:absolute;top:431px;left:145px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:431px;left:153px;white-space:nowrap" class="ft08">goBack</p>
+<p style="position:absolute;top:431px;left:202px;white-space:nowrap" class="ft06">();</p>
+<p style="position:absolute;top:449px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:449px;left:113px;white-space:nowrap" class="ft09"><b>return</b></p>
+<p style="position:absolute;top:449px;left:162px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:449px;left:170px;white-space:nowrap" class="ft010"><b>true</b></p>
+<p style="position:absolute;top:449px;left:202px;white-space:nowrap" class="ft06">;</p>
+<p style="position:absolute;top:468px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:468px;left:97px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:486px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:486px;left:97px;white-space:nowrap" class="ft09"><b>return</b></p>
+<p style="position:absolute;top:486px;left:145px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:486px;left:153px;white-space:nowrap" class="ft010"><b>false</b></p>
+<p style="position:absolute;top:486px;left:194px;white-space:nowrap" class="ft06">;</p>
+<p style="position:absolute;top:505px;left:48px;white-space:nowrap" class="ft05">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:505px;left:81px;white-space:nowrap" class="ft06">});</p>
+<p style="position:absolute;top:523px;left:48px;white-space:nowrap" class="ft05">&#160;&#160;</p>
+<p style="position:absolute;top:523px;left:64px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:523px;left:72px;white-space:nowrap" class="ft05">&#160; &#160;&#160;</p>
+</div>
+</body>
+</html>

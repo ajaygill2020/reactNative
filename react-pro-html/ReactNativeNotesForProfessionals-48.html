@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 48</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft03{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft06{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft09{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft010{font-size:13px;font-family:AOAEKO+RobotoMono;color:#006600;}
+	.ft011{font-size:15px;font-family:BDVIQH+OpenSans;color:#000000;}
+	.ft012{font-size:15px;font-family:AQIEPH+OpenSans;color:#05a4d1;}
+	.ft013{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft014{font-size:13px;line-height:18px;font-family:AQBTGV+RobotoMono;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page48-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals048.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">44</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 15: HTTP Requests</b></p>
+<p style="position:absolute;top:99px;left:43px;white-space:nowrap" class="ft02"><b>Section 15.1: Using Promises with the fetch API and Redux</b></p>
+<p style="position:absolute;top:150px;left:43px;white-space:nowrap" class="ft013">Redux is the most common state management library used with React-Native. The following example demonstrates<br/>how to use the fetch API and dispatch changes to your applications state reducer using redux-thunk.</p>
+<p style="position:absolute;top:217px;left:48px;white-space:nowrap" class="ft04">export</p>
+<p style="position:absolute;top:217px;left:97px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:217px;left:105px;white-space:nowrap" class="ft06"><b>const</b></p>
+<p style="position:absolute;top:217px;left:145px;white-space:nowrap" class="ft05">&#160;fetchRecipes&#160;</p>
+<p style="position:absolute;top:217px;left:259px;white-space:nowrap" class="ft07">=</p>
+<p style="position:absolute;top:217px;left:267px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:217px;left:275px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:217px;left:283px;white-space:nowrap" class="ft05">action</p>
+<p style="position:absolute;top:217px;left:332px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:217px;left:340px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:217px;left:348px;white-space:nowrap" class="ft07">=&gt;</p>
+<p style="position:absolute;top:217px;left:364px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:217px;left:372px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:235px;left:48px;white-space:nowrap" class="ft05">&#160;&#160;</p>
+<p style="position:absolute;top:235px;left:64px;white-space:nowrap" class="ft06"><b>return</b></p>
+<p style="position:absolute;top:235px;left:113px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:235px;left:121px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:235px;left:129px;white-space:nowrap" class="ft05">dispatch</p>
+<p style="position:absolute;top:235px;left:194px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:235px;left:202px;white-space:nowrap" class="ft05">&#160;getState</p>
+<p style="position:absolute;top:235px;left:275px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:235px;left:283px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:235px;left:291px;white-space:nowrap" class="ft07">=&gt;</p>
+<p style="position:absolute;top:235px;left:307px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:235px;left:315px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:254px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; fetch</p>
+<p style="position:absolute;top:254px;left:121px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:254px;left:129px;white-space:nowrap" class="ft08">'/recipes'</p>
+<p style="position:absolute;top:254px;left:210px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:254px;left:218px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:254px;left:226px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:272px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; method</p>
+<p style="position:absolute;top:272px;left:162px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:272px;left:170px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:272px;left:178px;white-space:nowrap" class="ft08">'POST'</p>
+<p style="position:absolute;top:272px;left:226px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:291px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; headers</p>
+<p style="position:absolute;top:291px;left:170px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:291px;left:178px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:291px;left:186px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:309px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:309px;left:129px;white-space:nowrap" class="ft08">'Accept'</p>
+<p style="position:absolute;top:309px;left:194px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:309px;left:202px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:309px;left:210px;white-space:nowrap" class="ft08">'application/json'</p>
+<p style="position:absolute;top:309px;left:356px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:328px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:328px;left:129px;white-space:nowrap" class="ft08">'Content-Type'</p>
+<p style="position:absolute;top:328px;left:243px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:328px;left:251px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:328px;left:259px;white-space:nowrap" class="ft08">'application/json'</p>
+<p style="position:absolute;top:346px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:346px;left:113px;white-space:nowrap" class="ft07">},</p>
+<p style="position:absolute;top:365px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; body</p>
+<p style="position:absolute;top:365px;left:145px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:365px;left:153px;white-space:nowrap" class="ft05">&#160;JSON.</p>
+<p style="position:absolute;top:365px;left:202px;white-space:nowrap" class="ft09">stringify</p>
+<p style="position:absolute;top:365px;left:275px;white-space:nowrap" class="ft07">({</p>
+<p style="position:absolute;top:383px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; recipeName</p>
+<p style="position:absolute;top:383px;left:210px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:402px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; instructions</p>
+<p style="position:absolute;top:402px;left:226px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:420px;left:48px;white-space:nowrap" class="ft014">&#160; &#160; &#160; &#160; &#160; ingredients<br/>&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:439px;left:113px;white-space:nowrap" class="ft07">})</p>
+<p style="position:absolute;top:457px;left:48px;white-space:nowrap" class="ft05">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:457px;left:81px;white-space:nowrap" class="ft07">})</p>
+<p style="position:absolute;top:476px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; .</p>
+<p style="position:absolute;top:476px;left:89px;white-space:nowrap" class="ft09">then</p>
+<p style="position:absolute;top:476px;left:121px;white-space:nowrap" class="ft07">((</p>
+<p style="position:absolute;top:476px;left:137px;white-space:nowrap" class="ft05">res</p>
+<p style="position:absolute;top:476px;left:162px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:476px;left:170px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:476px;left:178px;white-space:nowrap" class="ft07">=&gt;</p>
+<p style="position:absolute;top:476px;left:194px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:476px;left:202px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:494px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:494px;left:97px;white-space:nowrap" class="ft010"><i>// If response was successful parse the json and dispatch an update</i></p>
+<p style="position:absolute;top:512px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:512px;left:97px;white-space:nowrap" class="ft06"><b>if</b></p>
+<p style="position:absolute;top:512px;left:113px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:512px;left:121px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:512px;left:129px;white-space:nowrap" class="ft05">res.</p>
+<p style="position:absolute;top:512px;left:162px;white-space:nowrap" class="ft09">ok</p>
+<p style="position:absolute;top:512px;left:178px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:512px;left:186px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:512px;left:194px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:531px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; res.</p>
+<p style="position:absolute;top:531px;left:145px;white-space:nowrap" class="ft09">json</p>
+<p style="position:absolute;top:531px;left:178px;white-space:nowrap" class="ft07">()</p>
+<p style="position:absolute;top:531px;left:194px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:531px;left:202px;white-space:nowrap" class="ft09">then</p>
+<p style="position:absolute;top:531px;left:234px;white-space:nowrap" class="ft07">((</p>
+<p style="position:absolute;top:531px;left:251px;white-space:nowrap" class="ft05">recipe</p>
+<p style="position:absolute;top:531px;left:299px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:531px;left:307px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:531px;left:315px;white-space:nowrap" class="ft07">=&gt;</p>
+<p style="position:absolute;top:531px;left:332px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:531px;left:340px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:549px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; dispatch</p>
+<p style="position:absolute;top:549px;left:194px;white-space:nowrap" class="ft07">({</p>
+<p style="position:absolute;top:568px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; type</p>
+<p style="position:absolute;top:568px;left:178px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:568px;left:186px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:568px;left:194px;white-space:nowrap" class="ft08">'UPDATE_RECIPE'</p>
+<p style="position:absolute;top:568px;left:315px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:586px;left:48px;white-space:nowrap" class="ft014">&#160; &#160; &#160; &#160; &#160; &#160; recipe<br/>&#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:605px;left:129px;white-space:nowrap" class="ft07">});</p>
+<p style="position:absolute;top:623px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:623px;left:113px;white-space:nowrap" class="ft07">});</p>
+<p style="position:absolute;top:642px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:642px;left:97px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:642px;left:105px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:642px;left:113px;white-space:nowrap" class="ft06"><b>else</b></p>
+<p style="position:absolute;top:642px;left:145px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:642px;left:153px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:660px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:660px;left:113px;white-space:nowrap" class="ft010"><i>// response wasn't successful so dispatch an error</i></p>
+<p style="position:absolute;top:679px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; res.</p>
+<p style="position:absolute;top:679px;left:145px;white-space:nowrap" class="ft09">json</p>
+<p style="position:absolute;top:679px;left:178px;white-space:nowrap" class="ft07">()</p>
+<p style="position:absolute;top:679px;left:194px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:679px;left:202px;white-space:nowrap" class="ft09">then</p>
+<p style="position:absolute;top:679px;left:234px;white-space:nowrap" class="ft07">((</p>
+<p style="position:absolute;top:679px;left:251px;white-space:nowrap" class="ft05">err</p>
+<p style="position:absolute;top:679px;left:275px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:679px;left:283px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:679px;left:291px;white-space:nowrap" class="ft07">=&gt;</p>
+<p style="position:absolute;top:679px;left:307px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:679px;left:315px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:697px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; dispatch</p>
+<p style="position:absolute;top:697px;left:194px;white-space:nowrap" class="ft07">({</p>
+<p style="position:absolute;top:716px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; type</p>
+<p style="position:absolute;top:716px;left:178px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:716px;left:186px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:716px;left:194px;white-space:nowrap" class="ft08">'ERROR_RECIPE'</p>
+<p style="position:absolute;top:716px;left:307px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:734px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; message</p>
+<p style="position:absolute;top:734px;left:202px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:734px;left:210px;white-space:nowrap" class="ft05">&#160;err.</p>
+<p style="position:absolute;top:734px;left:251px;white-space:nowrap" class="ft09">reason</p>
+<p style="position:absolute;top:734px;left:299px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:753px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; status</p>
+<p style="position:absolute;top:753px;left:194px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:753px;left:202px;white-space:nowrap" class="ft05">&#160;err.</p>
+<p style="position:absolute;top:753px;left:243px;white-space:nowrap" class="ft09">status</p>
+<p style="position:absolute;top:771px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:771px;left:129px;white-space:nowrap" class="ft07">});</p>
+<p style="position:absolute;top:789px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:789px;left:113px;white-space:nowrap" class="ft07">});</p>
+<p style="position:absolute;top:808px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:808px;left:97px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:826px;left:48px;white-space:nowrap" class="ft05">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:826px;left:81px;white-space:nowrap" class="ft07">})</p>
+<p style="position:absolute;top:845px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; .</p>
+<p style="position:absolute;top:845px;left:89px;white-space:nowrap" class="ft06"><b>catch</b></p>
+<p style="position:absolute;top:845px;left:129px;white-space:nowrap" class="ft07">((</p>
+<p style="position:absolute;top:845px;left:145px;white-space:nowrap" class="ft05">err</p>
+<p style="position:absolute;top:845px;left:170px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:845px;left:178px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:845px;left:186px;white-space:nowrap" class="ft07">=&gt;</p>
+<p style="position:absolute;top:845px;left:202px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:845px;left:210px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:863px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:863px;left:97px;white-space:nowrap" class="ft010"><i>// Runs if there is a general JavaScript error.</i></p>
+<p style="position:absolute;top:882px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; dispatch</p>
+<p style="position:absolute;top:882px;left:162px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:882px;left:170px;white-space:nowrap" class="ft05">error</p>
+<p style="position:absolute;top:882px;left:210px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:882px;left:218px;white-space:nowrap" class="ft08">'There was a problem with the request.'</p>
+<p style="position:absolute;top:882px;left:534px;white-space:nowrap" class="ft07">));</p>
+<p style="position:absolute;top:900px;left:48px;white-space:nowrap" class="ft05">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:900px;left:81px;white-space:nowrap" class="ft07">});</p>
+<p style="position:absolute;top:919px;left:48px;white-space:nowrap" class="ft05">&#160;&#160;</p>
+<p style="position:absolute;top:919px;left:64px;white-space:nowrap" class="ft07">};</p>
+<p style="position:absolute;top:937px;left:48px;white-space:nowrap" class="ft07">};</p>
+<p style="position:absolute;top:976px;left:43px;white-space:nowrap" class="ft02"><b>Section 15.2: HTTP with the fetch API</b></p>
+<p style="position:absolute;top:1026px;left:43px;white-space:nowrap" class="ft03">It should be noted that Fetch&#160;</p>
+<p style="position:absolute;top:1026px;left:248px;white-space:nowrap" class="ft011"><i>does not support progress callbacks</i></p>
+<p style="position:absolute;top:1026px;left:485px;white-space:nowrap" class="ft03">. See:&#160;</p>
+<p style="position:absolute;top:1026px;left:526px;white-space:nowrap" class="ft012"><a href="https://github.com/github/fetch/issues/89">https://github.com/github/fetch/issues/89</a></p>
+<p style="position:absolute;top:1026px;left:818px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:1066px;left:43px;white-space:nowrap" class="ft03"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/progress">The alternative is to use XMLHttpRequest&#160;</a></p>
+<p style="position:absolute;top:1066px;left:334px;white-space:nowrap" class="ft012"><a href="https://developer.mozilla.org/en-US/docs/Web/Events/progress">https://developer.mozilla.org/en-US/docs/Web/Events/progress</a></p>
+<p style="position:absolute;top:1066px;left:777px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:1110px;left:48px;white-space:nowrap" class="ft05">fetch</p>
+<p style="position:absolute;top:1110px;left:89px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:1110px;left:97px;white-space:nowrap" class="ft08">'https://mywebsite.com/mydata.json'</p>
+<p style="position:absolute;top:1110px;left:380px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:1110px;left:388px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:1110px;left:396px;white-space:nowrap" class="ft09">then</p>
+<p style="position:absolute;top:1110px;left:429px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:1110px;left:437px;white-space:nowrap" class="ft05">json&#160;</p>
+<p style="position:absolute;top:1110px;left:477px;white-space:nowrap" class="ft07">=&gt;</p>
+<p style="position:absolute;top:1110px;left:494px;white-space:nowrap" class="ft05">&#160;console.</p>
+<p style="position:absolute;top:1110px;left:567px;white-space:nowrap" class="ft09">log</p>
+<p style="position:absolute;top:1110px;left:591px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:1110px;left:599px;white-space:nowrap" class="ft05">json</p>
+<p style="position:absolute;top:1110px;left:631px;white-space:nowrap" class="ft07">));</p>
+<p style="position:absolute;top:1147px;left:48px;white-space:nowrap" class="ft05">fetch</p>
+<p style="position:absolute;top:1147px;left:89px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:1147px;left:97px;white-space:nowrap" class="ft08">'/login'</p>
+<p style="position:absolute;top:1147px;left:162px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:1147px;left:170px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:1147px;left:178px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:1166px;left:48px;white-space:nowrap" class="ft05">&#160; method</p>
+<p style="position:absolute;top:1166px;left:113px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:1166px;left:121px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:1166px;left:129px;white-space:nowrap" class="ft08">'POST'</p>
+<p style="position:absolute;top:1166px;left:178px;white-space:nowrap" class="ft07">,</p>
+</div>
+</body>
+</html>

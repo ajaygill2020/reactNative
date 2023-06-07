@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 88</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft07{font-size:13px;font-family:AOOFJR+RobotoMono;color:#790774;}
+	.ft08{font-size:15px;font-family:AQIEPH+OpenSans;color:#05a4d1;}
+	.ft09{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page88-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals088.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">84</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 32: Unit Testing</b></p>
+<p style="position:absolute;top:105px;left:43px;white-space:nowrap" class="ft02">Unit testing is a low level testing practice where smallest units or components of the code are tested.</p>
+<p style="position:absolute;top:142px;left:43px;white-space:nowrap" class="ft03"><b>Section 32.1: Unit Test In React Native Using Jest</b></p>
+<p style="position:absolute;top:192px;left:43px;white-space:nowrap" class="ft09">Starting from react-native version 0.38, a Jest setup is included by default when running react-native init. The<br/>following conﬁguration should be automatically added to your package.json ﬁle:</p>
+<p style="position:absolute;top:260px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:260px;left:81px;white-space:nowrap" class="ft05">&#34;scripts&#34;</p>
+<p style="position:absolute;top:260px;left:153px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:260px;left:162px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:260px;left:170px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:278px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:278px;left:81px;white-space:nowrap" class="ft05">&#34;start&#34;</p>
+<p style="position:absolute;top:278px;left:137px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:278px;left:145px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:278px;left:153px;white-space:nowrap" class="ft05">&#34;node node_modules/react-native/local-cli/cli.js start&#34;</p>
+<p style="position:absolute;top:278px;left:599px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:297px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:297px;left:81px;white-space:nowrap" class="ft05">&#34;test&#34;</p>
+<p style="position:absolute;top:297px;left:129px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:297px;left:137px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:297px;left:145px;white-space:nowrap" class="ft05">&#34;jest&#34;</p>
+<p style="position:absolute;top:315px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:315px;left:81px;white-space:nowrap" class="ft06">},</p>
+<p style="position:absolute;top:334px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:334px;left:81px;white-space:nowrap" class="ft05">&#34;jest&#34;</p>
+<p style="position:absolute;top:334px;left:129px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:334px;left:137px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:334px;left:145px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:352px;left:48px;white-space:nowrap" class="ft04">&#160; &#160; &#160;</p>
+<p style="position:absolute;top:352px;left:89px;white-space:nowrap" class="ft05">&#34;preset&#34;</p>
+<p style="position:absolute;top:352px;left:153px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:352px;left:162px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:352px;left:170px;white-space:nowrap" class="ft05">&#34;react-native&#34;</p>
+<p style="position:absolute;top:371px;left:48px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:371px;left:81px;white-space:nowrap" class="ft06">}</p>
+<p style="position:absolute;top:412px;left:43px;white-space:nowrap" class="ft02">You can run&#160;</p>
+<p style="position:absolute;top:415px;left:130px;white-space:nowrap" class="ft04">run npm&#160;</p>
+<p style="position:absolute;top:415px;left:195px;white-space:nowrap" class="ft07"><b>test</b></p>
+<p style="position:absolute;top:415px;left:227px;white-space:nowrap" class="ft04">&#160;or jest</p>
+<p style="position:absolute;top:412px;left:292px;white-space:nowrap" class="ft02"><a href="https://github.com/facebook/jest/tree/master/examples/react-native">&#160;to test in react native. For code example:&#160;</a></p>
+<p style="position:absolute;top:412px;left:583px;white-space:nowrap" class="ft08"><a href="https://github.com/facebook/jest/tree/master/examples/react-native">Link</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 56</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft03{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft09{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft010{font-size:15px;font-family:AQIEPH+OpenSans;color:#05a4d1;}
+	.ft011{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page56-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals056.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">52</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 18: Custom Fonts</b></p>
+<p style="position:absolute;top:99px;left:43px;white-space:nowrap" class="ft02"><b>Section 18.1: Custom fonts for both Android and IOS</b></p>
+<p style="position:absolute;top:150px;left:88px;white-space:nowrap" class="ft03">Create a folder in your project folder, and add your fonts to it. Example:</p>
+<p style="position:absolute;top:196px;left:133px;white-space:nowrap" class="ft011">Example: Here we added a folder in root called &#34;mystuﬀ&#34;, then &#34;fonts&#34;, and inside it we placed our<br/>fonts:</p>
+<p style="position:absolute;top:504px;left:88px;white-space:nowrap" class="ft03">Add the below code in&#160;</p>
+<p style="position:absolute;top:507px;left:247px;white-space:nowrap" class="ft04">package.</p>
+<p style="position:absolute;top:507px;left:312px;white-space:nowrap" class="ft05">json</p>
+<p style="position:absolute;top:504px;left:344px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:551px;left:88px;white-space:nowrap" class="ft03">{ ... &#34;rnpm&#34;: { &#34;assets&#34;: [ &#34;path/to/fontfolder&#34; ] }, ... }</p>
+<p style="position:absolute;top:573px;left:133px;white-space:nowrap" class="ft03">For the example above, our package.json would now have a path of &#34;mystuﬀ/fonts&#34;:</p>
+<p style="position:absolute;top:612px;left:138px;white-space:nowrap" class="ft06">&#34;rnpm&#34;</p>
+<p style="position:absolute;top:612px;left:187px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:612px;left:195px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:612px;left:203px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:631px;left:138px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:631px;left:154px;white-space:nowrap" class="ft06">&#34;assets&#34;</p>
+<p style="position:absolute;top:631px;left:219px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:631px;left:227px;white-space:nowrap" class="ft04">&#160;</p>
+<p style="position:absolute;top:631px;left:235px;white-space:nowrap" class="ft07">[</p>
+<p style="position:absolute;top:649px;left:138px;white-space:nowrap" class="ft04">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:649px;left:171px;white-space:nowrap" class="ft06">&#34;mystuff/fonts&#34;</p>
+<p style="position:absolute;top:668px;left:138px;white-space:nowrap" class="ft04">&#160;&#160;</p>
+<p style="position:absolute;top:668px;left:154px;white-space:nowrap" class="ft07">]</p>
+<p style="position:absolute;top:686px;left:138px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:723px;left:88px;white-space:nowrap" class="ft03">Run&#160;</p>
+<p style="position:absolute;top:726px;left:119px;white-space:nowrap" class="ft04">react</p>
+<p style="position:absolute;top:726px;left:160px;white-space:nowrap" class="ft07">-</p>
+<p style="position:absolute;top:726px;left:168px;white-space:nowrap" class="ft08">native</p>
+<p style="position:absolute;top:726px;left:216px;white-space:nowrap" class="ft04">&#160;link</p>
+<p style="position:absolute;top:723px;left:257px;white-space:nowrap" class="ft03">&#160;command.</p>
+<p style="position:absolute;top:757px;left:88px;white-space:nowrap" class="ft03">Using custom fonts on project below code</p>
+<p style="position:absolute;top:803px;left:88px;white-space:nowrap" class="ft03">&lt;Text style={{ fontFamily: 'FONT-NAME' }}&gt; My Text &lt;/Text&gt;</p>
+<p style="position:absolute;top:842px;left:88px;white-space:nowrap" class="ft03">Where&#160;</p>
+<p style="position:absolute;top:845px;left:137px;white-space:nowrap" class="ft04">FONT</p>
+<p style="position:absolute;top:845px;left:170px;white-space:nowrap" class="ft07">-</p>
+<p style="position:absolute;top:845px;left:178px;white-space:nowrap" class="ft04">NAME</p>
+<p style="position:absolute;top:842px;left:210px;white-space:nowrap" class="ft03">&#160;is the preﬁx platform speciﬁc.</p>
+<p style="position:absolute;top:882px;left:88px;white-space:nowrap" class="ft09"><b>Android</b></p>
+<p style="position:absolute;top:922px;left:88px;white-space:nowrap" class="ft03">FONT-NAME is the words before the extension in ﬁle. Example: Your font's ﬁle name is&#160;</p>
+<p style="position:absolute;top:925px;left:693px;white-space:nowrap" class="ft04">Roboto</p>
+<p style="position:absolute;top:925px;left:742px;white-space:nowrap" class="ft07">-</p>
+<p style="position:absolute;top:925px;left:750px;white-space:nowrap" class="ft04">Regular.</p>
+<p style="position:absolute;top:925px;left:815px;white-space:nowrap" class="ft05">ttf</p>
+<p style="position:absolute;top:922px;left:839px;white-space:nowrap" class="ft03">,</p>
+<p style="position:absolute;top:944px;left:88px;white-space:nowrap" class="ft03">so you would set&#160;</p>
+<p style="position:absolute;top:947px;left:209px;white-space:nowrap" class="ft04">fontFamily</p>
+<p style="position:absolute;top:947px;left:290px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:947px;left:298px;white-space:nowrap" class="ft04">&#160;Roboto</p>
+<p style="position:absolute;top:947px;left:355px;white-space:nowrap" class="ft07">-</p>
+<p style="position:absolute;top:947px;left:363px;white-space:nowrap" class="ft04">Regular</p>
+<p style="position:absolute;top:944px;left:420px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:984px;left:88px;white-space:nowrap" class="ft09"><b>iOS</b></p>
+<p style="position:absolute;top:1024px;left:88px;white-space:nowrap" class="ft03">FONT-NAME is &#34;Full Name&#34; found after right clicking, on the font ﬁle, then clicking on &#34;Get Info&#34;. ( Source:</p>
+<p style="position:absolute;top:1046px;left:88px;white-space:nowrap" class="ft010"><a href="https://stackoverflow.com/a/16788493/2529614">https://stackoverﬂow.com/a/16788493/2529614</a></p>
+<p style="position:absolute;top:1046px;left:423px;white-space:nowrap" class="ft03"><a href="https://stackoverflow.com/a/16788493/2529614">&#160;), in the screenshot below, the ﬁle name is&#160;</a></p>
+<p style="position:absolute;top:1049px;left:724px;white-space:nowrap" class="ft04">MM Proxima Nova</p>
+<p style="position:absolute;top:1072px;left:88px;white-space:nowrap" class="ft04">Ultra bold.</p>
+<p style="position:absolute;top:1072px;left:177px;white-space:nowrap" class="ft05">otf</p>
+<p style="position:absolute;top:1069px;left:201px;white-space:nowrap" class="ft03">, however &#34;Full Name&#34; is &#34;Proxima Nova Semibold&#34;, thus you would set&#160;</p>
+<p style="position:absolute;top:1072px;left:698px;white-space:nowrap" class="ft04">fontFamily</p>
+<p style="position:absolute;top:1072px;left:779px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:1094px;left:88px;white-space:nowrap" class="ft04">Proxima Nova Semibold</p>
+<p style="position:absolute;top:1091px;left:258px;white-space:nowrap" class="ft03">. Screenshot -</p>
+</div>
+</body>
+</html>

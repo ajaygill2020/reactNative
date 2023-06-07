@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 61</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft03{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft07{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft08{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+	.ft09{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft010{font-size:15px;font-family:AQIEPH+OpenSans;color:#05a4d1;}
+	.ft011{font-size:13px;font-family:AQBTGV+RobotoMono;color:#05a4d1;}
+	.ft012{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft013{font-size:13px;font-family:AOAEKO+RobotoMono;color:#006600;}
+	.ft014{font-size:13px;font-family:AQBTGV+RobotoMono;color:#cc0000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page61-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals061.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:831px;white-space:nowrap" class="ft00">57</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 20: Android - Hardware Back</b></p>
+<p style="position:absolute;top:71px;left:43px;white-space:nowrap" class="ft01"><b>Button</b></p>
+<p style="position:absolute;top:134px;left:43px;white-space:nowrap" class="ft02"><b>Section 20.1: Detect Hardware back button presses in Android</b></p>
+<p style="position:absolute;top:190px;left:48px;white-space:nowrap" class="ft03">BackAndroid.</p>
+<p style="position:absolute;top:190px;left:145px;white-space:nowrap" class="ft04">addEventListener</p>
+<p style="position:absolute;top:190px;left:275px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:190px;left:283px;white-space:nowrap" class="ft06">'hardwareBackPress'</p>
+<p style="position:absolute;top:190px;left:437px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:190px;left:445px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:190px;left:453px;white-space:nowrap" class="ft07"><b>function</b></p>
+<p style="position:absolute;top:190px;left:518px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:190px;left:534px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:190px;left:542px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:209px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:209px;left:81px;white-space:nowrap" class="ft07"><b>if</b></p>
+<p style="position:absolute;top:209px;left:97px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:209px;left:105px;white-space:nowrap" class="ft05">(!</p>
+<p style="position:absolute;top:209px;left:121px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:209px;left:153px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:209px;left:162px;white-space:nowrap" class="ft04">onMainScreen</p>
+<p style="position:absolute;top:209px;left:259px;white-space:nowrap" class="ft05">())</p>
+<p style="position:absolute;top:209px;left:283px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:209px;left:291px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:227px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:227px;left:113px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:227px;left:145px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:227px;left:153px;white-space:nowrap" class="ft04">goBack</p>
+<p style="position:absolute;top:227px;left:202px;white-space:nowrap" class="ft05">();</p>
+<p style="position:absolute;top:246px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:246px;left:113px;white-space:nowrap" class="ft07"><b>return</b></p>
+<p style="position:absolute;top:246px;left:162px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:246px;left:170px;white-space:nowrap" class="ft08"><b>true</b></p>
+<p style="position:absolute;top:246px;left:202px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:264px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:264px;left:81px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:282px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:282px;left:81px;white-space:nowrap" class="ft07"><b>return</b></p>
+<p style="position:absolute;top:282px;left:129px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:282px;left:137px;white-space:nowrap" class="ft08"><b>false</b></p>
+<p style="position:absolute;top:282px;left:178px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:301px;left:48px;white-space:nowrap" class="ft05">});</p>
+<p style="position:absolute;top:342px;left:43px;white-space:nowrap" class="ft09">Note:&#160;</p>
+<p style="position:absolute;top:345px;left:84px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:345px;left:117px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:345px;left:125px;white-space:nowrap" class="ft04">onMainScreen</p>
+<p style="position:absolute;top:345px;left:222px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:342px;left:238px;white-space:nowrap" class="ft09">&#160;and&#160;</p>
+<p style="position:absolute;top:345px;left:273px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:345px;left:305px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:345px;left:313px;white-space:nowrap" class="ft04">goBack</p>
+<p style="position:absolute;top:345px;left:362px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:342px;left:378px;white-space:nowrap" class="ft09">&#160;are not built in functions, you also need to implement those.</p>
+<p style="position:absolute;top:365px;left:43px;white-space:nowrap" class="ft09">(</p>
+<p style="position:absolute;top:365px;left:47px;white-space:nowrap" class="ft010"><a href="https://github.com/immidi/react-native/commit/ed7e0fb31d842c63e8b8dc77ce795fac86e0f712)">https://github.com/immidi/react-native/commit/ed7e0fb31d842c63e8b8dc77ce795fac86e0f712)</a></p>
+<p style="position:absolute;top:401px;left:43px;white-space:nowrap" class="ft02"><b>Section 20.2: Example of BackAndroid along with Navigator</b></p>
+<p style="position:absolute;top:452px;left:43px;white-space:nowrap" class="ft09">This is an example on how to use React Native's&#160;</p>
+<p style="position:absolute;top:455px;left:379px;white-space:nowrap" class="ft03">BackAndroid</p>
+<p style="position:absolute;top:452px;left:468px;white-space:nowrap" class="ft09">&#160;along with the&#160;</p>
+<p style="position:absolute;top:455px;left:576px;white-space:nowrap" class="ft03">Navigator</p>
+<p style="position:absolute;top:452px;left:649px;white-space:nowrap" class="ft09">.</p>
+<p style="position:absolute;top:494px;left:43px;white-space:nowrap" class="ft03">componentWillMount</p>
+<p style="position:absolute;top:491px;left:188px;white-space:nowrap" class="ft09">&#160;registers an event listener to handle the taps on the back button. It checks if there is another</p>
+<p style="position:absolute;top:514px;left:43px;white-space:nowrap" class="ft09">view in the history stack, and if there is one, it goes back -otherwise it keeps the default behaviour.</p>
+<p style="position:absolute;top:553px;left:43px;white-space:nowrap" class="ft09"><a href="https://facebook.github.io/react-native/docs/backandroid.html">More information on the&#160;</a></p>
+<p style="position:absolute;top:556px;left:219px;white-space:nowrap" class="ft011"><a href="https://facebook.github.io/react-native/docs/backandroid.html">BackAndroid</a></p>
+<p style="position:absolute;top:553px;left:308px;white-space:nowrap" class="ft010"><a href="https://facebook.github.io/react-native/docs/backandroid.html">&#160;docs</a></p>
+<p style="position:absolute;top:553px;left:345px;white-space:nowrap" class="ft09"><a href="https://facebook.github.io/react-native/docs/backandroid.html">&#160;and the&#160;</a></p>
+<p style="position:absolute;top:556px;left:406px;white-space:nowrap" class="ft011"><a href="https://facebook.github.io/react-native/docs/navigator.html">Navigator</a></p>
+<p style="position:absolute;top:553px;left:479px;white-space:nowrap" class="ft010"><a href="https://facebook.github.io/react-native/docs/navigator.html">&#160;docs</a></p>
+<p style="position:absolute;top:553px;left:516px;white-space:nowrap" class="ft09"><a href="https://facebook.github.io/react-native/docs/navigator.html">.</a></p>
+<p style="position:absolute;top:598px;left:48px;white-space:nowrap" class="ft012">import</p>
+<p style="position:absolute;top:598px;left:97px;white-space:nowrap" class="ft03">&#160;React</p>
+<p style="position:absolute;top:598px;left:145px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:598px;left:153px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:598px;left:162px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:598px;left:170px;white-space:nowrap" class="ft03">&#160;Component&#160;</p>
+<p style="position:absolute;top:598px;left:259px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:598px;left:267px;white-space:nowrap" class="ft03">&#160;from&#160;</p>
+<p style="position:absolute;top:598px;left:315px;white-space:nowrap" class="ft06">'react'</p>
+<p style="position:absolute;top:598px;left:372px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:598px;left:380px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:598px;left:388px;white-space:nowrap" class="ft013"><i>// eslint-disable-line no-unused-vars</i></p>
+<p style="position:absolute;top:635px;left:48px;white-space:nowrap" class="ft012">import</p>
+<p style="position:absolute;top:635px;left:97px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:635px;left:105px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:653px;left:48px;white-space:nowrap" class="ft03">&#160; BackAndroid</p>
+<p style="position:absolute;top:653px;left:153px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:672px;left:48px;white-space:nowrap" class="ft03">&#160; Navigator</p>
+<p style="position:absolute;top:672px;left:137px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:690px;left:48px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:690px;left:56px;white-space:nowrap" class="ft03">&#160;from&#160;</p>
+<p style="position:absolute;top:690px;left:105px;white-space:nowrap" class="ft06">'react-native'</p>
+<p style="position:absolute;top:690px;left:218px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:727px;left:48px;white-space:nowrap" class="ft012">import</p>
+<p style="position:absolute;top:727px;left:97px;white-space:nowrap" class="ft03">&#160;SceneContainer from&#160;</p>
+<p style="position:absolute;top:727px;left:267px;white-space:nowrap" class="ft06">'./Navigation/SceneContainer'</p>
+<p style="position:absolute;top:727px;left:502px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:746px;left:48px;white-space:nowrap" class="ft012">import</p>
+<p style="position:absolute;top:746px;left:97px;white-space:nowrap" class="ft03">&#160;RouteMapper from&#160;</p>
+<p style="position:absolute;top:746px;left:243px;white-space:nowrap" class="ft06">'./Navigation/RouteMapper'</p>
+<p style="position:absolute;top:746px;left:453px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:783px;left:48px;white-space:nowrap" class="ft012">export</p>
+<p style="position:absolute;top:783px;left:97px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:783px;left:105px;white-space:nowrap" class="ft07"><b>default</b></p>
+<p style="position:absolute;top:783px;left:162px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:783px;left:170px;white-space:nowrap" class="ft012">class</p>
+<p style="position:absolute;top:783px;left:210px;white-space:nowrap" class="ft03">&#160;AppContainer&#160;</p>
+<p style="position:absolute;top:783px;left:324px;white-space:nowrap" class="ft012">extends</p>
+<p style="position:absolute;top:783px;left:380px;white-space:nowrap" class="ft03">&#160;Component&#160;</p>
+<p style="position:absolute;top:783px;left:469px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:820px;left:48px;white-space:nowrap" class="ft03">&#160; constructor</p>
+<p style="position:absolute;top:820px;left:153px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:820px;left:162px;white-space:nowrap" class="ft03">props</p>
+<p style="position:absolute;top:820px;left:202px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:820px;left:210px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:820px;left:218px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:838px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:838px;left:81px;white-space:nowrap" class="ft012">super</p>
+<p style="position:absolute;top:838px;left:121px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:838px;left:129px;white-space:nowrap" class="ft03">props</p>
+<p style="position:absolute;top:838px;left:170px;white-space:nowrap" class="ft05">);</p>
+<p style="position:absolute;top:875px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:875px;left:81px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:875px;left:113px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:875px;left:121px;white-space:nowrap" class="ft04">navigator</p>
+<p style="position:absolute;top:875px;left:194px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:894px;left:48px;white-space:nowrap" class="ft03">&#160;&#160;</p>
+<p style="position:absolute;top:894px;left:64px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:930px;left:48px;white-space:nowrap" class="ft03">&#160; componentWillMount</p>
+<p style="position:absolute;top:930px;left:210px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:930px;left:226px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:930px;left:234px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:949px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; BackAndroid.</p>
+<p style="position:absolute;top:949px;left:178px;white-space:nowrap" class="ft04">addEventListener</p>
+<p style="position:absolute;top:949px;left:307px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:949px;left:315px;white-space:nowrap" class="ft06">'hardwareBackPress'</p>
+<p style="position:absolute;top:949px;left:469px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:949px;left:477px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:949px;left:486px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:949px;left:502px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:949px;left:510px;white-space:nowrap" class="ft05">=&gt;</p>
+<p style="position:absolute;top:949px;left:526px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:949px;left:534px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:967px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:967px;left:97px;white-space:nowrap" class="ft07"><b>if</b></p>
+<p style="position:absolute;top:967px;left:113px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:967px;left:121px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:967px;left:129px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:967px;left:162px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:967px;left:170px;white-space:nowrap" class="ft04">navigator</p>
+<p style="position:absolute;top:967px;left:243px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:967px;left:251px;white-space:nowrap" class="ft05">&amp;&amp;</p>
+<p style="position:absolute;top:967px;left:267px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:967px;left:275px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:967px;left:307px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:967px;left:315px;white-space:nowrap" class="ft04">navigator</p>
+<p style="position:absolute;top:967px;left:388px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:967px;left:396px;white-space:nowrap" class="ft04">getCurrentRoutes</p>
+<p style="position:absolute;top:967px;left:526px;white-space:nowrap" class="ft05">()</p>
+<p style="position:absolute;top:967px;left:542px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:967px;left:550px;white-space:nowrap" class="ft04">length</p>
+<p style="position:absolute;top:967px;left:599px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:967px;left:607px;white-space:nowrap" class="ft05">&gt;</p>
+<p style="position:absolute;top:967px;left:615px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:967px;left:623px;white-space:nowrap" class="ft014">1</p>
+<p style="position:absolute;top:967px;left:631px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:967px;left:639px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:967px;left:648px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:986px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:986px;left:113px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:986px;left:145px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:986px;left:153px;white-space:nowrap" class="ft04">navigator</p>
+<p style="position:absolute;top:986px;left:226px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:986px;left:234px;white-space:nowrap" class="ft04">pop</p>
+<p style="position:absolute;top:986px;left:259px;white-space:nowrap" class="ft05">();</p>
+<p style="position:absolute;top:1004px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1004px;left:113px;white-space:nowrap" class="ft07"><b>return</b></p>
+<p style="position:absolute;top:1004px;left:162px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:1004px;left:170px;white-space:nowrap" class="ft08"><b>true</b></p>
+<p style="position:absolute;top:1004px;left:202px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:1023px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1023px;left:97px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:1041px;left:48px;white-space:nowrap" class="ft03">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1041px;left:97px;white-space:nowrap" class="ft07"><b>return</b></p>
+<p style="position:absolute;top:1041px;left:145px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:1041px;left:153px;white-space:nowrap" class="ft08"><b>false</b></p>
+<p style="position:absolute;top:1041px;left:194px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:1060px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1060px;left:81px;white-space:nowrap" class="ft05">});</p>
+<p style="position:absolute;top:1078px;left:48px;white-space:nowrap" class="ft03">&#160;&#160;</p>
+<p style="position:absolute;top:1078px;left:64px;white-space:nowrap" class="ft05">}</p>
+<p style="position:absolute;top:1115px;left:48px;white-space:nowrap" class="ft03">&#160; renderScene</p>
+<p style="position:absolute;top:1115px;left:153px;white-space:nowrap" class="ft05">(</p>
+<p style="position:absolute;top:1115px;left:162px;white-space:nowrap" class="ft03">route</p>
+<p style="position:absolute;top:1115px;left:202px;white-space:nowrap" class="ft05">,</p>
+<p style="position:absolute;top:1115px;left:210px;white-space:nowrap" class="ft03">&#160;navigator</p>
+<p style="position:absolute;top:1115px;left:291px;white-space:nowrap" class="ft05">)</p>
+<p style="position:absolute;top:1115px;left:299px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:1115px;left:307px;white-space:nowrap" class="ft05">{</p>
+<p style="position:absolute;top:1134px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1134px;left:81px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:1134px;left:113px;white-space:nowrap" class="ft03">.</p>
+<p style="position:absolute;top:1134px;left:121px;white-space:nowrap" class="ft04">navigator</p>
+<p style="position:absolute;top:1134px;left:194px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:1134px;left:202px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:1134px;left:210px;white-space:nowrap" class="ft03">&#160;navigator</p>
+<p style="position:absolute;top:1134px;left:291px;white-space:nowrap" class="ft05">;</p>
+<p style="position:absolute;top:1171px;left:48px;white-space:nowrap" class="ft03">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1171px;left:81px;white-space:nowrap" class="ft07"><b>return</b></p>
+<p style="position:absolute;top:1171px;left:129px;white-space:nowrap" class="ft03">&#160;</p>
+<p style="position:absolute;top:1171px;left:137px;white-space:nowrap" class="ft05">(</p>
+</div>
+</body>
+</html>

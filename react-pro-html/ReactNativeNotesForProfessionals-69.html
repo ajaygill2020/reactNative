@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 69</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft04{font-size:15px;font-family:AQIEPH+OpenSans;color:#05a4d1;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft08{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+	.ft09{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page69-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals069.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:831px;white-space:nowrap" class="ft00">65</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 24: ESLint in React Native</b></p>
+<p style="position:absolute;top:105px;left:43px;white-space:nowrap" class="ft02">This is the topic for ESLint rules explanation for react-native.</p>
+<p style="position:absolute;top:142px;left:43px;white-space:nowrap" class="ft03"><b>Section 24.1: How to start</b></p>
+<p style="position:absolute;top:192px;left:43px;white-space:nowrap" class="ft09">It's highly recommended to use ESLint in your project on react-native. ESLint is a tool for code validation using<br/>speciﬁc rules provided by community.</p>
+<p style="position:absolute;top:254px;left:43px;white-space:nowrap" class="ft02">For react-native you can use rulesets for javascript, react and react-native.</p>
+<p style="position:absolute;top:294px;left:43px;white-space:nowrap" class="ft02">Common ESLint rules with motivation and explanations for javascript you can ﬁnd here:</p>
+<p style="position:absolute;top:316px;left:43px;white-space:nowrap" class="ft04"><a href="https://github.com/eslint/eslint/tree/master/docs/rules">https://github.com/eslint/eslint/tree/master/docs/rules</a></p>
+<p style="position:absolute;top:316px;left:426px;white-space:nowrap" class="ft02"><a href="https://github.com/eslint/eslint/tree/master/docs/rules">&#160;. You can simply add ready ruleset from ESLint developers</a></p>
+<p style="position:absolute;top:339px;left:43px;white-space:nowrap" class="ft09">by adding in your .eslintr.json to 'extends' node 'eslint:recommended'. ( &#34;extends&#34;: [&#34;eslint:recommended&#34;] ) More<br/><a href="http://eslint.org/docs/developer-guide/development-environment">about ESLint conﬁguring you can read here:&#160;</a></p>
+<p style="position:absolute;top:361px;left:351px;white-space:nowrap" class="ft04"><a href="http://eslint.org/docs/developer-guide/development-environment">http://eslint.org/docs/developer-guide/development-environment</a></p>
+<p style="position:absolute;top:361px;left:811px;white-space:nowrap" class="ft02"><a href="http://eslint.org/docs/developer-guide/development-environment">&#160;. It's</a></p>
+<p style="position:absolute;top:384px;left:43px;white-space:nowrap" class="ft02">recommended to read full doc about this extremely useful tool.</p>
+<p style="position:absolute;top:423px;left:43px;white-space:nowrap" class="ft02">Next, full docs about rules for ES Lint react plugin you can ﬁnd here:</p>
+<p style="position:absolute;top:446px;left:43px;white-space:nowrap" class="ft04"><a href="https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules">https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules</a></p>
+<p style="position:absolute;top:446px;left:543px;white-space:nowrap" class="ft02"><a href="https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules">&#160;. Important note: not all rules from react</a></p>
+<p style="position:absolute;top:468px;left:43px;white-space:nowrap" class="ft09">are relative to react-native. For example: react/display-name and react/no-unknown-property for example. Another<br/>rules are 'must have' for every project on react-native, such as react/jsx-no-bind and react/jsx-key.</p>
+<p style="position:absolute;top:530px;left:43px;white-space:nowrap" class="ft02">Be very careful with choosing your own ruleset.</p>
+<p style="position:absolute;top:570px;left:43px;white-space:nowrap" class="ft02">And ﬁnaly, there is a plugin explicidly for react-native:&#160;</p>
+<p style="position:absolute;top:570px;left:419px;white-space:nowrap" class="ft04"><a href="https://github.com/intellicode/eslint-plugin-react-native">https://github.com/intellicode/eslint-plugin-react-native</a></p>
+<p style="position:absolute;top:570px;left:805px;white-space:nowrap" class="ft02">&#160;Note:</p>
+<p style="position:absolute;top:592px;left:43px;white-space:nowrap" class="ft02">If you split your styles in separate ﬁle, rule react-native/no-inline-styles will not work.</p>
+<p style="position:absolute;top:632px;left:43px;white-space:nowrap" class="ft02">For correct working of this tool in react-native env you might need to set value or 'env' in your conﬁg to this:</p>
+<p style="position:absolute;top:689px;left:48px;white-space:nowrap" class="ft05">&#34;env&#34;</p>
+<p style="position:absolute;top:689px;left:89px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:689px;left:97px;white-space:nowrap" class="ft07">&#160;</p>
+<p style="position:absolute;top:689px;left:105px;white-space:nowrap" class="ft06">{</p>
+<p style="position:absolute;top:708px;left:48px;white-space:nowrap" class="ft05">&#34;browser&#34;</p>
+<p style="position:absolute;top:708px;left:121px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:708px;left:129px;white-space:nowrap" class="ft07">&#160;</p>
+<p style="position:absolute;top:708px;left:137px;white-space:nowrap" class="ft08"><b>true</b></p>
+<p style="position:absolute;top:708px;left:170px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:726px;left:48px;white-space:nowrap" class="ft05">&#34;es6&#34;</p>
+<p style="position:absolute;top:726px;left:89px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:726px;left:97px;white-space:nowrap" class="ft07">&#160;</p>
+<p style="position:absolute;top:726px;left:105px;white-space:nowrap" class="ft08"><b>true</b></p>
+<p style="position:absolute;top:726px;left:137px;white-space:nowrap" class="ft06">,</p>
+<p style="position:absolute;top:745px;left:48px;white-space:nowrap" class="ft05">&#34;amd&#34;</p>
+<p style="position:absolute;top:745px;left:89px;white-space:nowrap" class="ft06">:</p>
+<p style="position:absolute;top:745px;left:97px;white-space:nowrap" class="ft07">&#160;</p>
+<p style="position:absolute;top:745px;left:105px;white-space:nowrap" class="ft08"><b>true</b></p>
+<p style="position:absolute;top:763px;left:48px;white-space:nowrap" class="ft06">},</p>
+<p style="position:absolute;top:804px;left:43px;white-space:nowrap" class="ft02">ESLint is a key tool for development of high quality product.</p>
+</div>
+</body>
+</html>

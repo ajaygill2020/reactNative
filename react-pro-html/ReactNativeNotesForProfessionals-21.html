@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 21</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft03{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft04{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft09{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft010{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft011{font-size:13px;font-family:AQBTGV+RobotoMono;color:#cc0000;}
+	.ft012{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page21-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals021.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:834px;white-space:nowrap" class="ft00">17</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 5: Modal</b></p>
+<p style="position:absolute;top:104px;left:127px;white-space:nowrap" class="ft02"><b>Prop</b></p>
+<p style="position:absolute;top:104px;left:519px;white-space:nowrap" class="ft02"><b>details</b></p>
+<p style="position:absolute;top:125px;left:44px;white-space:nowrap" class="ft03">animationType</p>
+<p style="position:absolute;top:125px;left:247px;white-space:nowrap" class="ft03">it's an enum of ('</p>
+<p style="position:absolute;top:125px;left:362px;white-space:nowrap" class="ft02"><b>none</b></p>
+<p style="position:absolute;top:125px;left:400px;white-space:nowrap" class="ft03">', '</p>
+<p style="position:absolute;top:125px;left:415px;white-space:nowrap" class="ft02"><b>slide</b></p>
+<p style="position:absolute;top:125px;left:449px;white-space:nowrap" class="ft03">', '</p>
+<p style="position:absolute;top:125px;left:464px;white-space:nowrap" class="ft02"><b>fade</b></p>
+<p style="position:absolute;top:125px;left:497px;white-space:nowrap" class="ft03">') and it controls modal animation.</p>
+<p style="position:absolute;top:150px;left:44px;white-space:nowrap" class="ft03">visible</p>
+<p style="position:absolute;top:150px;left:247px;white-space:nowrap" class="ft03">its a bool that controls modal visiblity.</p>
+<p style="position:absolute;top:176px;left:44px;white-space:nowrap" class="ft03">onShow</p>
+<p style="position:absolute;top:176px;left:247px;white-space:nowrap" class="ft03">it allows passing a function that will be called once the modal has been shown.</p>
+<p style="position:absolute;top:201px;left:44px;white-space:nowrap" class="ft03">transparent</p>
+<p style="position:absolute;top:201px;left:247px;white-space:nowrap" class="ft03">bool to set transparency.</p>
+<p style="position:absolute;top:226px;left:44px;white-space:nowrap" class="ft03">onRequestClose (</p>
+<p style="position:absolute;top:226px;left:165px;white-space:nowrap" class="ft02"><b>android</b></p>
+<p style="position:absolute;top:226px;left:224px;white-space:nowrap" class="ft03">)&#160;it always deﬁning a method that will be called when user tabs back button</p>
+<p style="position:absolute;top:251px;left:44px;white-space:nowrap" class="ft03">onOrientationChange (</p>
+<p style="position:absolute;top:251px;left:204px;white-space:nowrap" class="ft02"><b>IOS</b></p>
+<p style="position:absolute;top:251px;left:229px;white-space:nowrap" class="ft03">)&#160;it always deﬁning a method that will be called when orientation changes</p>
+<p style="position:absolute;top:276px;left:44px;white-space:nowrap" class="ft03">supportedOrientations (</p>
+<p style="position:absolute;top:276px;left:213px;white-space:nowrap" class="ft02"><b>IOS</b></p>
+<p style="position:absolute;top:276px;left:238px;white-space:nowrap" class="ft03">)&#160;enum('portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right')</p>
+<p style="position:absolute;top:302px;left:43px;white-space:nowrap" class="ft03">Modal component is a simple way to present content above an enclosing view.</p>
+<p style="position:absolute;top:339px;left:43px;white-space:nowrap" class="ft04"><b>Section 5.1: Modal Basic Example</b></p>
+<p style="position:absolute;top:395px;left:48px;white-space:nowrap" class="ft05">import</p>
+<p style="position:absolute;top:395px;left:97px;white-space:nowrap" class="ft06">&#160;React</p>
+<p style="position:absolute;top:395px;left:145px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:395px;left:153px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:395px;left:162px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:395px;left:170px;white-space:nowrap" class="ft06">&#160;Component&#160;</p>
+<p style="position:absolute;top:395px;left:259px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:395px;left:267px;white-space:nowrap" class="ft06">&#160;from&#160;</p>
+<p style="position:absolute;top:395px;left:315px;white-space:nowrap" class="ft08">'react'</p>
+<p style="position:absolute;top:395px;left:372px;white-space:nowrap" class="ft07">;</p>
+<p style="position:absolute;top:413px;left:48px;white-space:nowrap" class="ft05">import</p>
+<p style="position:absolute;top:413px;left:97px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:413px;left:105px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:432px;left:48px;white-space:nowrap" class="ft06">&#160; Modal</p>
+<p style="position:absolute;top:432px;left:105px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:450px;left:48px;white-space:nowrap" class="ft06">&#160; Text</p>
+<p style="position:absolute;top:450px;left:97px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:469px;left:48px;white-space:nowrap" class="ft06">&#160; View</p>
+<p style="position:absolute;top:469px;left:97px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:487px;left:48px;white-space:nowrap" class="ft06">&#160; Button</p>
+<p style="position:absolute;top:487px;left:113px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:506px;left:48px;white-space:nowrap" class="ft06">&#160; StyleSheet</p>
+<p style="position:absolute;top:506px;left:145px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:524px;left:48px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:524px;left:56px;white-space:nowrap" class="ft06">&#160;from&#160;</p>
+<p style="position:absolute;top:524px;left:105px;white-space:nowrap" class="ft08">'react-native'</p>
+<p style="position:absolute;top:524px;left:218px;white-space:nowrap" class="ft07">;</p>
+<p style="position:absolute;top:561px;left:48px;white-space:nowrap" class="ft09"><b>const</b></p>
+<p style="position:absolute;top:561px;left:89px;white-space:nowrap" class="ft06">&#160;styles&#160;</p>
+<p style="position:absolute;top:561px;left:153px;white-space:nowrap" class="ft07">=</p>
+<p style="position:absolute;top:561px;left:162px;white-space:nowrap" class="ft06">&#160;StyleSheet.</p>
+<p style="position:absolute;top:561px;left:259px;white-space:nowrap" class="ft010">create</p>
+<p style="position:absolute;top:561px;left:307px;white-space:nowrap" class="ft07">({</p>
+<p style="position:absolute;top:579px;left:48px;white-space:nowrap" class="ft06">&#160; mainContainer</p>
+<p style="position:absolute;top:579px;left:170px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:579px;left:178px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:579px;left:186px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:598px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; marginTop</p>
+<p style="position:absolute;top:598px;left:153px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:598px;left:162px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:598px;left:170px;white-space:nowrap" class="ft011">22</p>
+<p style="position:absolute;top:598px;left:186px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:616px;left:48px;white-space:nowrap" class="ft06">&#160;&#160;</p>
+<p style="position:absolute;top:616px;left:64px;white-space:nowrap" class="ft07">},</p>
+<p style="position:absolute;top:635px;left:48px;white-space:nowrap" class="ft06">&#160; modalContainer</p>
+<p style="position:absolute;top:635px;left:178px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:635px;left:186px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:635px;left:194px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:653px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; marginTop</p>
+<p style="position:absolute;top:653px;left:153px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:653px;left:162px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:653px;left:170px;white-space:nowrap" class="ft011">22</p>
+<p style="position:absolute;top:653px;left:186px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:672px;left:48px;white-space:nowrap" class="ft06">&#160;&#160;</p>
+<p style="position:absolute;top:672px;left:64px;white-space:nowrap" class="ft07">},</p>
+<p style="position:absolute;top:690px;left:48px;white-space:nowrap" class="ft07">});</p>
+<p style="position:absolute;top:727px;left:48px;white-space:nowrap" class="ft05">class</p>
+<p style="position:absolute;top:727px;left:89px;white-space:nowrap" class="ft06">&#160;Example&#160;</p>
+<p style="position:absolute;top:727px;left:162px;white-space:nowrap" class="ft05">extends</p>
+<p style="position:absolute;top:727px;left:218px;white-space:nowrap" class="ft06">&#160;Component&#160;</p>
+<p style="position:absolute;top:727px;left:307px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:746px;left:48px;white-space:nowrap" class="ft06">&#160; constructor</p>
+<p style="position:absolute;top:746px;left:153px;white-space:nowrap" class="ft07">()</p>
+<p style="position:absolute;top:746px;left:170px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:746px;left:178px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:764px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:764px;left:81px;white-space:nowrap" class="ft05">super</p>
+<p style="position:absolute;top:764px;left:121px;white-space:nowrap" class="ft07">();</p>
+<p style="position:absolute;top:783px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:783px;left:81px;white-space:nowrap" class="ft09"><b>this</b></p>
+<p style="position:absolute;top:783px;left:113px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:783px;left:121px;white-space:nowrap" class="ft010">state</p>
+<p style="position:absolute;top:783px;left:162px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:783px;left:170px;white-space:nowrap" class="ft07">=</p>
+<p style="position:absolute;top:783px;left:178px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:783px;left:186px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:801px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; visibility</p>
+<p style="position:absolute;top:801px;left:178px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:801px;left:186px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:801px;left:194px;white-space:nowrap" class="ft012"><b>false</b></p>
+<p style="position:absolute;top:801px;left:234px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:820px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:820px;left:81px;white-space:nowrap" class="ft07">};</p>
+<p style="position:absolute;top:838px;left:48px;white-space:nowrap" class="ft06">&#160;&#160;</p>
+<p style="position:absolute;top:838px;left:64px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:893px;left:48px;white-space:nowrap" class="ft06">&#160; setModalVisibility</p>
+<p style="position:absolute;top:893px;left:210px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:893px;left:218px;white-space:nowrap" class="ft06">visible</p>
+<p style="position:absolute;top:893px;left:275px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:893px;left:283px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:893px;left:291px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:912px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:912px;left:81px;white-space:nowrap" class="ft09"><b>this</b></p>
+<p style="position:absolute;top:912px;left:113px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:912px;left:121px;white-space:nowrap" class="ft010">setState</p>
+<p style="position:absolute;top:912px;left:186px;white-space:nowrap" class="ft07">({</p>
+<p style="position:absolute;top:930px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; visibility</p>
+<p style="position:absolute;top:930px;left:178px;white-space:nowrap" class="ft07">:</p>
+<p style="position:absolute;top:930px;left:186px;white-space:nowrap" class="ft06">&#160;visible</p>
+<p style="position:absolute;top:930px;left:251px;white-space:nowrap" class="ft07">,</p>
+<p style="position:absolute;top:949px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:949px;left:81px;white-space:nowrap" class="ft07">});</p>
+<p style="position:absolute;top:967px;left:48px;white-space:nowrap" class="ft06">&#160;&#160;</p>
+<p style="position:absolute;top:967px;left:64px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:1004px;left:48px;white-space:nowrap" class="ft06">&#160; render</p>
+<p style="position:absolute;top:1004px;left:113px;white-space:nowrap" class="ft07">()</p>
+<p style="position:absolute;top:1004px;left:129px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:1004px;left:137px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:1023px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1023px;left:81px;white-space:nowrap" class="ft09"><b>return</b></p>
+<p style="position:absolute;top:1023px;left:129px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:1023px;left:137px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:1041px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1041px;left:97px;white-space:nowrap" class="ft07">&lt;</p>
+<p style="position:absolute;top:1041px;left:105px;white-space:nowrap" class="ft06">View style</p>
+<p style="position:absolute;top:1041px;left:186px;white-space:nowrap" class="ft07">={</p>
+<p style="position:absolute;top:1041px;left:202px;white-space:nowrap" class="ft06">styles.</p>
+<p style="position:absolute;top:1041px;left:259px;white-space:nowrap" class="ft010">mainContainer</p>
+<p style="position:absolute;top:1041px;left:364px;white-space:nowrap" class="ft07">}&gt;</p>
+<p style="position:absolute;top:1060px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1060px;left:113px;white-space:nowrap" class="ft07">&lt;</p>
+<p style="position:absolute;top:1060px;left:121px;white-space:nowrap" class="ft06">Modal</p>
+<p style="position:absolute;top:1078px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; animationType</p>
+<p style="position:absolute;top:1078px;left:234px;white-space:nowrap" class="ft07">={</p>
+<p style="position:absolute;top:1078px;left:251px;white-space:nowrap" class="ft08">'slide'</p>
+<p style="position:absolute;top:1078px;left:307px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:1097px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; transparent</p>
+<p style="position:absolute;top:1097px;left:218px;white-space:nowrap" class="ft07">={</p>
+<p style="position:absolute;top:1097px;left:234px;white-space:nowrap" class="ft012"><b>false</b></p>
+<p style="position:absolute;top:1097px;left:275px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:1115px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; visible</p>
+<p style="position:absolute;top:1115px;left:186px;white-space:nowrap" class="ft07">={</p>
+<p style="position:absolute;top:1115px;left:202px;white-space:nowrap" class="ft09"><b>this</b></p>
+<p style="position:absolute;top:1115px;left:234px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:1115px;left:243px;white-space:nowrap" class="ft010">state</p>
+<p style="position:absolute;top:1115px;left:283px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:1115px;left:291px;white-space:nowrap" class="ft010">visibility</p>
+<p style="position:absolute;top:1115px;left:372px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:1133px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1133px;left:113px;white-space:nowrap" class="ft07">&gt;</p>
+<p style="position:absolute;top:1152px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1152px;left:129px;white-space:nowrap" class="ft07">&lt;</p>
+<p style="position:absolute;top:1152px;left:137px;white-space:nowrap" class="ft06">View style</p>
+<p style="position:absolute;top:1152px;left:218px;white-space:nowrap" class="ft07">={</p>
+<p style="position:absolute;top:1152px;left:234px;white-space:nowrap" class="ft06">styles.</p>
+<p style="position:absolute;top:1152px;left:291px;white-space:nowrap" class="ft010">modalContainer</p>
+<p style="position:absolute;top:1152px;left:405px;white-space:nowrap" class="ft07">}&gt;</p>
+<p style="position:absolute;top:1170px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1170px;left:145px;white-space:nowrap" class="ft07">&lt;</p>
+<p style="position:absolute;top:1170px;left:153px;white-space:nowrap" class="ft06">View</p>
+<p style="position:absolute;top:1170px;left:186px;white-space:nowrap" class="ft07">&gt;</p>
+</div>
+</body>
+</html>

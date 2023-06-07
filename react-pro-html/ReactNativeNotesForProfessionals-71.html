@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 71</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft02{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft03{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft04{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft07{font-size:15px;font-family:AKYLOI+OpenSans;color:#000000;}
+	.ft08{font-size:13px;font-family:AOOFJR+RobotoMono;color:#003366;}
+	.ft09{font-size:13px;line-height:18px;font-family:AQBTGV+RobotoMono;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page71-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals071.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:831px;white-space:nowrap" class="ft00">67</p>
+<p style="position:absolute;top:44px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; constructor</p>
+<p style="position:absolute;top:44px;left:170px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:44px;left:178px;white-space:nowrap" class="ft01">props</p>
+<p style="position:absolute;top:44px;left:218px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:44px;left:226px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:44px;left:234px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:62px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:62px;left:113px;white-space:nowrap" class="ft03">super</p>
+<p style="position:absolute;top:62px;left:153px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:62px;left:162px;white-space:nowrap" class="ft01">props</p>
+<p style="position:absolute;top:62px;left:202px;white-space:nowrap" class="ft02">);</p>
+<p style="position:absolute;top:81px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:81px;left:113px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:81px;left:145px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:81px;left:153px;white-space:nowrap" class="ft05">state</p>
+<p style="position:absolute;top:81px;left:194px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:81px;left:202px;white-space:nowrap" class="ft02">=</p>
+<p style="position:absolute;top:81px;left:210px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:81px;left:218px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:99px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160; posts</p>
+<p style="position:absolute;top:99px;left:186px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:99px;left:194px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:99px;left:202px;white-space:nowrap" class="ft02">[]</p>
+<p style="position:absolute;top:118px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:118px;left:113px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:136px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:136px;left:81px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:154px;left:48px;white-space:nowrap" class="ft09">&#160; &#160;<br/>&#160; &#160; componentWillMount</p>
+<p style="position:absolute;top:173px;left:226px;white-space:nowrap" class="ft02">()</p>
+<p style="position:absolute;top:173px;left:243px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:173px;left:251px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:191px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; firebase.</p>
+<p style="position:absolute;top:191px;left:186px;white-space:nowrap" class="ft05">database</p>
+<p style="position:absolute;top:191px;left:251px;white-space:nowrap" class="ft02">()</p>
+<p style="position:absolute;top:191px;left:267px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:191px;left:275px;white-space:nowrap" class="ft05">ref</p>
+<p style="position:absolute;top:191px;left:299px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:191px;left:307px;white-space:nowrap" class="ft06">'Posts/'</p>
+<p style="position:absolute;top:191px;left:372px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:191px;left:380px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:191px;left:388px;white-space:nowrap" class="ft05">on</p>
+<p style="position:absolute;top:191px;left:405px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:191px;left:413px;white-space:nowrap" class="ft06">'value'</p>
+<p style="position:absolute;top:191px;left:469px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:191px;left:477px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:191px;left:486px;white-space:nowrap" class="ft04"><b>function</b></p>
+<p style="position:absolute;top:191px;left:550px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:191px;left:558px;white-space:nowrap" class="ft01">data</p>
+<p style="position:absolute;top:191px;left:591px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:191px;left:599px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:191px;left:607px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:210px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:210px;left:145px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:210px;left:178px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:210px;left:186px;white-space:nowrap" class="ft05">setState</p>
+<p style="position:absolute;top:210px;left:251px;white-space:nowrap" class="ft02">({</p>
+<p style="position:absolute;top:210px;left:267px;white-space:nowrap" class="ft01">&#160;posts</p>
+<p style="position:absolute;top:210px;left:315px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:210px;left:324px;white-space:nowrap" class="ft01">&#160;data.</p>
+<p style="position:absolute;top:210px;left:372px;white-space:nowrap" class="ft05">val</p>
+<p style="position:absolute;top:210px;left:396px;white-space:nowrap" class="ft02">()</p>
+<p style="position:absolute;top:210px;left:413px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:210px;left:421px;white-space:nowrap" class="ft02">});</p>
+<p style="position:absolute;top:228px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:228px;left:113px;white-space:nowrap" class="ft02">});</p>
+<p style="position:absolute;top:247px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:247px;left:81px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:284px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; render</p>
+<p style="position:absolute;top:284px;left:129px;white-space:nowrap" class="ft02">()</p>
+<p style="position:absolute;top:284px;left:145px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:284px;left:153px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:302px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:302px;left:113px;white-space:nowrap" class="ft04"><b>return</b></p>
+<p style="position:absolute;top:302px;left:162px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:302px;left:170px;white-space:nowrap" class="ft02">&lt;</p>
+<p style="position:absolute;top:302px;left:178px;white-space:nowrap" class="ft01">PostsList posts</p>
+<p style="position:absolute;top:302px;left:299px;white-space:nowrap" class="ft02">={</p>
+<p style="position:absolute;top:302px;left:315px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:302px;left:348px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:302px;left:356px;white-space:nowrap" class="ft05">state</p>
+<p style="position:absolute;top:302px;left:396px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:302px;left:405px;white-space:nowrap" class="ft05">posts</p>
+<p style="position:absolute;top:302px;left:445px;white-space:nowrap" class="ft02">}/&gt;</p>
+<p style="position:absolute;top:321px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:321px;left:81px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:339px;left:48px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:381px;left:43px;white-space:nowrap" class="ft07"><b>PostsList.js</b></p>
+<p style="position:absolute;top:426px;left:48px;white-space:nowrap" class="ft03">class</p>
+<p style="position:absolute;top:426px;left:89px;white-space:nowrap" class="ft01">&#160;PostsList&#160;</p>
+<p style="position:absolute;top:426px;left:178px;white-space:nowrap" class="ft03">extends</p>
+<p style="position:absolute;top:426px;left:234px;white-space:nowrap" class="ft01">&#160;Component&#160;</p>
+<p style="position:absolute;top:426px;left:324px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:444px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; constructor</p>
+<p style="position:absolute;top:444px;left:170px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:444px;left:178px;white-space:nowrap" class="ft01">props</p>
+<p style="position:absolute;top:444px;left:218px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:444px;left:226px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:444px;left:234px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:463px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:463px;left:113px;white-space:nowrap" class="ft03">super</p>
+<p style="position:absolute;top:463px;left:153px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:463px;left:162px;white-space:nowrap" class="ft01">props</p>
+<p style="position:absolute;top:463px;left:202px;white-space:nowrap" class="ft02">);</p>
+<p style="position:absolute;top:481px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:481px;left:113px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:481px;left:145px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:481px;left:153px;white-space:nowrap" class="ft05">state</p>
+<p style="position:absolute;top:481px;left:194px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:481px;left:202px;white-space:nowrap" class="ft02">=</p>
+<p style="position:absolute;top:481px;left:210px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:481px;left:218px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:500px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160; dataSource</p>
+<p style="position:absolute;top:500px;left:226px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:500px;left:234px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:500px;left:243px;white-space:nowrap" class="ft04"><b>new</b></p>
+<p style="position:absolute;top:500px;left:267px;white-space:nowrap" class="ft01">&#160;ListView.</p>
+<p style="position:absolute;top:500px;left:348px;white-space:nowrap" class="ft05">DataSource</p>
+<p style="position:absolute;top:500px;left:429px;white-space:nowrap" class="ft02">({</p>
+<p style="position:absolute;top:518px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; rowHasChanged</p>
+<p style="position:absolute;top:518px;left:283px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:518px;left:291px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:518px;left:299px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:518px;left:307px;white-space:nowrap" class="ft01">row1</p>
+<p style="position:absolute;top:518px;left:340px;white-space:nowrap" class="ft02">,</p>
+<p style="position:absolute;top:518px;left:348px;white-space:nowrap" class="ft01">&#160;row2</p>
+<p style="position:absolute;top:518px;left:388px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:518px;left:396px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:518px;left:405px;white-space:nowrap" class="ft02">=&gt;</p>
+<p style="position:absolute;top:518px;left:421px;white-space:nowrap" class="ft01">&#160;row1&#160;</p>
+<p style="position:absolute;top:518px;left:469px;white-space:nowrap" class="ft02">!==</p>
+<p style="position:absolute;top:518px;left:494px;white-space:nowrap" class="ft01">&#160;row2</p>
+<p style="position:absolute;top:537px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:537px;left:145px;white-space:nowrap" class="ft02">}),</p>
+<p style="position:absolute;top:555px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:555px;left:113px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:573px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:573px;left:81px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:610px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; getDataSource</p>
+<p style="position:absolute;top:610px;left:186px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:610px;left:194px;white-space:nowrap" class="ft01">posts</p>
+<p style="position:absolute;top:610px;left:234px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:610px;left:243px;white-space:nowrap" class="ft01">&#160;Array</p>
+<p style="position:absolute;top:610px;left:291px;white-space:nowrap" class="ft02">&lt;</p>
+<p style="position:absolute;top:610px;left:299px;white-space:nowrap" class="ft01">any</p>
+<p style="position:absolute;top:610px;left:324px;white-space:nowrap" class="ft02">&gt;):</p>
+<p style="position:absolute;top:610px;left:348px;white-space:nowrap" class="ft01">&#160;ListView.</p>
+<p style="position:absolute;top:610px;left:429px;white-space:nowrap" class="ft05">DataSource</p>
+<p style="position:absolute;top:610px;left:510px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:610px;left:518px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:629px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:629px;left:113px;white-space:nowrap" class="ft04"><b>if</b></p>
+<p style="position:absolute;top:629px;left:129px;white-space:nowrap" class="ft02">(!</p>
+<p style="position:absolute;top:629px;left:145px;white-space:nowrap" class="ft01">posts</p>
+<p style="position:absolute;top:629px;left:186px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:629px;left:194px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:629px;left:202px;white-space:nowrap" class="ft04"><b>return</b></p>
+<p style="position:absolute;top:629px;left:251px;white-space:nowrap" class="ft02">;</p>
+<p style="position:absolute;top:647px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:647px;left:113px;white-space:nowrap" class="ft04"><b>return</b></p>
+<p style="position:absolute;top:647px;left:162px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:647px;left:170px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:647px;left:202px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:647px;left:210px;white-space:nowrap" class="ft05">state</p>
+<p style="position:absolute;top:647px;left:251px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:647px;left:259px;white-space:nowrap" class="ft05">dataSource</p>
+<p style="position:absolute;top:647px;left:340px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:647px;left:348px;white-space:nowrap" class="ft05">cloneWithRows</p>
+<p style="position:absolute;top:647px;left:453px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:647px;left:461px;white-space:nowrap" class="ft01">posts</p>
+<p style="position:absolute;top:647px;left:502px;white-space:nowrap" class="ft02">);</p>
+<p style="position:absolute;top:666px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:666px;left:81px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:703px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; componentDidMount</p>
+<p style="position:absolute;top:703px;left:218px;white-space:nowrap" class="ft02">()</p>
+<p style="position:absolute;top:703px;left:234px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:703px;left:243px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:721px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:721px;left:113px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:721px;left:145px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:721px;left:153px;white-space:nowrap" class="ft05">setState</p>
+<p style="position:absolute;top:721px;left:218px;white-space:nowrap" class="ft02">({</p>
+<p style="position:absolute;top:721px;left:234px;white-space:nowrap" class="ft01">dataSource</p>
+<p style="position:absolute;top:721px;left:315px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:721px;left:324px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:721px;left:332px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:721px;left:364px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:721px;left:372px;white-space:nowrap" class="ft05">getDataSource</p>
+<p style="position:absolute;top:721px;left:477px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:721px;left:486px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:721px;left:518px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:721px;left:526px;white-space:nowrap" class="ft05">props</p>
+<p style="position:absolute;top:721px;left:567px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:721px;left:575px;white-space:nowrap" class="ft05">posts</p>
+<p style="position:absolute;top:721px;left:615px;white-space:nowrap" class="ft02">)});</p>
+<p style="position:absolute;top:740px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:740px;left:81px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:777px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; componentWillReceiveProps</p>
+<p style="position:absolute;top:777px;left:283px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:777px;left:291px;white-space:nowrap" class="ft01">props</p>
+<p style="position:absolute;top:777px;left:332px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:777px;left:340px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:777px;left:348px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:795px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:795px;left:113px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:795px;left:145px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:795px;left:153px;white-space:nowrap" class="ft05">setState</p>
+<p style="position:absolute;top:795px;left:218px;white-space:nowrap" class="ft02">({</p>
+<p style="position:absolute;top:795px;left:234px;white-space:nowrap" class="ft01">dataSource</p>
+<p style="position:absolute;top:795px;left:315px;white-space:nowrap" class="ft02">:</p>
+<p style="position:absolute;top:795px;left:324px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:795px;left:332px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:795px;left:364px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:795px;left:372px;white-space:nowrap" class="ft05">getDataSource</p>
+<p style="position:absolute;top:795px;left:477px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:795px;left:486px;white-space:nowrap" class="ft01">props.</p>
+<p style="position:absolute;top:795px;left:534px;white-space:nowrap" class="ft05">posts</p>
+<p style="position:absolute;top:795px;left:575px;white-space:nowrap" class="ft02">)});</p>
+<p style="position:absolute;top:814px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:814px;left:81px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:851px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; renderRow&#160;</p>
+<p style="position:absolute;top:851px;left:162px;white-space:nowrap" class="ft02">=</p>
+<p style="position:absolute;top:851px;left:170px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:851px;left:178px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:851px;left:186px;white-space:nowrap" class="ft01">post</p>
+<p style="position:absolute;top:851px;left:218px;white-space:nowrap" class="ft02">)</p>
+<p style="position:absolute;top:851px;left:226px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:851px;left:234px;white-space:nowrap" class="ft02">=&gt;</p>
+<p style="position:absolute;top:851px;left:251px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:851px;left:259px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:869px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:869px;left:113px;white-space:nowrap" class="ft04"><b>return</b></p>
+<p style="position:absolute;top:869px;left:162px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:869px;left:170px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:887px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:887px;left:145px;white-space:nowrap" class="ft02">&lt;</p>
+<p style="position:absolute;top:887px;left:153px;white-space:nowrap" class="ft01">View</p>
+<p style="position:absolute;top:887px;left:186px;white-space:nowrap" class="ft02">&gt;</p>
+<p style="position:absolute;top:906px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:906px;left:178px;white-space:nowrap" class="ft02">&lt;</p>
+<p style="position:absolute;top:906px;left:186px;white-space:nowrap" class="ft01">Text</p>
+<p style="position:absolute;top:906px;left:218px;white-space:nowrap" class="ft02">&gt;{</p>
+<p style="position:absolute;top:906px;left:234px;white-space:nowrap" class="ft01">post.</p>
+<p style="position:absolute;top:906px;left:275px;white-space:nowrap" class="ft05">title</p>
+<p style="position:absolute;top:906px;left:315px;white-space:nowrap" class="ft02">}&lt;/</p>
+<p style="position:absolute;top:906px;left:340px;white-space:nowrap" class="ft01">Text</p>
+<p style="position:absolute;top:906px;left:372px;white-space:nowrap" class="ft02">&gt;</p>
+<p style="position:absolute;top:924px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:924px;left:178px;white-space:nowrap" class="ft02">&lt;</p>
+<p style="position:absolute;top:924px;left:186px;white-space:nowrap" class="ft01">Text</p>
+<p style="position:absolute;top:924px;left:218px;white-space:nowrap" class="ft02">&gt;{</p>
+<p style="position:absolute;top:924px;left:234px;white-space:nowrap" class="ft01">post.</p>
+<p style="position:absolute;top:924px;left:275px;white-space:nowrap" class="ft05">content</p>
+<p style="position:absolute;top:924px;left:332px;white-space:nowrap" class="ft02">}&lt;/</p>
+<p style="position:absolute;top:924px;left:356px;white-space:nowrap" class="ft01">Text</p>
+<p style="position:absolute;top:924px;left:388px;white-space:nowrap" class="ft02">&gt;</p>
+<p style="position:absolute;top:943px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:943px;left:145px;white-space:nowrap" class="ft02">&lt;/</p>
+<p style="position:absolute;top:943px;left:162px;white-space:nowrap" class="ft01">View</p>
+<p style="position:absolute;top:943px;left:194px;white-space:nowrap" class="ft02">&gt;</p>
+<p style="position:absolute;top:961px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:961px;left:113px;white-space:nowrap" class="ft02">);</p>
+<p style="position:absolute;top:980px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:980px;left:81px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:1017px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; render</p>
+<p style="position:absolute;top:1017px;left:129px;white-space:nowrap" class="ft02">()</p>
+<p style="position:absolute;top:1017px;left:145px;white-space:nowrap" class="ft01">&#160;</p>
+<p style="position:absolute;top:1017px;left:153px;white-space:nowrap" class="ft02">{</p>
+<p style="position:absolute;top:1035px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1035px;left:113px;white-space:nowrap" class="ft04"><b>return</b></p>
+<p style="position:absolute;top:1035px;left:162px;white-space:nowrap" class="ft02">(</p>
+<p style="position:absolute;top:1054px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1054px;left:145px;white-space:nowrap" class="ft02">&lt;</p>
+<p style="position:absolute;top:1054px;left:153px;white-space:nowrap" class="ft01">ListView</p>
+<p style="position:absolute;top:1072px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; dataSource</p>
+<p style="position:absolute;top:1072px;left:259px;white-space:nowrap" class="ft02">={</p>
+<p style="position:absolute;top:1072px;left:275px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:1072px;left:307px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:1072px;left:315px;white-space:nowrap" class="ft05">state</p>
+<p style="position:absolute;top:1072px;left:356px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:1072px;left:364px;white-space:nowrap" class="ft05">dataSource</p>
+<p style="position:absolute;top:1072px;left:445px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:1091px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; renderRow</p>
+<p style="position:absolute;top:1091px;left:251px;white-space:nowrap" class="ft02">={</p>
+<p style="position:absolute;top:1091px;left:267px;white-space:nowrap" class="ft04"><b>this</b></p>
+<p style="position:absolute;top:1091px;left:299px;white-space:nowrap" class="ft01">.</p>
+<p style="position:absolute;top:1091px;left:307px;white-space:nowrap" class="ft05">renderRow</p>
+<p style="position:absolute;top:1091px;left:380px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:1109px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; enableEmptySections</p>
+<p style="position:absolute;top:1109px;left:332px;white-space:nowrap" class="ft02">={</p>
+<p style="position:absolute;top:1109px;left:348px;white-space:nowrap" class="ft08"><b>true</b></p>
+<p style="position:absolute;top:1109px;left:380px;white-space:nowrap" class="ft02">}</p>
+<p style="position:absolute;top:1128px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1128px;left:145px;white-space:nowrap" class="ft02">/&gt;</p>
+<p style="position:absolute;top:1146px;left:48px;white-space:nowrap" class="ft01">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1146px;left:113px;white-space:nowrap" class="ft02">);</p>
+<p style="position:absolute;top:1164px;left:48px;white-space:nowrap" class="ft01">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:1164px;left:81px;white-space:nowrap" class="ft02">}</p>
+</div>
+</body>
+</html>

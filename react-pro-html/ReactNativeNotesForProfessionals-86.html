@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 86</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:39px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft04{font-size:15px;font-family:AQIEPH+OpenSans;color:#05a4d1;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft06{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000000;}
+	.ft07{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000066;}
+	.ft09{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft010{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft011{font-size:13px;font-family:AOAEKO+RobotoMono;color:#006600;}
+	.ft012{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page86-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals086.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">82</p>
+<p style="position:absolute;top:36px;left:43px;white-space:nowrap" class="ft01"><b>Chapter 30: Render Best Practises</b></p>
+<p style="position:absolute;top:105px;left:43px;white-space:nowrap" class="ft02">Topic for important notes about speciﬁc Component.render method behavoir.</p>
+<p style="position:absolute;top:142px;left:43px;white-space:nowrap" class="ft03"><b>Section 30.1: Functions in JSX</b></p>
+<p style="position:absolute;top:192px;left:43px;white-space:nowrap" class="ft02">For better performance it's important to avoid using of array (lambda) function in JSX.</p>
+<p style="position:absolute;top:232px;left:43px;white-space:nowrap" class="ft02">As explained at&#160;</p>
+<p style="position:absolute;top:232px;left:153px;white-space:nowrap" class="ft04"><a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md">https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md</a></p>
+<p style="position:absolute;top:232px;left:767px;white-space:nowrap" class="ft02"><a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md">&#160;:</a></p>
+<p style="position:absolute;top:288px;left:79px;white-space:nowrap" class="ft012">A bind call or arrow function in a JSX prop will create a brand new function on every single render. This is<br/>bad for performance, as it will result in the garbage collector being invoked way more than is necessary. It<br/>may also cause unnecessary re-renders if a brand new function is passed as a prop to a component that<br/>uses reference equality check on the prop to determine if it should update.</p>
+<p style="position:absolute;top:412px;left:43px;white-space:nowrap" class="ft02">So if have jsx code block like this:</p>
+<p style="position:absolute;top:457px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:457px;left:210px;white-space:nowrap" class="ft06"><b>&lt;TextInput</b></p>
+<p style="position:absolute;top:475px;left:48px;white-space:nowrap" class="ft07">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;</p>
+<p style="position:absolute;top:475px;left:218px;white-space:nowrap" class="ft08">onChangeValue</p>
+<p style="position:absolute;top:475px;left:324px;white-space:nowrap" class="ft07">={&#160; value =</p>
+<p style="position:absolute;top:475px;left:413px;white-space:nowrap" class="ft06"><b>&gt;</b></p>
+<p style="position:absolute;top:475px;left:421px;white-space:nowrap" class="ft05">&#160;this.handleValueChanging(value) }</p>
+<p style="position:absolute;top:493px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; /&gt;</p>
+<p style="position:absolute;top:535px;left:43px;white-space:nowrap" class="ft02">or</p>
+<p style="position:absolute;top:579px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:579px;left:210px;white-space:nowrap" class="ft06"><b>&lt;button</b></p>
+<p style="position:absolute;top:579px;left:267px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:579px;left:275px;white-space:nowrap" class="ft08">onClick</p>
+<p style="position:absolute;top:579px;left:332px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:579px;left:340px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:579px;left:348px;white-space:nowrap" class="ft05">&#160;this.handleClick.bind</p>
+<p style="position:absolute;top:579px;left:526px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:579px;left:534px;white-space:nowrap" class="ft05">this</p>
+<p style="position:absolute;top:579px;left:567px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:579px;left:575px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:579px;left:583px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:579px;left:591px;white-space:nowrap" class="ft06"><b>&gt;&lt;/button&gt;</b></p>
+<p style="position:absolute;top:621px;left:43px;white-space:nowrap" class="ft02">you can make it better:</p>
+<p style="position:absolute;top:665px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:665px;left:210px;white-space:nowrap" class="ft06"><b>&lt;TextInput</b></p>
+<p style="position:absolute;top:684px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:684px;left:226px;white-space:nowrap" class="ft08">onChangeValue</p>
+<p style="position:absolute;top:684px;left:332px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:684px;left:340px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:684px;left:348px;white-space:nowrap" class="ft05">&#160; this.handleValueChanging&#160;</p>
+<p style="position:absolute;top:684px;left:567px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:702px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:702px;left:210px;white-space:nowrap" class="ft06"><b>/&gt;</b></p>
+<p style="position:absolute;top:743px;left:43px;white-space:nowrap" class="ft02">and</p>
+<p style="position:absolute;top:788px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:788px;left:210px;white-space:nowrap" class="ft06"><b>&lt;button</b></p>
+<p style="position:absolute;top:788px;left:267px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:788px;left:275px;white-space:nowrap" class="ft08">onClick</p>
+<p style="position:absolute;top:788px;left:332px;white-space:nowrap" class="ft05">=</p>
+<p style="position:absolute;top:788px;left:340px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:788px;left:348px;white-space:nowrap" class="ft05">&#160;this.handleClick&#160;</p>
+<p style="position:absolute;top:788px;left:494px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:788px;left:502px;white-space:nowrap" class="ft06"><b>&gt;&lt;/button&gt;</b></p>
+<p style="position:absolute;top:829px;left:43px;white-space:nowrap" class="ft02">For correct context within handleValueChanging function you can apply it in constructor of component:</p>
+<p style="position:absolute;top:874px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; constructor</p>
+<p style="position:absolute;top:874px;left:218px;white-space:nowrap" class="ft07">(){</p>
+<p style="position:absolute;top:892px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:892px;left:145px;white-space:nowrap" class="ft09"><b>this</b></p>
+<p style="position:absolute;top:892px;left:178px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:892px;left:186px;white-space:nowrap" class="ft010">handleValueChanging</p>
+<p style="position:absolute;top:892px;left:340px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:892px;left:348px;white-space:nowrap" class="ft07">=</p>
+<p style="position:absolute;top:892px;left:356px;white-space:nowrap" class="ft05">&#160;</p>
+<p style="position:absolute;top:892px;left:364px;white-space:nowrap" class="ft09"><b>this</b></p>
+<p style="position:absolute;top:892px;left:396px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:892px;left:405px;white-space:nowrap" class="ft010">handleValueChanging</p>
+<p style="position:absolute;top:892px;left:558px;white-space:nowrap" class="ft05">.</p>
+<p style="position:absolute;top:892px;left:567px;white-space:nowrap" class="ft010">bind</p>
+<p style="position:absolute;top:892px;left:599px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:892px;left:607px;white-space:nowrap" class="ft09"><b>this</b></p>
+<p style="position:absolute;top:892px;left:639px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:911px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:911px;left:129px;white-space:nowrap" class="ft07">}</p>
+<p style="position:absolute;top:952px;left:43px;white-space:nowrap" class="ft02">more in&#160;</p>
+<p style="position:absolute;top:952px;left:101px;white-space:nowrap" class="ft04"><a href="https://stackoverflow.com/questions/35446486/binding-a-function-passed-to-a-component">binding a function passed to a component</a></p>
+<p style="position:absolute;top:991px;left:43px;white-space:nowrap" class="ft02">Or you can use solutions like this:&#160;</p>
+<p style="position:absolute;top:991px;left:280px;white-space:nowrap" class="ft04"><a href="https://github.com/andreypopp/autobind-decorator">https://github.com/andreypopp/autobind-decorator</a></p>
+<p style="position:absolute;top:991px;left:644px;white-space:nowrap" class="ft02"><a href="https://github.com/andreypopp/autobind-decorator">&#160;and simply add @autobind</a></p>
+<p style="position:absolute;top:1014px;left:43px;white-space:nowrap" class="ft02">decorator to each methos that you want bind to:</p>
+<p style="position:absolute;top:1059px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1059px;left:113px;white-space:nowrap" class="ft07">@</p>
+<p style="position:absolute;top:1059px;left:121px;white-space:nowrap" class="ft05">autobind</p>
+<p style="position:absolute;top:1077px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; handleValueChanging</p>
+<p style="position:absolute;top:1077px;left:267px;white-space:nowrap" class="ft07">(</p>
+<p style="position:absolute;top:1077px;left:275px;white-space:nowrap" class="ft05">newValue</p>
+<p style="position:absolute;top:1077px;left:340px;white-space:nowrap" class="ft07">)</p>
+<p style="position:absolute;top:1096px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1096px;left:113px;white-space:nowrap" class="ft07">{</p>
+<p style="position:absolute;top:1114px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1114px;left:145px;white-space:nowrap" class="ft011"><i>//processing event</i></p>
+<p style="position:absolute;top:1133px;left:48px;white-space:nowrap" class="ft05">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1133px;left:113px;white-space:nowrap" class="ft07">}</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 84</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	p {margin: 0; padding: 0;}	.ft00{font-size:15px;font-family:AKVMDQ+Quicksand;color:#05a4d1;}
+	.ft01{font-size:27px;font-family:AGEGBK+Quicksand;color:#05a4d1;}
+	.ft02{font-size:15px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft03{font-size:13px;font-family:AQBTGV+RobotoMono;color:#3366cc;}
+	.ft04{font-size:13px;font-family:AQBTGV+RobotoMono;color:#666666;}
+	.ft05{font-size:13px;font-family:AQBTGV+RobotoMono;color:#003366;}
+	.ft06{font-size:13px;font-family:AQBTGV+RobotoMono;color:#000000;}
+	.ft07{font-size:13px;font-family:AOOFJR+RobotoMono;color:#000066;}
+	.ft08{font-size:13px;font-family:AQBTGV+RobotoMono;color:#660066;}
+	.ft09{font-size:13px;font-family:AOAEKO+RobotoMono;color:#006600;}
+	.ft010{font-size:15px;line-height:22px;font-family:AQIEPH+OpenSans;color:#000000;}
+	.ft011{font-size:13px;line-height:18px;font-family:AQBTGV+RobotoMono;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page84-div" style="position:relative;width:892px;height:1262px;">
+<img width="892" height="1262" src="ReactNativeNotesForProfessionals084.png" alt="background image"/>
+<p style="position:absolute;top:1213px;left:44px;white-space:nowrap" class="ft00"><a href="https://goalkicker.com/">GoalKicker.com – React Native Notes for Professionals</a></p>
+<p style="position:absolute;top:1213px;left:830px;white-space:nowrap" class="ft00">80</p>
+<p style="position:absolute;top:38px;left:43px;white-space:nowrap" class="ft01"><b>Section 29.2: Navigating to scene from Notiﬁcation</b></p>
+<p style="position:absolute;top:88px;left:43px;white-space:nowrap" class="ft010">Here's a simple example to demonstrate that how can we jump/open a speciﬁc screen based on the notiﬁcation.<br/>For example, when a user clicks on the notiﬁcation, the app should open and directly jump to notiﬁcations page<br/>instead of home page.</p>
+<p style="position:absolute;top:178px;left:48px;white-space:nowrap" class="ft03">'use strict'</p>
+<p style="position:absolute;top:178px;left:145px;white-space:nowrap" class="ft04">;</p>
+<p style="position:absolute;top:215px;left:48px;white-space:nowrap" class="ft05">import</p>
+<p style="position:absolute;top:215px;left:97px;white-space:nowrap" class="ft06">&#160;React</p>
+<p style="position:absolute;top:215px;left:145px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:215px;left:153px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:215px;left:162px;white-space:nowrap" class="ft04">{</p>
+<p style="position:absolute;top:215px;left:170px;white-space:nowrap" class="ft06">&#160;Component&#160;</p>
+<p style="position:absolute;top:215px;left:259px;white-space:nowrap" class="ft04">}</p>
+<p style="position:absolute;top:215px;left:267px;white-space:nowrap" class="ft06">&#160;from&#160;</p>
+<p style="position:absolute;top:215px;left:315px;white-space:nowrap" class="ft03">'react'</p>
+<p style="position:absolute;top:215px;left:372px;white-space:nowrap" class="ft04">;</p>
+<p style="position:absolute;top:234px;left:48px;white-space:nowrap" class="ft05">import</p>
+<p style="position:absolute;top:234px;left:97px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:234px;left:105px;white-space:nowrap" class="ft04">{</p>
+<p style="position:absolute;top:252px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; StyleSheet</p>
+<p style="position:absolute;top:252px;left:162px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:271px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; Text</p>
+<p style="position:absolute;top:271px;left:113px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:289px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; View</p>
+<p style="position:absolute;top:289px;left:113px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:308px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; Navigator</p>
+<p style="position:absolute;top:308px;left:153px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:326px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; TouchableOpacity</p>
+<p style="position:absolute;top:326px;left:210px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:345px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; AsyncStorage</p>
+<p style="position:absolute;top:345px;left:178px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:363px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; BackAndroid</p>
+<p style="position:absolute;top:363px;left:170px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:381px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; Platform</p>
+<p style="position:absolute;top:381px;left:145px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:400px;left:48px;white-space:nowrap" class="ft04">}</p>
+<p style="position:absolute;top:400px;left:56px;white-space:nowrap" class="ft06">&#160;from&#160;</p>
+<p style="position:absolute;top:400px;left:105px;white-space:nowrap" class="ft03">'react-native'</p>
+<p style="position:absolute;top:400px;left:218px;white-space:nowrap" class="ft04">;</p>
+<p style="position:absolute;top:418px;left:48px;white-space:nowrap" class="ft05">import</p>
+<p style="position:absolute;top:418px;left:97px;white-space:nowrap" class="ft06">&#160;PushNotification from&#160;</p>
+<p style="position:absolute;top:418px;left:283px;white-space:nowrap" class="ft03">'react-native-push-notification'</p>
+<p style="position:absolute;top:418px;left:542px;white-space:nowrap" class="ft04">;</p>
+<p style="position:absolute;top:455px;left:48px;white-space:nowrap" class="ft07"><b>let</b></p>
+<p style="position:absolute;top:455px;left:72px;white-space:nowrap" class="ft06">&#160;initialRoute&#160;</p>
+<p style="position:absolute;top:455px;left:186px;white-space:nowrap" class="ft04">=</p>
+<p style="position:absolute;top:455px;left:194px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:455px;left:202px;white-space:nowrap" class="ft04">{</p>
+<p style="position:absolute;top:455px;left:210px;white-space:nowrap" class="ft06">&#160;id</p>
+<p style="position:absolute;top:455px;left:234px;white-space:nowrap" class="ft04">:</p>
+<p style="position:absolute;top:455px;left:243px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:455px;left:251px;white-space:nowrap" class="ft03">'loginview'</p>
+<p style="position:absolute;top:455px;left:340px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:455px;left:348px;white-space:nowrap" class="ft04">}</p>
+<p style="position:absolute;top:492px;left:48px;white-space:nowrap" class="ft05">export</p>
+<p style="position:absolute;top:492px;left:97px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:492px;left:105px;white-space:nowrap" class="ft07"><b>default</b></p>
+<p style="position:absolute;top:492px;left:162px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:492px;left:170px;white-space:nowrap" class="ft05">class</p>
+<p style="position:absolute;top:492px;left:210px;white-space:nowrap" class="ft06">&#160;MainClass&#160;</p>
+<p style="position:absolute;top:492px;left:299px;white-space:nowrap" class="ft05">extends</p>
+<p style="position:absolute;top:492px;left:356px;white-space:nowrap" class="ft06">&#160;Component</p>
+<p style="position:absolute;top:511px;left:48px;white-space:nowrap" class="ft04">{</p>
+<p style="position:absolute;top:529px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; constructor</p>
+<p style="position:absolute;top:529px;left:170px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:529px;left:178px;white-space:nowrap" class="ft06">props</p>
+<p style="position:absolute;top:529px;left:218px;white-space:nowrap" class="ft04">)</p>
+<p style="position:absolute;top:548px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:548px;left:81px;white-space:nowrap" class="ft04">{</p>
+<p style="position:absolute;top:566px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:566px;left:113px;white-space:nowrap" class="ft05">super</p>
+<p style="position:absolute;top:566px;left:153px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:566px;left:162px;white-space:nowrap" class="ft06">props</p>
+<p style="position:absolute;top:566px;left:202px;white-space:nowrap" class="ft04">);</p>
+<p style="position:absolute;top:603px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:603px;left:113px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:603px;left:145px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:603px;left:153px;white-space:nowrap" class="ft08">handleNotification</p>
+<p style="position:absolute;top:603px;left:299px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:603px;left:307px;white-space:nowrap" class="ft04">=</p>
+<p style="position:absolute;top:603px;left:315px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:603px;left:324px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:603px;left:356px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:603px;left:364px;white-space:nowrap" class="ft08">handleNotification</p>
+<p style="position:absolute;top:603px;left:510px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:603px;left:518px;white-space:nowrap" class="ft08">bind</p>
+<p style="position:absolute;top:603px;left:550px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:603px;left:558px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:603px;left:591px;white-space:nowrap" class="ft04">);</p>
+<p style="position:absolute;top:622px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:622px;left:81px;white-space:nowrap" class="ft04">}</p>
+<p style="position:absolute;top:658px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; handleNotification</p>
+<p style="position:absolute;top:658px;left:226px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:658px;left:234px;white-space:nowrap" class="ft06">notification</p>
+<p style="position:absolute;top:658px;left:332px;white-space:nowrap" class="ft04">)</p>
+<p style="position:absolute;top:677px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:677px;left:81px;white-space:nowrap" class="ft04">{</p>
+<p style="position:absolute;top:695px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; console.</p>
+<p style="position:absolute;top:695px;left:178px;white-space:nowrap" class="ft08">log</p>
+<p style="position:absolute;top:695px;left:202px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:695px;left:210px;white-space:nowrap" class="ft03">'handleNotification'</p>
+<p style="position:absolute;top:695px;left:372px;white-space:nowrap" class="ft04">);</p>
+<p style="position:absolute;top:714px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:714px;left:113px;white-space:nowrap" class="ft07"><b>var</b></p>
+<p style="position:absolute;top:714px;left:137px;white-space:nowrap" class="ft06">&#160;notificationId&#160;</p>
+<p style="position:absolute;top:714px;left:267px;white-space:nowrap" class="ft04">=</p>
+<p style="position:absolute;top:714px;left:275px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:714px;left:283px;white-space:nowrap" class="ft03">''</p>
+<p style="position:absolute;top:732px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:732px;left:113px;white-space:nowrap" class="ft09"><i>//your logic to get relevant information from the notification</i></p>
+<p style="position:absolute;top:751px;left:48px;white-space:nowrap" class="ft011">&#160; &#160; &#160; &#160;<br/>&#160; &#160;&#160;</p>
+<p style="position:absolute;top:769px;left:81px;white-space:nowrap" class="ft09"><i>//here you navigate to a scene in your app based on the notification info</i></p>
+<p style="position:absolute;top:788px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:788px;left:113px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:788px;left:145px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:788px;left:153px;white-space:nowrap" class="ft08">navigator</p>
+<p style="position:absolute;top:788px;left:226px;white-space:nowrap" class="ft06">.</p>
+<p style="position:absolute;top:788px;left:234px;white-space:nowrap" class="ft08">push</p>
+<p style="position:absolute;top:788px;left:267px;white-space:nowrap" class="ft04">({</p>
+<p style="position:absolute;top:788px;left:283px;white-space:nowrap" class="ft06">&#160;id</p>
+<p style="position:absolute;top:788px;left:307px;white-space:nowrap" class="ft04">:</p>
+<p style="position:absolute;top:788px;left:315px;white-space:nowrap" class="ft06">&#160;Constants.</p>
+<p style="position:absolute;top:788px;left:405px;white-space:nowrap" class="ft08">ITEM_VIEW_ID</p>
+<p style="position:absolute;top:788px;left:502px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:788px;left:510px;white-space:nowrap" class="ft06">&#160;item</p>
+<p style="position:absolute;top:788px;left:550px;white-space:nowrap" class="ft04">:</p>
+<p style="position:absolute;top:788px;left:558px;white-space:nowrap" class="ft06">&#160;item&#160;</p>
+<p style="position:absolute;top:788px;left:607px;white-space:nowrap" class="ft04">});</p>
+<p style="position:absolute;top:806px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:806px;left:81px;white-space:nowrap" class="ft04">}</p>
+<p style="position:absolute;top:843px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; componentDidMount</p>
+<p style="position:absolute;top:843px;left:218px;white-space:nowrap" class="ft04">()</p>
+<p style="position:absolute;top:862px;left:48px;white-space:nowrap" class="ft06">&#160; &#160;&#160;</p>
+<p style="position:absolute;top:862px;left:81px;white-space:nowrap" class="ft04">{</p>
+<p style="position:absolute;top:880px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:880px;left:113px;white-space:nowrap" class="ft07"><b>var</b></p>
+<p style="position:absolute;top:880px;left:137px;white-space:nowrap" class="ft06">&#160;that&#160;</p>
+<p style="position:absolute;top:880px;left:186px;white-space:nowrap" class="ft04">=</p>
+<p style="position:absolute;top:880px;left:194px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:880px;left:202px;white-space:nowrap" class="ft07"><b>this</b></p>
+<p style="position:absolute;top:880px;left:234px;white-space:nowrap" class="ft04">;</p>
+<p style="position:absolute;top:917px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; PushNotification.</p>
+<p style="position:absolute;top:917px;left:251px;white-space:nowrap" class="ft08">configure</p>
+<p style="position:absolute;top:917px;left:324px;white-space:nowrap" class="ft04">({</p>
+<p style="position:absolute;top:954px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:954px;left:145px;white-space:nowrap" class="ft09"><i>// (optional) Called when Token is generated (iOS and Android)</i></p>
+<p style="position:absolute;top:972px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160; onRegister</p>
+<p style="position:absolute;top:972px;left:226px;white-space:nowrap" class="ft04">:</p>
+<p style="position:absolute;top:972px;left:234px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:972px;left:243px;white-space:nowrap" class="ft07"><b>function</b></p>
+<p style="position:absolute;top:972px;left:307px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:972px;left:315px;white-space:nowrap" class="ft06">token</p>
+<p style="position:absolute;top:972px;left:356px;white-space:nowrap" class="ft04">)</p>
+<p style="position:absolute;top:972px;left:364px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:972px;left:372px;white-space:nowrap" class="ft04">{</p>
+<p style="position:absolute;top:991px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; console.</p>
+<p style="position:absolute;top:991px;left:243px;white-space:nowrap" class="ft08">log</p>
+<p style="position:absolute;top:991px;left:267px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:991px;left:275px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:991px;left:283px;white-space:nowrap" class="ft03">'TOKEN:'</p>
+<p style="position:absolute;top:991px;left:348px;white-space:nowrap" class="ft04">,</p>
+<p style="position:absolute;top:991px;left:356px;white-space:nowrap" class="ft06">&#160;token&#160;</p>
+<p style="position:absolute;top:991px;left:413px;white-space:nowrap" class="ft04">);</p>
+<p style="position:absolute;top:1009px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1009px;left:145px;white-space:nowrap" class="ft04">},</p>
+<p style="position:absolute;top:1046px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1046px;left:145px;white-space:nowrap" class="ft09"><i>// (required) Called when a remote or local notification is opened or received</i></p>
+<p style="position:absolute;top:1065px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160; onNotification</p>
+<p style="position:absolute;top:1065px;left:259px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:1065px;left:267px;white-space:nowrap" class="ft06">notification</p>
+<p style="position:absolute;top:1065px;left:364px;white-space:nowrap" class="ft04">)</p>
+<p style="position:absolute;top:1065px;left:372px;white-space:nowrap" class="ft06">&#160;</p>
+<p style="position:absolute;top:1065px;left:380px;white-space:nowrap" class="ft04">{</p>
+<p style="position:absolute;top:1083px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; console.</p>
+<p style="position:absolute;top:1083px;left:243px;white-space:nowrap" class="ft08">log</p>
+<p style="position:absolute;top:1083px;left:267px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:1083px;left:275px;white-space:nowrap" class="ft03">'onNotification'</p>
+<p style="position:absolute;top:1083px;left:405px;white-space:nowrap" class="ft04">)</p>
+<p style="position:absolute;top:1102px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; console.</p>
+<p style="position:absolute;top:1102px;left:243px;white-space:nowrap" class="ft08">log</p>
+<p style="position:absolute;top:1102px;left:267px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:1102px;left:275px;white-space:nowrap" class="ft06">&#160;notification&#160;</p>
+<p style="position:absolute;top:1102px;left:388px;white-space:nowrap" class="ft04">);</p>
+<p style="position:absolute;top:1139px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; that.</p>
+<p style="position:absolute;top:1139px;left:218px;white-space:nowrap" class="ft08">handleNotification</p>
+<p style="position:absolute;top:1139px;left:364px;white-space:nowrap" class="ft04">(</p>
+<p style="position:absolute;top:1139px;left:372px;white-space:nowrap" class="ft06">notification</p>
+<p style="position:absolute;top:1139px;left:469px;white-space:nowrap" class="ft04">);</p>
+<p style="position:absolute;top:1157px;left:48px;white-space:nowrap" class="ft06">&#160; &#160; &#160; &#160; &#160; &#160;&#160;</p>
+<p style="position:absolute;top:1157px;left:145px;white-space:nowrap" class="ft04">},</p>
+</div>
+</body>
+</html>
