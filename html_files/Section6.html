@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 6</title>
+  </head>
+  <body>
+    <h1>Section 6 --> pages 24-</h1>
+    <pre>
+        <code>
+          this.setState({myKey: 'myValue'});
+
+          this.setState((previousState, currentProps) => {
+            return {
+                myInteger: previousState.myInteger+1}
+            }
+          })
+
+          this.setState({myKey: 'myValue'}, () => {
+            // Component has re-rendered ... do something amazing!
+          });
+        </code>
+
+        <code>
+            import React, {Component} from 'react';
+            import {AppRegistry, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+
+
+        </code>
+    </pre>
+  </body>
+</html>
