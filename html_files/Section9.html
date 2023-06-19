@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 9</title>
+  </head>
+  <body>
+    <h1>Section 9 --> pages 30-38</h1>
+    <pre>
+        <code>
+          const Direction = (props) => {
+            return (
+              <View style = {styles.container}>
+                <Box/>
+                <Box/>
+                <Box/>
+                <View style = {{flexDirection: 'row'}}>
+                  <Box/>
+                  <Box/>
+                  <Box/>
+                </View>
+              </View>
+            )
+          }
+
+          const styles = StyleSheet.create({
+            container: {
+              flex: 1,
+              backgroundColor: '#AED581',
+            }
+          });
+        </code>
+
+        <code>
+          const AlignmentAxis = (props) => {
+            return (
+              <View style = {style.container}>
+                  <Box/>
+                <View style = {{flex:1, alignItems:'flex-end', justifyContent:'flex-end'}}>
+                  <Box/>
+                  <Box/>              
+                </View>
+                  <Box/>
+              </View>
+            )
+          }
+
+          const styles = StyleSheet.create({
+            container: {
+              flex:1,
+              backgroundColor: 
+            },
+            text: {
+              color: 'white',
+              textAlign: 'center'
+            }
+          });
+        </code>
+    </pre>
+  </body>
+</html>

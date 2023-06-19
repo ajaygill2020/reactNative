@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 8</title>
+  </head>
+  <body>
+    <h1>Section 8 --> page 28-29</h1>
+    <pre>
+        <code>
+          <View style = {[(this.props.isTrue)? styles.bgcolorBlack : sytles.bgColorWhite]}>
+
+          <Text style = {{color:'red'}}>Red text</Text>
+        </code>
+
+        <code>
+          import React, {Component} from 'react';
+          import {View, Text, StyleSheet} from 'react-native';
+
+          const styles = StyleSheet.create({
+            red: {
+              color: 'red'
+            },
+            big: {
+              fontSize: 30
+            }
+          });
+
+          class Example extends Component {
+            render () {
+              return (
+                <View>
+                  <Text style = {styles.red}>Red</Text>
+                  <Text style = {styles.big}>Big</Text>
+                </View>
+              );
+            }
+          }
+        </code>
+
+        <code>
+          import React, {Component} from 'react';
+          import {View, Text, StyleSheet} from 'react-native';
+
+          const styles = StyleSheet.create({
+            red: {
+              color: 'red'
+            },
+            greenUnderline: {
+              color: 'green',
+              textDecoration: 'underline'
+            },
+            big: {
+              fontSize: 30
+            }
+          });
+
+          class Example extends Component {
+            render () {
+              return (
+                <View>
+                  <Text style = {[styles.red, styles.big]}>Big red</Text>
+                  <Text style = {[styles.red, styles.greenUnderline]}>Green underline</Text>
+                  <Text style = {[styles.greenUnderline, styles.red]}>Red underlined</Text>
+                  <Text style = {[styles.greenUnderline, styles.red, styles.big]}>Big red underline</Text>
+                </View>
+              );
+            }
+          }
+        </code>
+    </pre>
+  </body>
+</html>
