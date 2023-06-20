@@ -58,6 +58,61 @@
             }
           });
         </code>
+
+        <code>
+          const Alignment = (props) => {
+            return (
+              <View style = {styles.container}>
+                <Box/>
+                <View style = {{alignItems:'center'}}>
+                  <Box/>
+                  <View style = {{flexDirection:'row'}}>
+                  <Box/>
+                  <Box/>              
+                  <Box/>
+                </View>
+                  <Box/>
+              </View>
+              <Box/>
+            </View>
+            )
+          }
+          
+          const styles = StyleSheet.create({
+            container: {
+              flex: 1,
+              backgroundColor: '#69B8CC',
+            };
+            text: {
+              color: 'white',
+              textAlign: 'center'
+            }
+          });
+
+          <View style = {styles.container}>
+            <View style = {{flex: 0.1}}>
+              <Box style = {{flex: 0.7}}/>
+              <Box style = {{backgroundColor: 'yellow'}}
+              <Box/>
+              <Box style = {{flex: 0.3, backgroundColor:'yellow'}}/>
+            </View>
+            <View style = {{flex: 0.1}}>
+              <Box style = {{flex: 1}}/>
+              <Box style = {{backgroundColor: 'yellow'}}
+              <Box/>
+              <Box style = {{flex: 1, backgroundColor:'yellow'}}/>
+            </View>
+          </View>
+        )}
+        
+          const styles = StyleSheet.create({
+            container: {
+              flex:1,
+              flexDirection:'row',
+              backgroundColor:colors[1],
+            },
+          });
+        </code>
     </pre>
   </body>
 </html>
