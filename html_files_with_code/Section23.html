@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 23</title>
+  </head>
+  <body>
+    <h1>Section 23 --> page 67-68</h1>
+    <pre>
+        <code>
+          import {Linking} from 'react-native';
+
+          Linking.openURL(url).catch(err => console.error('An error occured', err))
+
+          Linking.canOpenURL(url).then(supported => {
+            if(!supported) {
+              console.log('Unsupported URL: ' + url)
+            } else {
+              return Linking.openURL(url)
+            }
+          }).catch (err => console.error('An error occured', err))
+
+
+          componentDidMount() {
+            const url = Linking.getInitialURL().then((url) => {
+              if (url) {
+                console.log('Initial url is : ' + url)
+              }
+            }).catch(err => console.error('An error occured' , err))
+          }
+        </code>
+    </pre>
+  </body>
+</html>
