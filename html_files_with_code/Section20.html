@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 20</title>
+  </head>
+  <body>
+    <h1>Section 20 --> page 61-63</h1>
+    <pre>
+        <code>
+          BackAndroid.addEventListener ('hardwareBackPress', function () {
+            if (!this.onMainScreen()) {
+              this.goBack();
+              return true;
+            }
+            return false;
+          });
+        </code>
+        <code>
+          import React, {Component} from 'react'; //eslint-disable-line no-unused-vars
+
+          import {
+            BackAndroid,
+            Navigator,
+          } from 'react-native';
+
+          import SceneContainer from './Navigation/Scenecontainer';
+          import RouteMapper from './Navigation/RouteMapper';
+
+          export default class AppContainer extends Component {
+            constructor(props) {
+              super(props);
+              this.navigator;
+            }
+
+            componentWillMount () {
+              BackAndroid.addEventListener ('hardwareBackPress', () => {
+                if (this.navigator && this.navigator.getCurrentRoutes().length > 1) {
+                  this.navigator.pop();
+                  return true;
+                }
+                return false;
+              });
+            }
+          
+            renderScene (route.navigator){
+              this.navigator = navigator;
+              return(
+                <SceneContainer
+                  title= {route.title}
+                  route= {route}
+                  navigator= {navigator}
+                  onBack = {() => {
+                    if (route.index > 0) {
+                      navigator.pop();
+                    }
+                  }}
+                  {... this.props} />
+              );
+            }
+          
+            render() {
+              return(
+                <Navigator 
+                  initialRoute = {<View/>}
+                  renderScene = {this.renderScene.bind(this)}
+                  navigationBar = {
+                    <Navigator.NavigationBar style = {{backgroundColor: 'gray'}}
+                    routeMapper = {RouteMapper} />
+                  } 
+                />
+              );
+            }
+          };
+        </code>
+        <code>
+          import {BackHandler} from 'react-native';
+
+          constructor (props) {
+            super(props)
+            this.handleBackButtonClick = this.handleButtonClick.bind(this);
+          }
+
+          componentWillMount() {
+            BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
+          }
+
+          componentWillUnmount() {
+            BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
+          }
+
+          handleBackButtonClick() {
+            this.props.navigation.goBack(null);
+            return true;
+          }
+        </code>
+        <code>
+          import {BackHandler} from 'react-native';
+
+          {... }
+            componentWillMount() {
+              BackHandler.addEventListener('hardwareBackPress', ()=> {
+                if (!this.onMainScreen ()) {
+                  this.goBack();
+                  return true;
+                }
+                return false;
+              });
+            }
+        </code>
+    </pre>
+  </body>
+</html>
