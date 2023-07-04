@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 26</title>
+  </head>
+  <body>
+    <h1>Section 26 --> pages 73-77</h1>
+    <pre>
+        <code>
+          <Navigator 
+            ref = {(navigator) => {this.navigator = navigator}}
+            initialRoute = {{id:'route1', title:'Route 1'}}
+            renderScene = {this.renderScene.bind(this)}
+            configureScene = {(route) => Navigator.SceneConfigs.FloatFromRight}
+            style={{flex: 1}}
+            navigationBar = {
+              // see Managing the Navigation Bar below
+              <Navigator.NavigationBar routeMapper = {this.routeMapper}/>
+            }
+          />
+        </code>
+        <code>
+          renderScene (route, navigator) {
+            if (route.id === 'route1') {
+              return <ExampleScene navigator = {navigator} title = {route.title} />; // see below
+            } else if (route.id === 'route2') {
+              return <ExampleScene navigator = {navigator} title = {route.title} />; // see below
+            }
+          }
+
+          function ExampleScene (props) {
+            function forward() {
+              // this route object will pass along our 'renderScene' function we defined above
+              props.navigator.push({id: 'route2', title: 'Route 2'});
+            }
+
+            function back() {
+              // 'pop' simply pops one route object off the 'Navigator' stack 
+              props.navigator.pop();
+            }
+
+            return (
+              <View>
+                <Text>{props.title}</Text>
+                <TouchibleOpacity onPress = {forward}>
+                  <Text> Go forward!</Text>
+                </TouchibleOpacity>
+                <TouchibleOpacity onPress = {back}>
+                  <Text> Go back!</Text>
+                </TouchibleOpacity>
+              </View>
+            );
+          }
+        </code>
+        <code>
+          configureScene = {(route) => {
+            return {
+              ... Navigator.SceneConfigs.FloatFromRight,
+              gestures: {
+                pop: {
+                  ... Navigator.SceneConfigs.FloatFromRight.gestures.pop, 
+                  edgeHitWidth: Dimensions.get('window').width /2,
+                },
+              },
+            };
+          }}
+        </code>
+        <code>
+          const routeMapper = {
+            LeftButton (route, navigator, index, navState) {
+              if (index === 0) {
+                return null;
+              }
+              return (
+                <TouchableOpacity onPress = { () => navigator.pop()}
+                  style = { styles.navBarLeftButton}>
+                  <Text>Back</Text>
+                </TouchableOpacity>
+              );
+            },
+
+            RightButton (route, navigator, index, navState) {
+              if (index === 0) {
+                return null;
+              }
+              return (
+                <TouchableOpacity onPress = {route.handleRightButtonClick}
+                  style = { styles.navBarLeftButton}>
+                  <Text>Next</Text>
+                </TouchableOpacity>
+              );
+            },
+
+            Title (route, navigator, index, navState) {
+              return(
+                <Text>{route.title</Text>
+              );
+            },
+          };
+        </code>
+        <code>
+          // Shell command run: npm install --save react-navigation
+
+          import {Button, View, Text, AppRegistry} from 'react-native';
+          import {StackNavigator} from 'react-navigation';
+
+          const App = StackNavigator ({
+            FirstPage: {screen: FirstPage},
+            SecondPage: {screen: SecondPage},
+          });
+
+          class FirstPage extends React.Component{
+            static navigationOptions = {
+              title: 'Welcome',
+            },
+          
+            render() {
+              const {navigate} = this.props.navigation;
+              return(
+                <Button title= = 'Go to second page'
+                onPress = {() => navigate ('SecondPage', {name: 'Awesomepankaj'})}/>
+              );
+            }
+          }
+
+          class SeconPage extends React.Component{
+            static navigationOptions = ({ navigation}) => ({
+              title: navigation.state.params.name,
+            });
+          
+            render() {
+              const {goBack} = this.props.navigation;
+              return(
+                <View>
+                  <Text>Welcome to Second Page</Text>
+                  <Button title= = 'Go back to first page'
+                  onPress = {() => goBack()}/>
+                </View>
+              );
+            }
+          }
+        </code>
+        <code>
+          import React from 'react';
+          import {Scene, Router} from 'react-native-router-flux';
+          import LogIn from './components/Login';
+          import SecondPage from './components/SecondPage';
+
+          const RouterComponent = () => {
+            return (
+              <Router>
+                <Scene key = "login" component = {login} title= "Login Form" initial/>
+                <Scene key = "secondPage" component = {SecondPage} title = "Home"/>
+              </Router>
+            );
+          };
+
+          export default RouterComponent;
+        </code>
+    </pre>
+  </body>
+</html>
