@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 30</title>
+  </head>
+  <body>
+    <h1>Section 30 --> page 86</h1>
+    <pre>
+        <code>
+          <TextInput onChangeValue = {value=> this.handleValueChanging(value)}/>
+          
+          <button onClick = {this.handleClick.bind(this)}></button>
+
+          <TextInput onChangeValue = {this.handleValueChanging}/>
+            
+          <button onClick = {this.handleClick}></button>
+
+          constructor(){
+            this.handleValueChanging = this.handleValueChanging.bind(this)
+          }
+        </code>
+    </pre>
+  </body>
+</html>
