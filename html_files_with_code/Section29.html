@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 29</title>
+  </head>
+  <body>
+    <h1>Section 29 --> pages 82-85</h1>
+    <pre>
+        <code>
+          // Shell command: react-native init PushNotification
+        
+          import React, {Component} from 'react';
+
+          import {
+            AppRegistry,
+            StyleSheet,
+            Text,
+            View,
+            Button
+          } from 'react-native';
+
+          import PushNotification from 'react-native-push-notification';
+
+          export default class App extends Component {
+            constructor (props) {
+              super(props);
+              this.NewNotification = this.NewNotification.bind(this);
+            }
+
+            componentDidMount(){
+              PushNotification.configure({
+                // required: called when a remote or local notification is opened or received
+                onNotification: function (notification) {
+                  console.log('NOTIFICATION:', notification);
+                },
+                popInitialNotification: true,
+                requestPermissions: true,
+              });
+            }
+
+            NewNotification(){
+              let date = new Date (Date.now() + (this.state.seconds*1000));
+              //Fix for iOS
+              if (Platform.OS == "ios") {
+                date = date.toISOString();
+              }
+              
+              PushNotification.localNotificationSchedule ({
+                message: "My Notification Message", // required
+                date: date,
+                largeIcon: ""
+              });
+            }
+
+            render() {
+              return (
+                <View style = {styles.container}>
+                  <Text style = {styles.welcome}>
+                    Push Notification
+                  </Text>
+                  <View style = {styles.Button}>
+                    <Button
+                      onPress = {()=>{this.NewNotification()}}
+                      title = "Show Notification"
+                      style = {styles.Button}
+                      color = "#841584"
+                      accessibilityLabel = "Show Notification"
+                    />
+                  </View>
+                </View>
+              );
+            }
+          }
+        
+          const styles = StyleSheet.create({
+            container:
+            {
+              flex: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: '#F5FCCF'
+            },
+            welcome: {
+              fontSize: 20,
+              textAlign: 'center',
+              margin: 10,
+            },
+            Button: {
+              margin: 10,
+            }
+          });
+
+          AppRegistry.registerComponent('PushNotification', ()=> App);
+        </code>
+        <code>
+          'use strict';
+
+          import React, {Component} from 'react';
+          import  {
+            StyleSheet,
+            Text,
+            View,
+            Navigator,
+            TouchableOpacity,
+            AsyncStorage,
+            BlackAndroid,
+            Platform,
+          } from 'react-native';
+          import PushNotification from 'react-native-push-notification';
+          
+          let initialRoute = {id: 'loginview'}
+
+          export default class MainClass extends Component{
+            constructor (props) {
+              super(props);
+              this.handleNotification = this.handleNotification.bind(this);
+            }
+
+            handleNotification (notification){
+              console.log('handleNotification');
+              var notificationId = "";
+              this.navigator.push({id:Constants.ITEM_VIEW_ID, item: item});
+            }
+
+            componentDidMount(){
+              var that = this;
+              PushNotification.configure({
+                onRegister: function(token) {
+                  console.log('TOKEN:', token');
+                },
+                onNotification: function (notification) {
+                  console.log('onNOTIFICATION:')
+                  console.log(notification);
+                  that.handleNotification (notification);
+                
+                },
+                //ANDROID ONLY
+                senderID: 'Vizido',
+
+                //IOS ONLY
+                permissions: {
+                  alert: true,
+                  badge: true,
+                  sound: true
+                },
+
+                popInitialNotification: true,
+                requestPermissions: true,
+              });
+            }
+
+            render() {
+              return (
+                <Navigator ref={(nav) => this.navigator = nav}
+                    initialRoute={initialRoute}
+                    renderScene={this.renderScene.bind(this)}
+                    configureScene={(route)=> {
+                      if(route.SceneConfig){
+                        return route.scenceConfig;
+                      }
+                      return Navigator.SceneConfigs.FadeAndroid;
+                    }}
+                />
+              );
+            }
+
+            renderScene(route, navigator) {
+              switch (route.id) {
+                // do routing here 
+                case 'mainview':
+                  return(<MainView navigator = {navigator}/>);
+                default:
+                  return(<MainView navigator = {navigator}/>);
+              }
+            }
+          }
+        </code>
+    </pre>
+  </body>
+</html>
