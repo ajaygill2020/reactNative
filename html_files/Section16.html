@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 16</title>
+  </head>
+  <body>
+    <h1>Section 16 --> page 53</h1>
+    <pre>
+        <code>
+          import {Platform} from 'react-native';
+
+          const styles = StyleSheet.create({
+            height:(Platform.OS === 'ios')? 200:100,
+          })
+
+          if (Platform.Version === 21) {
+            console.log('Running on Lollipop!');
+          }
+
+          if (parseInt(Platform.version, 10) >= 9) {
+            console.log('Running version higher than 8');
+          }
+
+          const MyTask = require('./MyTask')
+        </code>
+    </pre>
+  </body>
+</html>

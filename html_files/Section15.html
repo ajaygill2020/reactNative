@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 15</title>
+  </head>
+  <body>
+    <h1>Section 15 --> pages 48-52</h1>
+    <pre>
+        <code>
+         export const fetchRecipes = (action)=>{
+          return(dispatch, getState) => {
+            fetch ('/recipes', {
+              method:'POST',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json' }, 
+              body: JSON.stringify({
+                recipeName,
+                instructions,
+                ingredients })
+              })
+              .then ((res)=> {
+                //If response was successful parse the json and dispatch an update
+                if (res.ok) {
+                  res.json().then((recipe) => {
+                    dispatch({type: 'UPDATE_RECIPE',
+                    recipe});
+                  });
+                } else {
+                //If response wasn't successful, so dispatch an error
+                  res.json().then((err) => {
+                    dispatch ({
+                      type: 'ERROR_RECIPE',
+                      message: err.reason,
+                      status: err.status
+                    });
+                  });
+                }
+              })
+              .catch((err) => {
+                //Runs if there is a general JavaScript error
+                  dispatch(error('There was a problem with the request.'));
+              }); 
+              };
+            };
+          };
+        }
+        </code>
+        <code>
+          // Fetch does not support progress callbacks
+          
+          fetch('https://mywebsite.com/mydata.json').then(json => console.log(json));
+
+        fetch('/login', {
+          method: 'POST',
+          body: form,
+          mode: 'cors',
+          cache: 'default',
+        }).then(session => onLogin(session), failure => console.error(failure));
+        </code>
+        <code>
+          var request = new XMLHttpRequest();
+          request.onreadystatechange = (e) => {
+            if (request.readyState !== 4) {
+              return;
+            } 
+
+            if (request.status === 200) {
+              console.log('success', request.responseText);
+            } else {
+              console.warn('error');
+            }
+          };
+
+          request.open('GET', 'https://mywebsite.com/endpoint/');
+          request.send();
+        </code>
+        <code>
+          var ws = new WebSocket('ws://host.com/path');
+
+          ws.onopen = () => {
+            //connection opened
+            ws.send('something'); // send message
+          };
+
+          ws.onmessage = (e) => {
+            // a message was received
+            console.log(e.data);
+          };
+
+          ws.onerror = (e) => {
+            // an error occured
+            console.log(e.message);
+          };
+
+          ws.onclose = (e) => {
+            // connection closed
+            console.log(e.code, e.reason);
+          };
+        </code>
+        <code>
+          import * as axios from 'axios';
+
+          var instance = axios.create();
+          instance.defaults.baseURL = serverURL;
+          instance.defaults.timeout = 20000;
+
+          // ...
+          // and other options
+
+          export {instance as default};
+        </code>
+        <code>
+          import axios from './axios';
+          import {errorHandling} from './common';
+
+          const UserService = {
+            getCallToAction () {
+              return axios.get('api/user/dosomething').then(respoone => response.data).catch(errorHandling);
+            },
+          }
+
+          export default UserService;
+        </code>
+        <code>
+          import MockAdapter from 'axios-mock-adapter';
+
+          var mock = new MockAdapter (instance);
+          mock.onAny().reply(500);
+        </code>
+        <code>
+          export function getAuthToken(storeContainer) {
+            return config => {
+              let store = storeContainer.getState();
+              config.headers['Authorization'] = store.user.accessToken;
+              return config;
+            };
+          }
+        </code>
+        <code>
+          axios.interceptors.request.use(getAuthToken(this.state.store));
+        </code>
+        <code>
+          // Shell command to install 'socket.io-client'
+          npm i socket.io-client --save 
+
+          // In code, import module and initialize in your constructor
+          import SocketIOClient from 'socket.io-client/dist/socket.io.js'
+          constructor (props) {
+            super(props);
+            this.socket=SocketIOClient('http://server:3000');
+          }
+        </code>
+        <code>
+          _sendPing() {
+            //emit a dong moessage to socket serversocket.emit('ding');
+          }
+
+          _getReply(data){
+            //get reply from socket server, log it to console
+            console.log('Reply from server:' + data);
+          }
+
+          constructor(props){
+            super(props);
+            this.socket = SocketIOCLIENT('http://server:3000');
+
+            //bind the functions
+            this._sendPing = this._sendPing.bind(this);
+            this._getReply = this._getReply.bind(this);
+          }
+
+          this.socket.on('dong', this._getReply);
+        </code>
+    </pre>
+  </body>
+</html>

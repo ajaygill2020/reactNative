@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 17</title>
+  </head>
+  <body>
+    <h1>Section 17 --> pages 54-55</h1>
+    <pre>
+        <code>
+          import {Image} from 'react';
+          <Image source={{uri: 'https://image-source.com/awesomeImage'}}/>
+
+          import {Image} from 'react';
+          <Image source={requrie('./img/myCoolImage.png')}/>
+
+          class ImageExample extends Component {
+            render() {
+              return (
+                <View>
+                  <Image style={{width:30, height:30}}
+                  source={{uri: 'http://facebook.github.io/react/img/logo_og.png'/>
+                </View>
+              );
+            }
+          }
+
+          <Image style={[this.props.imageStyle]}
+            source={this.props.imagePath? this.props.imagePath:require('./theme/images/resource.png')}/>
+        
+          let imagePath = require("../../assets/list.png");
+          <Image style={{height:50, width:50}} soruce={imagePath}/>
+   
+          <Image style={{height:50, width:50}} source={{uri: userData.image}}/>
+        
+          <Image resizeMode="contain"
+            style={{height:100, width:100}}
+            source={require('../assets/image.png')}/>
+        </code>
+    </pre>
+  </body>
+</html>
